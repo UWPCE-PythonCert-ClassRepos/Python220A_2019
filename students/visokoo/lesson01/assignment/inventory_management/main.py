@@ -17,8 +17,8 @@ def main_menu(user_prompt=None):
     options = list(valid_prompts.keys())
 
     while user_prompt not in valid_prompts:
-        ("{}" + (", {}") * (len(options)-1)).format(*options)
-        print("Please choose from the following options ({options_str}):")
+        options_str = ("{}" + (", {}") * (len(options)-1)).format(*options)
+        print(f"Please choose from the following options ({options_str}):")
         print("1. Add a new item to the inventory")
         print("2. Get item information")
         print("q. Quit")
@@ -28,15 +28,13 @@ def main_menu(user_prompt=None):
 
 def get_price(item_code):
     """ Grab price for respectice item code provided """
-    # global FULL_INVENTORY
-    price = FULL_INVENTORY[item_code]
+    price = FULL_INVENTORY[item_code]['rental_price']
     print(f"Price for item code: {item_code} is {price}")
     return price
 
 
 def add_new_item():
     """ Add new inventory item """
-    # global FULL_INVENTORY
     item_code = input("Enter item code: ")
     item_description = input("Enter item description: ")
     item_rental_price = input("Enter item rental price: ")
@@ -76,6 +74,7 @@ def add_new_item():
                 item_rental_price)
     FULL_INVENTORY[item_code] = new_item.return_as_dictionary()
     print("New inventory item added")
+    return FULL_INVENTORY[item_code]
 
 
 def item_info():
@@ -83,10 +82,14 @@ def item_info():
     item_code = input("Enter item code: ")
     if item_code in FULL_INVENTORY:
         print_dict = FULL_INVENTORY[item_code]
+        output = []
         for key, value in print_dict.items():
-            print("{}:{}".format(key, value))
+            print(f"{key}: {value}")
+            output.append(print_dict)
     else:
-        print("Item not found in inventory")
+        output = "Item not found in inventory"
+        print(output)
+    return output
 
 
 def exit_program():
@@ -94,8 +97,10 @@ def exit_program():
     sys.exit()
 
 
+FULL_INVENTORY = {}
+
 if __name__ == '__main__':
-    FULL_INVENTORY = {}
+    # FULL_INVENTORY = {}
     while True:
         for index, item in FULL_INVENTORY.items():
             print(f"{index}: {item}")

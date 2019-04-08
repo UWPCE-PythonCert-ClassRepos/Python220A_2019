@@ -22,7 +22,7 @@ class ElectricAppliances(Inventory):
 
     def return_as_dictionary(self):
         """
-        Return the ElectricAppliances object as a dict.
+        Return the ElectricAppliances object as a dict
         """
         output_dict = {}
         output_dict = super(ElectricAppliances, self).return_as_dictionary()

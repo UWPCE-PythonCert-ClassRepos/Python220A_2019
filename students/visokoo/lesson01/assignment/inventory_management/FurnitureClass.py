@@ -23,7 +23,7 @@ class Furniture(Inventory):
 
     def return_as_dictionary(self):
         """
-        Return the Furniture object as a dict.
+        Return the Furniture object as a dict
         """
         output_dict = {}
         output_dict = super(Furniture, self).return_as_dictionary()

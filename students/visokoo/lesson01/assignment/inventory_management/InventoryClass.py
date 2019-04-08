@@ -16,7 +16,7 @@ class Inventory():
 
     def return_as_dictionary(self):
         """
-        Return the inventory object as a dict.
+        Return the inventory object as a dict
         """
         output_dict = {}
         output_dict['product_code'] = self.product_code

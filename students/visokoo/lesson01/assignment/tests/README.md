@@ -7,6 +7,7 @@
 From the assignment directory in lesson01, run:
 
 `python3 -m coverage run -m unittest tests/integration_test.py`
+
 Contains 1 test that adds 3 items [Furniture, Appliance, Item] and checks
 the contents of the values with option 2 of the menu and quits after.
 
@@ -17,6 +18,7 @@ the contents of the values with option 2 of the menu and quits after.
 From the assignment directory in lesson01, run:
 
 `python3 -m coverage run -m unittest tests/unit_tests.py`
+
 Runs 15 tests that go through each available method in class files present in
 the `./inventory_management` directory.
 

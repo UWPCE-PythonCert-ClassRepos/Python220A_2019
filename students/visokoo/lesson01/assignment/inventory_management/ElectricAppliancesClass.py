@@ -2,7 +2,7 @@
 """
 This module provides methods to interact with the ElectricAppliances class
 """
-from InventoryClass import Inventory
+from inventory_management.InventoryClass import Inventory
 
 
 class ElectricAppliances(Inventory):

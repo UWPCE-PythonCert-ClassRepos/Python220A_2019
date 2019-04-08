@@ -3,8 +3,8 @@
 from unittest import TestCase
 from unittest.mock import MagicMock, patch
 
-import market_prices as market_price
-import main
+from inventory_management import main
+from inventory_management import market_prices
 
 
 class ModuleTests(TestCase):
@@ -14,7 +14,7 @@ class ModuleTests(TestCase):
         """ Testing item creation with all classes and viewing the contents """
         with patch('builtins.input', lambda value: '1'):
             main.main_menu()
-            market_price.get_latest_price = MagicMock(return_value=300)
+            market_prices.get_latest_price = MagicMock(return_value=300)
 
         input_info = [10, 'Bar Stool', '20', 'y', 'Wood', 'S']
         with patch('builtins.input', side_effect=input_info):
@@ -33,7 +33,7 @@ class ModuleTests(TestCase):
         input_info = [11, 'Dishwasher', '60', 'n', 'y', 'GE', '110']
         with patch('builtins.input', lambda value: '1'):
             main.main_menu()
-            market_price.get_latest_price = MagicMock(return_value=1500)
+            market_prices.get_latest_price = MagicMock(return_value=1500)
         with patch('builtins.input', side_effect=input_info):
             new_item = main.add_new_item()
         self.assertEqual(
@@ -49,7 +49,7 @@ class ModuleTests(TestCase):
 
         with patch('builtins.input', lambda value: '1'):
             main.main_menu()
-            market_price.get_latest_price = MagicMock(return_value=10)
+            market_prices.get_latest_price = MagicMock(return_value=10)
 
         input_info = [12, 'Toy', '5', 'n', 'n']
         with patch('builtins.input', side_effect=input_info):
@@ -108,3 +108,7 @@ class ModuleTests(TestCase):
                         'rental_price': '5'
                     },
                     item_dict)
+
+        with patch('builtins.input', lambda value: 'q'):
+            main.main_menu()
+            self.assertRaises(SystemExit)

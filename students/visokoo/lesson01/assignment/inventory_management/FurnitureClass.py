@@ -2,7 +2,7 @@
 """
 This module provides methods to interact with the Furniture class
 """
-from InventoryClass import Inventory
+from inventory_management.InventoryClass import Inventory
 
 
 class Furniture(Inventory):

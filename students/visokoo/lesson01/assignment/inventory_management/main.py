@@ -3,10 +3,10 @@ The purpose of this module is to launch the user interface for
 the inventory management system
 """
 import sys
-import market_prices
-import InventoryClass
-import FurnitureClass
-import ElectricAppliancesClass
+from inventory_management import market_prices
+from inventory_management import InventoryClass
+from inventory_management import FurnitureClass
+from inventory_management import ElectricAppliancesClass
 
 
 def main_menu(user_prompt=None):

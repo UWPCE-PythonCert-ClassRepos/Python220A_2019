@@ -4,11 +4,11 @@ This test module tests methods in the InventoryTests class
 from unittest import TestCase
 from unittest.mock import MagicMock, patch
 
-from InventoryClass import Inventory
-from ElectricAppliancesClass import ElectricAppliances
-from FurnitureClass import Furniture
-import main
-import market_prices as market_price
+from inventory_management.InventoryClass import Inventory
+from inventory_management.ElectricAppliancesClass import ElectricAppliances
+from inventory_management.FurnitureClass import Furniture
+from inventory_management import main
+from inventory_management import market_prices
 
 
 class InventoryTests(TestCase):
@@ -219,12 +219,7 @@ class MainTests(TestCase):
 
     def test_get_latest_price(self):
         """ Test latest market price with mock """
-        market_price.get_latest_price = MagicMock(return_value=4000)
-        price = market_price.get_latest_price(4)
-        market_price.get_latest_price.assert_called_with(4)
+        market_prices.get_latest_price = MagicMock(return_value=4000)
+        price = market_prices.get_latest_price(4)
+        market_prices.get_latest_price.assert_called_with(4)
         self.assertEqual(price, 4000)
-
-
-# if __name__ == '__main__' and __package__ is None:
-#     from os import sys, path
-#     sys.path.append(path.dirname(path.dirname(path.abspath(__file__))))

@@ -8,6 +8,7 @@ import electric_appliances_class
 
 
 def main_menu(user_prompt=None):
+    """"fixing docstring"""
     valid_prompts = {"1": add_new_item,
                      "2": item_info,
                      "q": exit_program}
@@ -25,10 +26,12 @@ def main_menu(user_prompt=None):
 
 
 def get_price(item_code):
+    """"fixing docstring"""
     print("Get price")
 
 
 def add_new_item():
+    """"fixing docstring"""
     global fullInventory
     item_code = input("Enter item code: ")
     item_description = input("Enter item description: ")
@@ -52,7 +55,7 @@ def add_new_item():
         if is_electric_appliance.lower() == "y":
             item_brand = input("Enter item brand: ")
             item_voltage = input("Enter item voltage: ")
-            new_item = electric_appliances_class.electricAppliances(item_code,
+            new_item = electric_appliances_class.ElectricAppliances(item_code,
                                                                     item_description,
                                                                     item_price,
                                                                     item_rental_price,
@@ -68,6 +71,7 @@ def add_new_item():
 
 
 def item_info():
+    """"fixing docstring"""
     item_code = input("Enter item code: ")
     if item_code in fullInventory:
         print_dict = fullInventory[item_code]
@@ -78,6 +82,7 @@ def item_info():
 
 
 def exit_program():
+    """"fixing docstring"""
     sys.exit()
 
 

@@ -3,7 +3,6 @@
 This files is a class for Electric appliances
 """
 from inventory_class import Inventory
-""" does this fix it?"""
 
 
 class ElectricAppliances(Inventory):
@@ -17,7 +16,7 @@ class ElectricAppliances(Inventory):
                  rental_price,
                  brand,
                  voltage):
-        # Creates common instance variables from the parent class
+        """Creates common instance variables from the parent class"""
         Inventory.__init__(self,
                            product_code,
                            description,
@@ -28,6 +27,7 @@ class ElectricAppliances(Inventory):
         self.voltage = voltage
 
     def returnasdictionary(self):
+        """"fixing docstring"""
         outputDict = {}
         outputDict['product_code'] = self.product_code
         outputDict['description'] = self.description

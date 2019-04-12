@@ -1,7 +1,7 @@
 # Furniture class
+""" Fixing docstring """
 from inventory_class import Inventory
-"""Fixing doc string  
-"""
+
 
 class Furniture(Inventory):
     """Fixing doc string

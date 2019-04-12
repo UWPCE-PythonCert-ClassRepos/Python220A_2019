@@ -16,7 +16,8 @@ def main_menu(user_prompt=None):
 
     while user_prompt not in valid_prompts:
         options_str = ("{}" + (", {}") * (len(options)-1)).format(*options)
-        # line 17 look at the format thing where you use the f and the options at the end.
+        # look at the format
+        # thing where you use the f and the options at the end.
         print(f"Please choose from the following options ({options_str}):")
         print("1. Add a new item to the Inventory")
         print("2. Get item information")
@@ -32,7 +33,7 @@ def get_price(item_code):
 
 def add_new_item():
     """"fixing docstring"""
-    global fullInventory
+    global FULL_INVENTORY
     item_code = input("Enter item code: ")
     item_description = input("Enter item description: ")
     item_rental_price = input("Enter item rental price: ")
@@ -51,32 +52,34 @@ def add_new_item():
                                              item_material,
                                              item_size)
     else:
-        is_electric_appliance = input("Is this item an electric appliance? (Y/N): ")
+        is_electric_appliance = input("Is this item an electric appliance?"
+                                      " (Y/N): ")
         if is_electric_appliance.lower() == "y":
             item_brand = input("Enter item brand: ")
             item_voltage = input("Enter item voltage: ")
-            new_item = electric_appliances_class.ElectricAppliances(item_code,
-                                                                    item_description,
-                                                                    item_price,
-                                                                    item_rental_price,
-                                                                    item_brand,
-                                                                    item_voltage)
+            new_item = \
+                electric_appliances_class.ElectricAppliances(item_code,
+                                                             item_description,
+                                                             item_price,
+                                                             item_rental_price,
+                                                             item_brand,
+                                                             item_voltage)
         else:
             new_item = inventory_class.Inventory(item_code,
                                                  item_description,
                                                  item_price,
                                                  item_rental_price)
-    fullInventory[item_code] = new_item.return_as_dictionary()
+    FULL_INVENTORY[item_code] = new_item.return_as_dictionary()
     print("New Inventory item added")
 
 
 def item_info():
     """"fixing docstring"""
     item_code = input("Enter item code: ")
-    if item_code in fullInventory:
-        print_dict = fullInventory[item_code]
-        for k, v in print_dict.items():
-            print("{}:{}".format(k, v))
+    if item_code in FULL_INVENTORY:
+        print_dict = FULL_INVENTORY[item_code]
+        for k, value in print_dict.items():
+            print("{}:{}".format(k, value))
     else:
         print("Item not found in Inventory")
 
@@ -87,8 +90,8 @@ def exit_program():
 
 
 if __name__ == '__main__':
-    fullInventory = {}
+    FULL_INVENTORY = {}
     while True:
-        print(fullInventory)
+        print(FULL_INVENTORY)
         main_menu()()
         input("Press Enter to continue...........")

@@ -1,3 +1,6 @@
+""" Market Prices """
+
+
 def get_latest_price(item_code):
     """"fixing docstring"""
     return 24

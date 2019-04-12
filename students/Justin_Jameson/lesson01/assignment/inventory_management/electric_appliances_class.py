@@ -28,12 +28,12 @@ class ElectricAppliances(Inventory):
 
     def returnasdictionary(self):
         """"fixing docstring"""
-        outputDict = {}
-        outputDict['product_code'] = self.product_code
-        outputDict['description'] = self.description
-        outputDict['market_price'] = self.market_price
-        outputDict['rental_price'] = self.rental_price
-        outputDict['brand'] = self.brand
-        outputDict['voltage'] = self.voltage
+        output_dict = {}
+        output_dict['product_code'] = self.product_code
+        output_dict['description'] = self.description
+        output_dict['market_price'] = self.market_price
+        output_dict['rental_price'] = self.rental_price
+        output_dict['brand'] = self.brand
+        output_dict['voltage'] = self.voltage
 
-        return outputDict
+        return output_dict

@@ -1,9 +1,9 @@
 # Inventory class
-"""Fixing doc string
-"""
+""" Fixing doc string """
+
+
 class Inventory:
-    """Fixing doc string
-    """
+    """Fixing doc string """
     def __init__(self,
                  product_code,
                  description,
@@ -17,6 +17,7 @@ class Inventory:
         self.rental_price = rental_price
 
     def return_as_dictionary(self):
+        """ Fixing doc string """
         output_dict = {}
         output_dict['product_code'] = self.product_code
         output_dict['description'] = self.description

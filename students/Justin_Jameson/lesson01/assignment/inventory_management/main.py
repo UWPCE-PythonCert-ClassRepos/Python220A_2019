@@ -1,9 +1,10 @@
-# Launches the user interface for the Inventory management system
+""" Launches the user interface for the Inventory management system"""
+
 import sys
 import market_prices
-import inventoryClass
-import furnitureClass
-import electricAppliancesClass
+import inventory_class
+import furniture_class
+import electric_appliances_class
 
 
 def main_menu(user_prompt=None):
@@ -40,28 +41,28 @@ def add_new_item():
     if is_furniture.lower() == "y":
         item_material = input("Enter item material: ")
         item_size = input("Enter item size (S,M,L,XL): ")
-        new_item = furnitureClass.Furniture(item_code,
-                                            item_description,
-                                            item_price,
-                                            item_rental_price,
-                                            item_material,
-                                            item_size)
+        new_item = furniture_class.Furniture(item_code,
+                                             item_description,
+                                             item_price,
+                                             item_rental_price,
+                                             item_material,
+                                             item_size)
     else:
         is_electric_appliance = input("Is this item an electric appliance? (Y/N): ")
         if is_electric_appliance.lower() == "y":
             item_brand = input("Enter item brand: ")
             item_voltage = input("Enter item voltage: ")
-            new_item = electricAppliancesClass.electricAppliances(item_code,
-                                                                  item_description,
-                                                                  item_price,
-                                                                  item_rental_price,
-                                                                  item_brand,
-                                                                  item_voltage)
+            new_item = electric_appliances_class.electricAppliances(item_code,
+                                                                    item_description,
+                                                                    item_price,
+                                                                    item_rental_price,
+                                                                    item_brand,
+                                                                    item_voltage)
         else:
-            new_item = inventoryClass.Inventory(item_code,
-                                                item_description,
-                                                item_price,
-                                                item_rental_price)
+            new_item = inventory_class.Inventory(item_code,
+                                                 item_description,
+                                                 item_price,
+                                                 item_rental_price)
     fullInventory[item_code] = new_item.return_as_dictionary()
     print("New Inventory item added")
 

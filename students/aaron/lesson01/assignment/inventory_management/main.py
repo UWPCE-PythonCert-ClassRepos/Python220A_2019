@@ -27,14 +27,6 @@ def main_menu(user_prompt=None):
         user_prompt = input(">")
     return valid_prompts.get(user_prompt)
 
-def get_price(item_code):
-    """
-    Get a price for an item_code
-    """
-    if item_code:
-        pass
-    print("Get price")
-
 def add_new_item(full_inventory):
     """
     Add a new item
@@ -77,8 +69,9 @@ def item_info(full_inventory):
         print_dict = full_inventory[item_code]
         for key, val in print_dict.items():
             print("{}:{}".format(key, val))
-    else:
-        print("Item not found in inventory")
+        return print_dict
+    print("Item not found in inventory")
+    return None
 
 def exit_program(empty):
     """

@@ -107,7 +107,6 @@ class MainTests(TestCase):
         inventory = {}
         with patch('builtins.input', side_effect=input_vars):
             main.add_new_item(inventory)
-        print(inventory)
         self.assertEqual(inventory['3'],
                          {
                              'product_code': '3',
@@ -124,7 +123,6 @@ class MainTests(TestCase):
         inventory = {}
         with patch('builtins.input', side_effect=input_vars):
             main.add_new_item(inventory)
-        print(inventory)
         self.assertEqual(inventory['4'],
                          {
                              'product_code': '4',
@@ -143,7 +141,6 @@ class MainTests(TestCase):
         inventory = {}
         with patch('builtins.input', side_effect=input_vars):
             main.add_new_item(inventory)
-        print(inventory)
         self.assertEqual(inventory['5'],
                          {
                              'product_code': '5',

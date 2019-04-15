@@ -10,14 +10,38 @@ import logging.config
 
 
 def init_logging(logging_level):
-    """ Setting up the logger """
-    # if lvl 1 = only show error msgs on console and in file
-    # if lvl 2 = only show debug and warnings
-    # if lvl 3 = show all msgs
-    # if lvl 0 = show nothing and output nothing
-    logging.config.fileConfig(
-        fname='logging.conf', disable_existing_loggers=False)
+    """ Setting up the logger
+    lvl 1 = only show error msgs on console and in file
+    lvl 2 = only show error and warnings on console and in file
+    lvl 3 = show all msgs on console and in file
+    lvl 0 = show nothing and output nothing
+    """
     logger = logging.getLogger(__name__)
+    log_format = (
+        "%(asctime)s %(filename)s:%(lineno)-3d %(levelname)s %(message)s")
+    log_file = datetime.datetime.now().strftime("%Y-%m-%d")+'.log'
+    formatter = logging.Formatter(log_format)
+    file_handler = logging.FileHandler(log_file)
+    file_handler.setFormatter(formatter)
+    stream_handler = logging.StreamHandler()
+    stream_handler.setFormatter(formatter)
+
+    if logging_level == 0:
+        logger.disabled = True
+    elif logging_level == 1:
+        file_handler.setLevel(logging.ERROR)
+        stream_handler.setLevel(logging.ERROR)
+        logger.addHandler(file_handler)
+        logger.addHandler(stream_handler)
+    elif logging_level == 2:
+        file_handler.setLevel(logging.WARNING)
+        stream_handler.setLevel(logging.WARNING)
+        logger.addHandler(file_handler)
+        logger.addHandler(stream_handler)
+    elif logging_level == 3:
+        logging.config.fileConfig(
+            fname='logging.conf', disable_existing_loggers=False)
+
     return logger
 
 

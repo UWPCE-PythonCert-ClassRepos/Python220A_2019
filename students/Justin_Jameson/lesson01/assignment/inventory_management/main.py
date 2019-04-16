@@ -28,7 +28,7 @@ def main_menu(user_prompt=None):
 
 def get_price(item_code):
     """"fixing docstring"""
-    print("Get price for " item_code)
+    print("Get price")
 
 
 def add_new_item():

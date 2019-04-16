@@ -4,8 +4,7 @@ from inventory_class import Inventory
 
 
 class Furniture(Inventory):
-    """Fixing doc string
-    """
+    """ creating a child class of Inventory"""
     def __init__(self,
                  product_code,
                  description,
@@ -22,15 +21,16 @@ class Furniture(Inventory):
 
         self.material = material
         self.size = size
+        self.output_dict = {}
 
     def return_as_dictionary(self):
-        """"fixing docstring"""
-        output_dict = {}
-        output_dict['product_code'] = self.product_code
-        output_dict['description'] = self.description
-        output_dict['market_price'] = self.market_price
-        output_dict['rental_price'] = self.rental_price
-        output_dict['material'] = self.material
-        output_dict['size'] = self.size
+        """"can I get rid of the replicated ones from the original class?"""
+        #  output_dict = {}
+        self.output_dict['product_code'] = self.product_code
+        self.output_dict['description'] = self.description
+        self.output_dict['market_price'] = self.market_price
+        self.output_dict['rental_price'] = self.rental_price
+        self.output_dict['material'] = self.material
+        self.output_dict['size'] = self.size
 
-        return output_dict
+        return self.output_dict

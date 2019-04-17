@@ -2,7 +2,7 @@
 # # Title:inventory class module for Inventory Management
 # # Dev:   unknown
 # # Date:  4/16/2019
-# # ChangeLog: (Who, , What)
+# # ChangeLog: (Who, What)
 # Justin Jameson
 # added content to doc strings
 # -------------------------------------------------#

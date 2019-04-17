@@ -1,16 +1,25 @@
-# Inventory class
-""" Fixing doc string """
+# -------------------------------------------------#
+# # Title:inventory class module for Inventory Management
+# # Dev:   unknown
+# # Date:  4/16/2019
+# # ChangeLog: (Who, , What)
+# Justin Jameson
+# added content to doc strings
+# -------------------------------------------------#
+
+""" Super class for Inventory Management program """
 
 
 class Inventory:
-    """Fixing doc string """
+    """ Inventory class defining attributes, content
+    is fed to this class from main.py and converted
+    to a dictionary. """
     def __init__(self,
                  product_code,
                  description,
                  market_price,
                  rental_price):
-        """Fixing doc string
-        """
+        """ prepping input from main to place in dictionary"""
         self.product_code = product_code
         self.description = description
         self.market_price = market_price

@@ -1,3 +1,14 @@
+# -------------------------------------------------#
+# # Title: Main module for inventory Management
+# # Dev:   unknown
+# # Date:  4/16/2019
+# # ChangeLog: (Who, What)
+# Justin Jameson
+# Added doc strings
+# shortened lines to conform to PEP 8
+# method 'add_new_item' removed global FULL_INVENTORY;
+# added doc strings.
+# #-------------------------------------------------#
 """ Launches the user interface for the Inventory management system"""
 
 import sys
@@ -7,17 +18,19 @@ import furniture_class
 import electric_appliances_class
 
 
+
 def main_menu(user_prompt=None):
-    """"fixing docstring"""
+    """"This method is the menu for the program. The intent is to
+    offer (3) choices, add an item, retrieve information from an existing
+    item, and exit the program."""
     valid_prompts = {"1": add_new_item,
                      "2": item_info,
                      "q": exit_program}
     options = list(valid_prompts.keys())
 
     while user_prompt not in valid_prompts:
-        options_str = ("{}" + (", {}") * (len(options)-1)).format(*options)
-        # look at the format
-        # thing where you use the f and the options at the end.
+        options_str = ("{}" + ", {}" * (len(options)-1)).format(*options)
+        # look at the format string with the use of f and options at the end.
         print(f"Please choose from the following options ({options_str}):")
         print("1. Add a new item to the Inventory")
         print("2. Get item information")
@@ -27,13 +40,15 @@ def main_menu(user_prompt=None):
 
 
 def get_price(item_code):
-    """"fixing docstring"""
-    print("Get price")
-
+    """This method is incomplete, I suspect it will
+    be incorporated in the future with code from below
+    item_price = market_prices.get_latest_price(item_code)"""
+    # print("Get price")
+    item_price = market_prices.get_latest_price(item_code)
 
 def add_new_item():
-    """"fixing docstring"""
-    global FULL_INVENTORY
+    """Adding items to inventory. This method will add user
+    input into a dictionary"""
     item_code = input("Enter item code: ")
     item_description = input("Enter item description: ")
     item_rental_price = input("Enter item rental price: ")
@@ -74,7 +89,7 @@ def add_new_item():
 
 
 def item_info():
-    """"fixing docstring"""
+    """ This method prints the dictionary"""
     item_code = input("Enter item code: ")
     if item_code in FULL_INVENTORY:
         print_dict = FULL_INVENTORY[item_code]
@@ -85,7 +100,7 @@ def item_info():
 
 
 def exit_program():
-    """"fixing docstring"""
+    """This method exits the program"""
     sys.exit()
 
 

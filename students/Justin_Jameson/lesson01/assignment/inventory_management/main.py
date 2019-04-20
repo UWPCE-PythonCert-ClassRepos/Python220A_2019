@@ -18,7 +18,6 @@ import furniture_class
 import electric_appliances_class
 
 
-
 def main_menu(user_prompt=None):
     """"This method is the menu for the program. The intent is to
     offer (3) choices, add an item, retrieve information from an existing
@@ -45,6 +44,7 @@ def get_price(item_code):
     item_price = market_prices.get_latest_price(item_code)"""
     # print("Get price")
     item_price = market_prices.get_latest_price(item_code)
+
 
 def add_new_item():
     """Adding items to inventory. This method will add user

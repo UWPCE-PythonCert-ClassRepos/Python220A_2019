@@ -2,16 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6bb85536-1948-4e2b-ba85-f8239e33582a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../lesson03/assignment/.idea/assignment.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lesson03/assignment/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lesson03/assignment/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lesson03/assignment/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lesson03/assignment/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lesson03/assignment/src/test_gradel03.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../assignment/inventory_management/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../assignment/inventory_management/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../assignment/inventory_management/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../assignment/inventory_management/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lesson03/assignment/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../lesson03/assignment/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../lesson03/assignment/src/basic_operations.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../lesson03/assignment/src/basic_operations.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../lesson03/assignment/src/customer_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../lesson03/assignment/src/customer_class.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lesson03/assignment/src/customer_info_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../lesson03/assignment/src/customer_info_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lesson03/assignment/src/new_customer.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../lesson03/assignment/src/new_customer.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,36 +20,65 @@
   <component name="FileEditorManager">
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
-        <leaf>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/../../lesson03/activity/personjob_model.py">
+              <provider selected="true" editor-type-id="text-editor" />
+            </entry>
+          </file>
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/../../lesson02/assignment/src/charges_calc.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="147">
-                  <caret line="66" column="77" selection-start-line="66" selection-start-column="77" selection-end-line="66" selection-end-column="77" />
-                  <folding>
-                    <element signature="e#452#467#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
+            <entry file="file://$PROJECT_DIR$/../../lesson03/activity/create_personjob.py">
+              <provider selected="true" editor-type-id="text-editor" />
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/../../lesson02/assignment/src/testing logger.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="68">
-                  <caret line="4" column="20" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
-                </state>
-              </provider>
+            <entry file="file://$PROJECT_DIR$/../../lesson03/activity/personjob_learning_v3_p3.py">
+              <provider selected="true" editor-type-id="text-editor" />
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/../../lesson03/activity/personjob_learning_v5_p1.py">
+              <provider selected="true" editor-type-id="text-editor" />
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/../../lesson03/activity/personjob_learning_v5_p2.py">
+              <provider selected="true" editor-type-id="text-editor" />
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/../../lesson03/activity/personjob_learning_v5_p3.py">
+              <provider selected="true" editor-type-id="text-editor" />
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/../../lesson03/activity/personjob_learning_v5_p4.py">
+              <provider selected="true" editor-type-id="text-editor" />
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/../../lesson03/activity/personjob_learning_v5_p5.py">
+              <provider selected="true" editor-type-id="text-editor" />
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/../../lesson03/activity/personjob_learning_v5_p6.py">
+              <provider selected="true" editor-type-id="text-editor" />
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/../../lesson03/activity/personjob_learning_v5_p7.py">
+              <provider selected="true" editor-type-id="text-editor" />
             </entry>
           </file>
         </leaf>
       </split-first>
       <split-second>
-        <leaf>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/../../lesson02/assignment/src/source.json">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="3757">
+                <state>
                   <caret line="371" column="4" selection-start-line="371" selection-start-column="4" selection-end-line="371" selection-end-column="4" />
                 </state>
               </provider>
@@ -94,11 +121,11 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-12" />
-    <option name="y" value="-12" />
-    <option name="width" value="2762" />
-    <option name="height" value="1770" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="1182" />
+    <option name="y" value="868" />
+    <option name="width" value="688" />
+    <option name="height" value="190" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -139,7 +166,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../assignment/tests/unittest.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../lesson03/activity/create_personjob.py" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
@@ -324,10 +351,10 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="-6" width="1381" height="885" extended-state="7" />
+    <frame x="591" y="434" width="344" height="95" extended-state="1" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22007436" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.0" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -338,7 +365,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.40264902" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.0" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32936078" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -436,13 +463,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/03 Advanced Python Certificate/complicated .py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="35" column="22" selection-start-line="35" selection-start-column="22" selection-end-line="35" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://C:/03 Advanced Python Certificate/complicated .py" />
     <entry file="file://$PROJECT_DIR$/../assignment/inventory_management/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -457,16 +478,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../assignment/tests/unittest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-          <folding>
-            <element signature="e#0#29#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../assignment/tests/unittest.py" />
     <entry file="file://$PROJECT_DIR$/../assignment/tests/test_unit.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -496,17 +508,56 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../../lesson02/assignment/src/charges_calc.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="66" column="77" selection-start-line="66" selection-start-column="77" selection-end-line="66" selection-end-column="77" />
+        <state relative-caret-position="168">
+          <caret line="81" column="32" lean-forward="true" selection-start-line="81" selection-start-column="32" selection-end-line="81" selection-end-column="32" />
           <folding>
             <element signature="e#452#467#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../../lesson03/activity/personjob_learning_v1_p1.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../lesson03/activity/personjob_learning_v3_p1.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../lesson03/activity/personjob_learning_v3_p2.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../lesson03/activity/personjob_model.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../lesson03/activity/personjob_learning_v3_p3.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../lesson03/activity/personjob_learning_v5_p1.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../lesson03/activity/personjob_learning_v5_p2.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../lesson03/activity/personjob_learning_v5_p3.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../lesson03/activity/personjob_learning_v5_p4.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../lesson03/activity/personjob_learning_v5_p5.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../lesson03/activity/personjob_learning_v5_p6.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../lesson03/activity/personjob_learning_v5_p7.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../lesson03/activity/create_personjob.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/../../lesson02/assignment/src/source.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3757">
+        <state>
           <caret line="371" column="4" selection-start-line="371" selection-start-column="4" selection-end-line="371" selection-end-column="4" />
         </state>
       </provider>

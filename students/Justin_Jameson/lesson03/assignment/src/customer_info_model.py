@@ -16,3 +16,21 @@ database = SqliteDatabase('customer_info.db')
 database.connect()
 database.execute_sql('PRAGMA foreign_keys = ON;') # needed for sqlite only
 
+
+class BaseModel(Model):
+    class Meta:
+        database = database
+
+
+class Customer(BaseModel):
+    """
+        This class defines the Customer attribute informaton for the table 'Customer'.
+    """
+    customer_id = CharField(primary_key=True, max_length=10)
+    first_name = CharField(max_length=30)
+    last_name = CharField(max_length=30)
+    home_address = CharField(max_length=30)
+    phone_number = CharField(max_length=15, null=True)
+    email_address = CharField(max_length=30)
+    customer_status = CharField(max_length=30)
+    credit_limit = DecimalField(max_digits=7, decimal_places=2)

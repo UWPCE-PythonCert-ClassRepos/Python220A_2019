@@ -2,16 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cc9bdf54-1840-49fe-91b3-710b4eac555d" name="Default Changelist" comment="updating linting hw">
-      <change afterPath="$PROJECT_DIR$/../../../lesson03/assignment/.idea/assignment.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../lesson03/assignment/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../lesson03/assignment/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../lesson03/assignment/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../lesson03/assignment/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../lesson03/assignment/src/test_gradel03.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../activity/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../activity/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../lesson03/assignment/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../lesson03/assignment/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../lesson03/assignment/src/basic_operations.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../lesson03/assignment/src/basic_operations.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../lesson03/assignment/src/customer_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../lesson03/assignment/src/customer_class.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../lesson03/assignment/src/customer_info_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../lesson03/assignment/src/customer_info_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../lesson03/assignment/src/new_customer.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../lesson03/assignment/src/new_customer.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,7 +23,7 @@
   <component name="FileEditorManager">
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
-        <leaf>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/electric_appliances_class.py">
               <provider selected="true" editor-type-id="text-editor" />
@@ -34,7 +32,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/furniture_class.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="384">
+                <state relative-caret-position="510">
                   <caret line="30" column="29" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="29" />
                 </state>
               </provider>
@@ -52,11 +50,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/main.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="799">
-                  <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
-                  <folding>
-                    <element signature="e#72#82#0" expanded="true" />
-                  </folding>
+                <state relative-caret-position="786">
+                  <caret line="62" column="13" selection-start-line="62" selection-start-column="13" selection-end-line="62" selection-end-column="13" />
                 </state>
               </provider>
             </entry>
@@ -73,21 +68,21 @@
         </leaf>
       </split-first>
       <split-second>
-        <leaf>
-          <file pinned="false" current-in-tab="false">
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/inventory_class.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="102">
-                  <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+                <state relative-caret-position="612">
+                  <caret line="36" lean-forward="true" selection-start-line="15" selection-start-column="24" selection-end-line="36" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/../test_unit.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="195">
-                  <caret line="15" column="24" lean-forward="true" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+                <state relative-caret-position="153">
+                  <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
                   <folding>
                     <element signature="e#0#29#0" expanded="true" />
                   </folding>
@@ -139,10 +134,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="455" />
-    <option name="y" value="-1088" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="x" value="1182" />
+    <option name="y" value="868" />
+    <option name="width" value="688" />
+    <option name="height" value="190" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -323,16 +318,12 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="455" y="-1088" width="1936" height="1056" extended-state="6" />
+    <frame x="-6" y="-6" width="1381" height="885" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Favorites" sideWeight="0.5008881" side_tool="true" weight="0.28855327" />
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4991119" weight="0.28847584" />
       <window_info id="Structure" order="1" sideWeight="0.5008881" side_tool="true" weight="0.28855327" />
-      <window_info anchor="bottom" id="Version Control" weight="0.32936078" />
-      <window_info anchor="bottom" id="Python Console" weight="0.3285968" />
-      <window_info anchor="bottom" id="Terminal" sideWeight="0.49947312" weight="0.3434453" />
-      <window_info anchor="bottom" id="Event Log" sideWeight="0.50052685" side_tool="true" weight="0.5633803" />
+      <window_info id="Favorites" order="2" sideWeight="0.5008881" side_tool="true" weight="0.28855327" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.26868907" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.65960264" />
@@ -340,6 +331,10 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32936078" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32936078" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49947312" weight="0.3434453" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50052685" side_tool="true" weight="0.5633803" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.3285968" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -370,6 +365,20 @@
         </entry>
       </map>
     </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="updating hw" />
@@ -377,10 +386,14 @@
     <option name="LAST_COMMIT_MESSAGE" value="updating linting hw" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pylintrc">
+    <entry file="file://$PROJECT_DIR$/pylintrc" />
+    <entry file="file://$PROJECT_DIR$/electric_appliances_class.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/furniture_class.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="108" column="66" selection-start-line="108" selection-start-column="53" selection-end-line="108" selection-end-column="66" />
+        <state relative-caret-position="510">
+          <caret line="30" column="29" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -391,39 +404,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="786">
+          <caret line="62" column="13" selection-start-line="62" selection-start-column="13" selection-end-line="62" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/inventory_class.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" column="53" selection-start-line="31" selection-start-column="53" selection-end-line="31" selection-end-column="53" />
+        <state relative-caret-position="612">
+          <caret line="36" lean-forward="true" selection-start-line="15" selection-start-column="24" selection-end-line="36" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/furniture_class.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="30" column="29" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/electric_appliances_class.py">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/../test_unit.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="15" column="24" lean-forward="true" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+        <state relative-caret-position="153">
+          <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
           <folding>
             <element signature="e#0#29#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
-          <folding>
-            <element signature="e#72#82#0" expanded="true" />
           </folding>
         </state>
       </provider>

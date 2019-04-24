@@ -25,6 +25,7 @@ class CustomerInformationClass:
         self.customer_status = customer_status
         self.credit_limit = credit_limit
 
+
     def return_as_dictionary(self):
         """
         Returns Class Representation as a Dictionary
@@ -42,3 +43,21 @@ class CustomerInformationClass:
         customer_dict['credit_limit'] = self.credit_limit
 
         return customer_dict
+
+    def return_as_list(self):
+        """
+        Returns Class Representation as a list
+        :return: list Representation of the customer information
+        class
+        """
+        customer_list = [(self.customer_id,
+                         self.first_name,
+                         self.last_name,
+                         self.home_address,
+                         self.phone_number,
+                         self.email_address,
+                         self.customer_status,
+                         self.credit_limit), ]
+
+        return customer_list
+

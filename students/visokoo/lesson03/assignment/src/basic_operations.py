@@ -45,7 +45,6 @@ def add_customer(customer_id,
                 email_address=email_address,
                 status=status,
                 credit_limit=credit_limit)
-            new_customer.save()
             LOGGER.info("DATABASE add successful")
     except peewee.IntegrityError:
         LOGGER.info("Unique constraint failed on %s", customer_id)
@@ -65,12 +64,11 @@ def search_customer(customer_id):
     """
     query_dict = {}
     try:
-        with DATABASE.transaction():
-            query = (
-                Customer
-                .select()
-                .where(Customer.customer_id == customer_id).get())
-            query_dict = model_to_dict(query)
+        query = (
+            Customer
+            .select()
+            .where(Customer.customer_id == customer_id).get())
+        query_dict = model_to_dict(query)
     except peewee.DoesNotExist:
         LOGGER.info("Can't find customer with id: %s.", customer_id)
         LOGGER.info("Returning empty dict.")
@@ -117,11 +115,10 @@ def list_active_customers():
     :rtype int
     """
     try:
-        with DATABASE.transaction():
-            active_customers = (
-                Customer
-                .select()
-                .where(Customer.status == "active").count())
+        active_customers = (
+            Customer
+            .select()
+            .where(Customer.status == "active").count())
     except peewee.DoesNotExist:
         LOGGER.info("No active customers found in DB")
     return active_customers

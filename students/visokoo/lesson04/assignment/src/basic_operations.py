@@ -166,6 +166,7 @@ def update_customer_credit(customer_id, new_credit):
     if update == 0:
         LOGGER.error("No customer was found for id %s", customer_id)
         raise ValueError("NoCustomer")
+    LOGGER.info("Update was successful for customer: %s", customer_id)
     return update
 
 
@@ -185,7 +186,8 @@ def delete_all_rows():
 def load_data(file):
     """load_data(file)
 
-    Takes in a file and loads all of its data into the DB.
+    Takes in a file and creates an iterable of its data to prep for being
+    added to the DB.
 
     :param file file: Path to file for use
 

@@ -118,8 +118,10 @@ def list_active_customers():
         active_customers = (
             Customer
             .select()
-            .where(Customer.status == "active").count())
-    except peewee.DoesNotExist:
+            .where(
+                (Customer.status == "active") |
+                (Customer.status == "Active")).count())
+    if active_customers == 0:
         LOGGER.info("No active customers found in DB")
     return active_customers
 

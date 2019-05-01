@@ -1,9 +1,7 @@
 """
-    Autograde Lesson 3 assignment
+    Autograde Lesson 4 assignment
     Run pytest
-    Run cobverage and linitng using standard batch file
-    Student should submit an empty database
-
+    Merge the student's pull requests when done grading
 """
 
 import pytest

@@ -3,33 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b364d2e3-347d-4f4d-8c18-bd7b1e93b05a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Archive/.idea/Archive.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Archive/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Archive/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Archive/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Archive/__MACOSX/._personjob_learning_v3_p1.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Archive/__MACOSX/._personjob_learning_v3_p2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Archive/__MACOSX/._personjob_learning_v3_p3.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Archive/__MACOSX/._personjob_learning_v5_p1.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Archive/__MACOSX/._personjob_learning_v5_p2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Archive/__MACOSX/._personjob_learning_v5_p3.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Archive/__MACOSX/._personjob_learning_v5_p4.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Archive/__MACOSX/._personjob_learning_v5_p5.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Archive/__MACOSX/._personjob_learning_v5_p6.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Archive/__MACOSX/._personjob_learning_v5_p7.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Archive/personjob_learning_v3_p1.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Archive/personjob_learning_v3_p2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Archive/personjob_learning_v3_p3.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Archive/personjob_learning_v5_p1.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Archive/personjob_learning_v5_p2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Archive/personjob_learning_v5_p3.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Archive/personjob_learning_v5_p4.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Archive/personjob_learning_v5_p5.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Archive/personjob_learning_v5_p6.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Archive/personjob_learning_v5_p7.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/basic_operations.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/basic_operations.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/customer_info.db" beforeDir="false" afterPath="$PROJECT_DIR$/src/customer_info.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test_gradel03.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/test_gradel03.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,29 +11,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/basic_operations.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/new_customer.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="30" selection-start-line="1" selection-end-line="3" selection-end-column="30" />
-              <folding>
-                <element signature="e#1#11#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -132,6 +83,15 @@
               <item name="assignment" type="b2602c69:ProjectViewProjectNode" />
               <item name="assignment" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="assignment" type="b2602c69:ProjectViewProjectNode" />
+              <item name="assignment" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="assignment" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
             </path>
           </expand>
           <select />
@@ -323,12 +283,18 @@
       <option name="project" value="LOCAL" />
       <updated>1556842384205</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="cleaning up directory">
+      <created>1556852773290</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1556852773290</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="454" y="-1088" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.32771337" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -371,7 +337,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Beggining new project, updating git." />
     <MESSAGE value="adding a customer information mode file" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding a customer information mode file" />
+    <MESSAGE value="cleaning up directory" />
+    <option name="LAST_COMMIT_MESSAGE" value="cleaning up directory" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/../activity/utilities.py">
@@ -462,27 +429,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/testing.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../activity/personjob_modeli.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
           <caret line="35" column="50" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/testharness.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="42" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
-          <folding>
-            <element signature="e#344#357#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -497,26 +447,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" selection-start-line="7" selection-end-line="7" />
-          <folding>
-            <element signature="e#159#172#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/newfile.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="445">
-          <caret line="132" column="19" selection-start-line="123" selection-start-column="4" selection-end-line="133" selection-end-column="17" />
-          <folding>
-            <element signature="e#75#89#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test_gradel03.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="48" column="43" selection-start-line="48" selection-start-column="43" selection-end-line="48" selection-end-column="43" />
           <folding>
             <element signature="e#159#172#0" expanded="true" />
           </folding>
@@ -543,6 +473,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/new_customer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="30" selection-start-line="1" selection-end-line="3" selection-end-column="30" />
+          <folding>
+            <element signature="e#1#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/newfile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1312">
+          <caret line="132" column="19" selection-start-line="123" selection-start-column="4" selection-end-line="133" selection-end-column="17" />
+          <folding>
+            <element signature="e#75#89#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/basic_operations.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -550,12 +500,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/new_customer.py">
+    <entry file="file://$PROJECT_DIR$/src/testharness.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="30" selection-start-line="1" selection-end-line="3" selection-end-column="30" />
+        <state relative-caret-position="17">
+          <caret line="1" column="7" lean-forward="true" selection-end-line="5" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/testing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test_JJame_hw03.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="52" selection-start-line="5" selection-start-column="52" selection-end-line="5" selection-end-column="52" />
           <folding>
-            <element signature="e#1#11#0" expanded="true" />
+            <element signature="e#159#172#0" expanded="true" />
           </folding>
         </state>
       </provider>

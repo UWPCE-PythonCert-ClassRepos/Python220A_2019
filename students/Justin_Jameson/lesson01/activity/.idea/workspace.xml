@@ -2,14 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6bb85536-1948-4e2b-ba85-f8239e33582a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../lesson03/assignment/src/test_gradel03.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lesson03/assignment/src/testharness.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../assignment/inventory_management/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../assignment/inventory_management/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lesson03/assignment/.idea/assignment.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../lesson03/assignment/.idea/assignment.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../lesson03/assignment/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../lesson03/assignment/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../lesson03/assignment/src/basic_operations.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../lesson03/assignment/src/basic_operations.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../lesson03/assignment/src/customer_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../lesson03/assignment/src/customer_class.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lesson03/assignment/src/customer_info.db" beforeDir="false" afterPath="$PROJECT_DIR$/../../lesson03/assignment/src/customer_info.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../lesson03/assignment/src/customer_info_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../lesson03/assignment/src/customer_info_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lesson03/assignment/src/new_customer.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../lesson03/assignment/src/new_customer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lesson03/assignment/src/test_gradel03.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../lesson03/assignment/src/test_gradel03.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lesson03/assignment/src/testing.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../lesson03/assignment/src/testing.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -121,11 +124,11 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="1182" />
-    <option name="y" value="868" />
-    <option name="width" value="688" />
-    <option name="height" value="190" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-12" />
+    <option name="y" value="-12" />
+    <option name="width" value="2762" />
+    <option name="height" value="1770" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -351,10 +354,9 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="591" y="434" width="344" height="95" extended-state="1" />
-    <editor active="true" />
+    <frame x="-6" y="-6" width="1381" height="885" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.0" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.049814127" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -365,7 +367,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.0" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.0397351" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32936078" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />

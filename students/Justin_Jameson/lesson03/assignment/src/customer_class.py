@@ -25,7 +25,6 @@ class CustomerInformationClass:
         self.customer_status = customer_status
         self.credit_limit = credit_limit
 
-
     def return_as_dictionary(self):
         """
         Returns Class Representation as a Dictionary

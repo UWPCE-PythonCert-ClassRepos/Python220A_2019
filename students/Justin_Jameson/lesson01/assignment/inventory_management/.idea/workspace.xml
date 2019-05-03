@@ -2,14 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cc9bdf54-1840-49fe-91b3-710b4eac555d" name="Default Changelist" comment="updating linting hw">
-      <change afterPath="$PROJECT_DIR$/../../../lesson03/assignment/src/test_gradel03.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../lesson03/assignment/src/testharness.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../activity/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../activity/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../lesson03/assignment/.idea/assignment.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../lesson03/assignment/.idea/assignment.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../lesson03/assignment/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../lesson03/assignment/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../lesson03/assignment/src/basic_operations.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../lesson03/assignment/src/basic_operations.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../lesson03/assignment/src/customer_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../lesson03/assignment/src/customer_class.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../lesson03/assignment/src/customer_info.db" beforeDir="false" afterPath="$PROJECT_DIR$/../../../lesson03/assignment/src/customer_info.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../lesson03/assignment/src/customer_info_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../lesson03/assignment/src/customer_info_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../lesson03/assignment/src/new_customer.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../lesson03/assignment/src/new_customer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../lesson03/assignment/src/test_gradel03.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../lesson03/assignment/src/test_gradel03.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../lesson03/assignment/src/testing.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../lesson03/assignment/src/testing.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -50,8 +53,11 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/main.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="786">
+                <state relative-caret-position="857">
                   <caret line="62" column="13" selection-start-line="62" selection-start-column="13" selection-end-line="62" selection-end-column="13" />
+                  <folding>
+                    <element signature="e#445#455#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -73,7 +79,7 @@
             <entry file="file://$PROJECT_DIR$/inventory_class.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="612">
-                  <caret line="36" lean-forward="true" selection-start-line="15" selection-start-column="24" selection-end-line="36" />
+                  <caret line="36" selection-start-line="15" selection-start-column="24" selection-end-line="36" />
                 </state>
               </provider>
             </entry>
@@ -134,10 +140,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1182" />
-    <option name="y" value="868" />
-    <option name="width" value="688" />
-    <option name="height" value="190" />
+    <option name="x" value="-12" />
+    <option name="y" value="-12" />
+    <option name="width" value="2762" />
+    <option name="height" value="1770" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -404,17 +410,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="786">
-          <caret line="62" column="13" selection-start-line="62" selection-start-column="13" selection-end-line="62" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/inventory_class.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="36" lean-forward="true" selection-start-line="15" selection-start-column="24" selection-end-line="36" />
+        <state relative-caret-position="527">
+          <caret line="31" column="53" selection-start-line="31" selection-start-column="53" selection-end-line="31" selection-end-column="53" />
         </state>
       </provider>
     </entry>
@@ -424,6 +423,16 @@
           <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
           <folding>
             <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="857">
+          <caret line="62" column="13" selection-start-line="62" selection-start-column="13" selection-end-line="62" selection-end-column="13" />
+          <folding>
+            <element signature="e#445#455#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -24,7 +24,7 @@ class BaseModel(Model):
 
 class Customer(BaseModel):
     """
-        This class defines the Customer attribute informaton for the table 'Customer'.
+        This class defines the Customer attribute information for the table 'Customer'.
     """
     customer_id = CharField(primary_key=True, max_length=10)
     first_name = CharField(max_length=30)
@@ -34,3 +34,16 @@ class Customer(BaseModel):
     email_address = CharField(max_length=30)
     customer_status = CharField(max_length=30)
     credit_limit = DecimalField(max_digits=7, decimal_places=2)
+
+    class Meta:
+        database = database  # using 'customer_info.db'
+
+
+def create_table():
+    database.create_tables([Customer])
+
+
+def delete_customer(customer_id):
+    customer_id.deleteinstance()
+
+# create_table()

@@ -8,23 +8,14 @@
 Defining the database information and applying logging messages"""
 
 import sys
-from src import customer_class
 import logging
+import peewee
+from customer_class import CustomerInformationClass
 from customer_info_model import *
+from playhouse.shortcuts import model_to_dict
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
-
-CUSTOMER_INFO = {}
-CUSTOMER_ID = 0
-FIRST_NAME = 1
-LAST_NAME = 2
-HOME_ADDRESS = 3
-PHONE_NUMBER = 4
-EMAIL_ADDRESS = 5
-CUSTOMER_STATUS = 6
-CREDIT_LIMIT = 7
-logger.info('Created CUSTOMER_INFO dict, and defined column headings')
 
 
 def main_menu(user_prompt=None):
@@ -56,40 +47,38 @@ def main_menu(user_prompt=None):
 
 
 def create_new_customer():
-    new_customer = customer_class.CustomerInformationClass(
+    new_customer = CustomerInformationClass(
         customer_id=input("Enter Customer ID: "),
         first_name=input("Enter Customers first name: "),
-        last_name=input("Enter Customers first name: "),
+        last_name=input("Enter Customers last name: "),
         home_address=input("Enter the Customers Home Address: "),
         phone_number=input("Enter the Customers Phone Number: "),
         email_address=input("Enter the Customers Email: "),
         customer_status=input("Enter the Customers Status (Active/Inactive):"),
         credit_limit=input("Enter the Customers Credit Limit: "))
     logger.info('create_new _customer parameters entered.')
-    CUSTOMER_INFO = new_customer.return_as_dictionary()
-    print("New Customer added!", CUSTOMER_INFO)
-    add_customer(CUSTOMER_INFO)
+    customer_info = new_customer.return_as_dictionary()
+    add_customer(customer_info)
 
 
 def add_customer(customer_dict):  # customer_id, name, lastname, home_address, phone_number, email_address, status, credit_limit):
     """This function will add a new customer to the sqlite3 database."""
-    customer_import_model.BaseModel
     try:
-        with database.transaction():  # Created transaction, and each record is created within a transaction
-            new_customer = customer_import_model.Customer.create(
-                customer_id=customer_dict['customer_id'],
-                first_name = customer_dict['first_name'],
-                last_name = customer_dict['last_name'],
-                home_address = customer_dict['home_address'],
-                phone_number = customer_dict['phone_number'],
-                email_address = customer_dict['email_address'],
-                customer_status = customer_dict['customer_status'],
-                credit_limit = customer_dict['credit_limit'])  # Record created
-            new_customer.save()  # Record saved
-            logger.info('Database add successful')
+        new_customer = Customer.create(
+            customer_id=customer_dict['customer_id'],
+            first_name=customer_dict['first_name'],
+            last_name=customer_dict['last_name'],
+            home_address=customer_dict['home_address'],
+            phone_number=customer_dict['phone_number'],
+            email_address=customer_dict['email_address'],
+            customer_status=customer_dict['customer_status'],
+            credit_limit=customer_dict['credit_limit'])  # Record created
+        new_customer.save()  # Record saved
+        logger.info('Database add successful')
+        logger.info(customer_dict)
 
     except Exception as e:
-        logger.info(f'Error creating = {person[PERSON_NAME]}')
+        logger.info(f'Error creating = {customer_dict}')
         logger.info(e)
         logger.info('See how the database protects our data')
 
@@ -100,26 +89,65 @@ def search_customer():  # customer_id):
     """This function will return a dictionary object with name, lastname,
     email address and phone number of a customer or an empty dictionary object
     if no customer was found."""
-    logger.info('called search_customer')
+    customer_id = input("Enter Customer ID: ")
+    query_dict = {}
+    try:
+        query = (
+            Customer
+            .select()
+            .where(Customer.customer_id == customer_id).get())
+        query_dict = model_to_dict(query)
+    except peewee.DoesNotExist:
+        logger.info("Can't find customer with id: %s.", customer_id)
+        logger.info("Returning empty dict.")
+    print(query_dict)
 
 
 def delete_customer():  # customer_id):
     """This function will delete a customer from the sqlite3 database."""
-    logger.info('called delete_customer')
+    database = Customer
+    customer_id = input("Enter Customer ID: ")
+    try:
+        remove_customer = database.get(database.customer_id == customer_id)
+        remove_customer.delete_instance()
+        logger.info('Database delete successful')
+
+    except Exception as e:
+        logger.info(f'Error finding = {customer_id}')
+        logger.info(e)
+
 
 
 def update_customer_credit():  # customer_id, credit_limit):
     """This function will search an existing customer by customer_id
     and update their credit limit or raise a ValueError exception
     if the customer does not exist."""
-    logger.info('called update_customer_credit')
+    customer_id = input('Enter customer id: ')
+    new_credit = input('Enter new credit limit: ')
+    with database.transaction():
+        update = (
+            Customer
+            .update(credit_limit=new_credit)
+            .where(Customer.customer_id == customer_id)
+            .execute()
+        )
+    if update == 0:
+        logger.info("No customer was found for id %s", customer_id)
+        raise ValueError("NoCustomer")
+    print(update)
 
 
 def list_active_customers():
     """This function will return an integer with the number of customers
     whose status is currently active."""
-    logger.info('called list_active_customers')
-
+    try:
+        active_customers = (
+            Customer
+            .select()
+            .where(Customer.customer_status == "A").count())
+    except peewee.DoesNotExist:
+        logger.info("No active customers found in DB")
+    print(active_customers)
 
 def exit_program():
     """This method exits the program"""

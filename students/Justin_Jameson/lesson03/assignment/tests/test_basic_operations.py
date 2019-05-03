@@ -15,11 +15,39 @@ For example, app/data/data_interface.py should have a test file of test/unit/app
 """
 
 import pytest
-import basic_operations as b_ops
+from src import basic_operations as b_ops
 
 
 @pytest.fixture
 def _add_customers():
+    """
+    possible refactor could be defining the dict as a constant then calling each key in the specific method.
+    see chapter 2 from above book:
+Without Setup
+class TestCalculate(unittest.TestCase):
+    def test_add_method_returns_correct_result(self):
+      calc = Calculate()
+        self.assertEqual(4, calc.add(2,2))
+
+    def test_add_method_raises_typeerror_if_not_ints(self):
+        calc = Calculate()
+        self.assertRaises(TypeError, calc.add, "Hello", "World")
+
+if __name__ == '__main__':
+    unittest.main()
+With Setup
+class TestCalculate(unittest.TestCase):
+
+    def setUp(self):
+        self.calc = Calculate()
+
+    def test_add_method_returns_correct_result(self):
+        self.assertEqual(4, self.calc.add(2,2))
+
+    def test_add_method_raises_typeerror_if_not_ints(self):
+        self.assertRaises(TypeError, self.calc.add, "Hello", "World")
+    :return:
+    """
     customer_dict = {'customer_id': '6', 'first_name': 'Katee', 'last_name': 'Jane',
                      'home_address': 'lkasdjf', 'phone_number': '9876',
                      'email_address': 'none', 'customer_status': 'A',
@@ -101,3 +129,4 @@ def test_delete_customer(_delete_customers):
 
     deleted = b_ops.search_customer(_delete_customers)
     assert deleted == {}
+

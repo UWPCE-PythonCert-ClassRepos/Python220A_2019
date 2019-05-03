@@ -85,11 +85,14 @@ def add_customer(customer_dict):  # customer_id, name, lastname, home_address, p
     main_menu()()
 
 
-def search_customer():  # customer_id):
+def search_customer(customer_id=None):
     """This function will return a dictionary object with name, lastname,
     email address and phone number of a customer or an empty dictionary object
     if no customer was found."""
-    customer_id = input("Enter Customer ID: ")
+    if customer_id is None:
+        customer_id = input("Enter Customer ID: ")
+    else:
+        customer_id = customer_id
     query_dict = {}
     try:
         query = (
@@ -101,14 +104,18 @@ def search_customer():  # customer_id):
         logger.info("Can't find customer with id: %s.", customer_id)
         logger.info("Returning empty dict.")
     print(query_dict)
+    return query_dict
 
 
-def delete_customer():  # customer_id):
+def delete_customer(customer_id=None):
     """This function will delete a customer from the sqlite3 database."""
-    database = Customer
-    customer_id = input("Enter Customer ID: ")
+    dbase = Customer
+    if customer_id is None:
+        customer_id = input("Enter Customer ID: ")
+    else:
+        customer_id = customer_id
     try:
-        remove_customer = database.get(database.customer_id == customer_id)
+        remove_customer = dbase.get(dbase.customer_id == customer_id)
         remove_customer.delete_instance()
         logger.info('Database delete successful')
 
@@ -117,13 +124,17 @@ def delete_customer():  # customer_id):
         logger.info(e)
 
 
-
-def update_customer_credit():  # customer_id, credit_limit):
+def update_customer_credit(customer_id=None, new_credit=None):
     """This function will search an existing customer by customer_id
     and update their credit limit or raise a ValueError exception
     if the customer does not exist."""
-    customer_id = input('Enter customer id: ')
-    new_credit = input('Enter new credit limit: ')
+    if customer_id is None and new_credit is None:
+        customer_id = input("Enter Customer ID: ")
+        new_credit = input("Enter new credit limit: ")
+    else:
+        customer_id = customer_id
+        new_credit = new_credit
+
     with database.transaction():
         update = (
             Customer
@@ -134,7 +145,7 @@ def update_customer_credit():  # customer_id, credit_limit):
     if update == 0:
         logger.info("No customer was found for id %s", customer_id)
         raise ValueError("NoCustomer")
-    print(update)
+    return update
 
 
 def list_active_customers():

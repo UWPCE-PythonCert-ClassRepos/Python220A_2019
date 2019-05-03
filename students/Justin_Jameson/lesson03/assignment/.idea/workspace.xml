@@ -2,17 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b364d2e3-347d-4f4d-8c18-bd7b1e93b05a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/testharness.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lesson01/activity/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../lesson01/activity/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../lesson01/assignment/inventory_management/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../lesson01/assignment/inventory_management/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/assignment.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/assignment.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Archive/.idea/Archive.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Archive/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Archive/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Archive/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Archive/__MACOSX/._personjob_learning_v3_p1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Archive/__MACOSX/._personjob_learning_v3_p2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Archive/__MACOSX/._personjob_learning_v3_p3.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Archive/__MACOSX/._personjob_learning_v5_p1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Archive/__MACOSX/._personjob_learning_v5_p2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Archive/__MACOSX/._personjob_learning_v5_p3.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Archive/__MACOSX/._personjob_learning_v5_p4.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Archive/__MACOSX/._personjob_learning_v5_p5.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Archive/__MACOSX/._personjob_learning_v5_p6.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Archive/__MACOSX/._personjob_learning_v5_p7.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Archive/personjob_learning_v3_p1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Archive/personjob_learning_v3_p2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Archive/personjob_learning_v3_p3.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Archive/personjob_learning_v5_p1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Archive/personjob_learning_v5_p2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Archive/personjob_learning_v5_p3.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Archive/personjob_learning_v5_p4.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Archive/personjob_learning_v5_p5.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Archive/personjob_learning_v5_p6.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Archive/personjob_learning_v5_p7.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/basic_operations.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/basic_operations.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/customer_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/customer_class.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/customer_info.db" beforeDir="false" afterPath="$PROJECT_DIR$/src/customer_info.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/customer_info_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/customer_info_model.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test_gradel03.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/test_gradel03.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/testing.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/testing.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,94 +38,29 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/../activity/personjob_modeli.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="595">
-                  <caret line="35" column="50" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="61" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/testharness.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="221">
-                  <caret line="13" column="42" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
-                  <folding>
-                    <element signature="e#344#357#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/basic_operations.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="678">
-                  <caret line="136" column="17" lean-forward="true" selection-start-line="136" selection-start-column="17" selection-end-line="136" selection-end-column="17" />
-                  <folding>
-                    <element signature="e#373#383#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/newfile.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="445">
-                  <caret line="132" column="19" selection-start-line="123" selection-start-column="4" selection-end-line="133" selection-end-column="17" />
-                  <folding>
-                    <element signature="e#75#89#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/test_gradel03.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-476">
-                  <caret line="23" selection-start-line="23" selection-end-line="23" />
-                  <folding>
-                    <element signature="e#159#172#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/customer_info_model.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="85">
-                  <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
-                  <folding>
-                    <element signature="e#293#307#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/customer_class.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="136">
-                  <caret line="8" selection-start-line="8" selection-end-line="8" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/basic_operations.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/new_customer.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="30" selection-start-line="1" selection-end-line="3" selection-end-column="30" />
+              <folding>
+                <element signature="e#1#11#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -141,20 +93,20 @@
         <option value="$PROJECT_DIR$/tests/test_gradel03.py" />
         <option value="$PROJECT_DIR$/../activity/personjob_modeli.py" />
         <option value="$PROJECT_DIR$/src/testing.py" />
-        <option value="$PROJECT_DIR$/src/customer_info_model.py" />
         <option value="$PROJECT_DIR$/src/customer_class.py" />
         <option value="$PROJECT_DIR$/src/newfile.py" />
         <option value="$PROJECT_DIR$/src/testharness.py" />
+        <option value="$PROJECT_DIR$/src/customer_info_model.py" />
         <option value="$PROJECT_DIR$/src/basic_operations.py" />
         <option value="$PROJECT_DIR$/src/test_gradel03.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-12" />
-    <option name="y" value="-12" />
-    <option name="width" value="2762" />
-    <option name="height" value="1770" />
+    <option name="x" value="454" />
+    <option name="y" value="-1088" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -174,22 +126,12 @@
             <path>
               <item name="assignment" type="b2602c69:ProjectViewProjectNode" />
               <item name="assignment" type="462c0819:PsiDirectoryNode" />
-              <item name="Archive" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="assignment" type="b2602c69:ProjectViewProjectNode" />
-              <item name="assignment" type="462c0819:PsiDirectoryNode" />
               <item name="data" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="assignment" type="b2602c69:ProjectViewProjectNode" />
               <item name="assignment" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="assignment" type="b2602c69:ProjectViewProjectNode" />
-              <item name="assignment" type="462c0819:PsiDirectoryNode" />
-              <item name="tests" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -282,7 +224,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/test_gradel03.py" />
+      <option name="SCRIPT_NAME" value="C:\Python220\Python220A_2019\students\Justin_Jameson\lesson03\assignment\src\test_JJame_hw03.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -374,14 +316,21 @@
       <option name="project" value="LOCAL" />
       <updated>1556086646514</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="adding a customer information mode file">
+      <created>1556842384205</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1556842384205</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="-6" width="1381" height="885" extended-state="6" />
+    <frame x="454" y="-1088" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.35241637" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.32771337" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -392,7 +341,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.40264902" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.32936078" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32936078" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -438,32 +387,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/new_customer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="30" selection-start-line="3" selection-end-line="3" selection-end-column="30" />
-          <folding>
-            <element signature="e#1#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../activity/personjob_model.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1003">
           <caret line="59" column="46" lean-forward="true" selection-start-line="59" selection-start-column="46" selection-end-line="59" selection-end-column="46" />
           <folding>
             <element signature="e#157#171#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/test_gradel03.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-          <folding>
-            <element signature="e#159#172#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -513,9 +442,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/customer_info.db">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/Archive/personjob_learning_v5_p1.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-330">
@@ -550,13 +476,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/customer_class.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/testharness.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -574,12 +493,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/customer_info_model.py">
+    <entry file="file://$PROJECT_DIR$/tests/test_gradel03.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+        <state relative-caret-position="119">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
           <folding>
-            <element signature="e#293#307#0" expanded="true" />
+            <element signature="e#159#172#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -594,22 +513,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/basic_operations.py">
+    <entry file="file://$PROJECT_DIR$/src/test_gradel03.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="678">
-          <caret line="136" column="17" lean-forward="true" selection-start-line="136" selection-start-column="17" selection-end-line="136" selection-end-column="17" />
+        <state relative-caret-position="265">
+          <caret line="48" column="43" selection-start-line="48" selection-start-column="43" selection-end-line="48" selection-end-column="43" />
           <folding>
-            <element signature="e#373#383#0" expanded="true" />
+            <element signature="e#159#172#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test_gradel03.py">
+    <entry file="file://$PROJECT_DIR$/src/customer_class.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-476">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        <state relative-caret-position="136">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/customer_info.db">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/customer_info_model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
           <folding>
-            <element signature="e#159#172#0" expanded="true" />
+            <element signature="e#293#307#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/basic_operations.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/new_customer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="30" selection-start-line="1" selection-end-line="3" selection-end-column="30" />
+          <folding>
+            <element signature="e#1#11#0" expanded="true" />
           </folding>
         </state>
       </provider>

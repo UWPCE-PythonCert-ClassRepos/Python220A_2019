@@ -1,6 +1,7 @@
 from unittest import TestCase
-from src.basic_operations import *
+import basic_operations as bo
 from peewee import *
+from customer_model import *
 
 database = SqliteDatabase(':memory:')
 
@@ -21,7 +22,7 @@ class BasicOperationsTests(TestCase):
 
     def test_add_customer(self):
 
-        add_customer('C00001', 'Kevin', 'Cavanaugh', '123 Main St',
+        bo.add_customer('C00001', 'Kevin', 'Cavanaugh', '123 Main St',
                      '5551231234', 'email@gmail.com', 'Active', '750000')
 
         new_test_cust = ['C00001', 'Kevin', 'Cavanaugh', '123 Main St',
@@ -37,10 +38,10 @@ class BasicOperationsTests(TestCase):
         self.assertEqual(new_test_cust[7], Customer.credit_limit)
 
     def test_search_customer(self):
-        add_customer('C00001', 'Kevin', 'Cavanaugh', '123 Main St',
+        bo.add_customer('C00001', 'Kevin', 'Cavanaugh', '123 Main St',
                      '5551231234', 'email@gmail.com', 'Active', '750000')
 
-        search = search_customer('C00001')
+        search = bo.search_customer('C00001')
 
         test_search = {
             'first_name': 'Kevin',
@@ -52,21 +53,22 @@ class BasicOperationsTests(TestCase):
         self.assertDictEqual(test_search, search)
 
     def test_list_active_customers(self):
-        add_customer('C00001', 'Kevin', 'Cavanaugh', '123 Main St',
+        bo.add_customer('C00001', 'Kevin', 'Cavanaugh', '123 Main St',
                      '5551231234', 'email@gmail.com', 'Active', '750000')
 
-        self.assertEqual(1, list_active_customers())
+        self.assertEqual(1, bo.list_active_customers())
 
     def test_delete_customer(self):
-        add_customer('C00001', 'Kevin', 'Cavanaugh', '123 Main St',
+        bo.add_customer('C00001', 'Kevin', 'Cavanaugh', '123 Main St',
                      '5551231234', 'email@gmail.com', 'Active', '750000')
 
-        self.assertEqual(True, delete_customer('C00001'))
+        self.assertEqual(True, bo.delete_customer('C00001'))
 
     def test_update_customer(self):
-        add_customer('C00001', 'Kevin', 'Cavanaugh', '123 Main St',
+        bo.add_customer('C00001', 'Kevin', 'Cavanaugh', '123 Main St',
                      '5551231234', 'email@gmail.com', 'Active', '750000')
-        self.assertEqual(True, update_customer('C00001', 1500000))
+        self.assertEqual(True, bo.update_customer('C00001', 1500000))
+
 
 if __name__ == "__main__":
     unittest.main()

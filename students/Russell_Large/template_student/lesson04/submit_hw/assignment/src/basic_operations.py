@@ -111,11 +111,6 @@ def update_customer_credit(customer_id, credit_limit):
                  .execute())
             logger.info(f'Customer, {customer_id} credit limit updated to '
                         f'${credit_limit}')
-
-        if q == 0:
-            logger.info(f'Customer, {customer_id} '
-                        f'could not update ${credit_limit}')
-
         else:
             raise ValueError("NoCustomer")
 

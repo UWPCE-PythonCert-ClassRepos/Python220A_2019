@@ -87,7 +87,6 @@ def delete_customer(customer_id):
             query = (Customer.get(Customer.cust_id == customer_id))
             query.delete_instance()
             logger.info(f'Deleting {Customer.cust_id}')
-            return True
 
     except Exception as e:
         logger.info(f'Delete failed: {Customer.cust_id}')

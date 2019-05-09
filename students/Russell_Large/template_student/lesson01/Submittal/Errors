@@ -1,0 +1,6 @@
+electric_appliances_class.py - Class name "electrical_appliance" doesnt conform to '[A-Z_][a-zA-Z0-9]+$]'
+    pattern (invalid-name)
+
+main.py - Constant name "full_inventory" doesnt conform to '(([A-Z_][a-zA-Z0-9_]*):(_.*__))$'
+    pattern (invalid-name)
+

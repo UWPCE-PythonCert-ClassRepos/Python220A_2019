@@ -1,0 +1,78 @@
+Microsoft Windows [Version 6.1.7601]
+Copyright (c) 2009 Microsoft Corporation.  All rights reserved.
+
+C:\Users\rlarge>cd/
+
+C:\>cd \Python220\Lesson01\assignment
+
+C:\Python220\Lesson01\assignment>python -m coverage run --source=inventory_manag
+ement -m unittest test_unit.py
+Get price
+New inventory item added
+..Get price
+New inventory item added
+product_code:12
+description:test_description
+market_price:24
+rental_price:15
+brand:test_brand
+voltage:34kw
+.....Get price
+.
+----------------------------------------------------------------------
+Ran 8 tests in 0.016s
+
+OK
+
+C:\Python220\Lesson01\assignment>python -m coverage report
+Name                                                Stmts   Miss  Cover
+-----------------------------------------------------------------------
+inventory_management\electric_appliances_class.py      15      0   100%
+inventory_management\furniture_class.py                15      0   100%
+inventory_management\inventory_class.py                13      0   100%
+inventory_management\main.py                           51     19    63%
+inventory_management\market_prices.py                   3      0   100%
+-----------------------------------------------------------------------
+TOTAL                                                  97     19    80%
+
+C:\Python220\Lesson01\assignment>python -m coverage report
+Name                                                Stmts   Miss  Cover
+-----------------------------------------------------------------------
+inventory_management\electric_appliances_class.py      15      0   100%
+inventory_management\furniture_class.py                15      0   100%
+inventory_management\inventory_class.py                13      0   100%
+inventory_management\main.py                           51     19    63%
+inventory_management\market_prices.py                   3      0   100%
+-----------------------------------------------------------------------
+TOTAL                                                  97     19    80%
+
+C:\Python220\Lesson01\assignment>python -m coverage run --source=inventory_manag
+ement -m unittest test_integration.py
+Get price
+New inventory item added
+..Get price
+New inventory item added
+product_code:12
+description:test_description
+market_price:24
+rental_price:15
+brand:test_brand
+voltage:34kw
+..
+----------------------------------------------------------------------
+Ran 4 tests in 0.011s
+
+OK
+
+C:\Python220\Lesson01\assignment>python -m coverage report
+Name                                                Stmts   Miss  Cover
+-----------------------------------------------------------------------
+inventory_management\electric_appliances_class.py      15      0   100%
+inventory_management\furniture_class.py                15     11    27%
+inventory_management\inventory_class.py                13      6    54%
+inventory_management\main.py                           51     19    63%
+inventory_management\market_prices.py                   3      0   100%
+-----------------------------------------------------------------------
+TOTAL                                                  97     36    63%
+
+C:\Python220\Lesson01\assignment>

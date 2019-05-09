@@ -15,7 +15,7 @@ For example, app/data/data_interface.py should have a test file of test/unit/app
 """
 
 import pytest
-from src import basic_operations as b_ops
+from ..assignment.src import basic_operations as b_ops
 
 
 @pytest.fixture

@@ -8,10 +8,10 @@
 Defining the database information and applying logging messages"""
 
 import sys
-import logging
+import logging  # Refactored by importing only Customer from customer_class, which was importing *
 import peewee
 from customer_class import CustomerInformationClass
-from customer_info_model import *
+from customer_info_model import Customer, database  # refactored to only import Customer class
 from playhouse.shortcuts import model_to_dict
 
 logging.basicConfig(level=logging.INFO)
@@ -21,20 +21,18 @@ logger = logging.getLogger(__name__)
 def main_menu(user_prompt=None):
     """
     This method creates the menu for the program.
-    The intent is to offer (3) choices:
-    1: add a new customer, 2: modify the database, and 3: exit the program.
     """
     valid_prompts = {"1": create_new_customer,
                      "2": search_customer,
                      "3": delete_customer,
                      "4": update_customer_credit,
                      "5": list_active_customers,
-                     "q": exit_program}
+                     "q": exit_program,
+                     "t": method_to_call_testing}
     options = list(valid_prompts.keys())
 
     while user_prompt not in valid_prompts:
         options_str = ("{}" + ", {}" * (len(options)-1)).format(*options)
-        # look at the format string with the use of f and options at the end.
         print(f"Please choose from the following options ({options_str}):")
         print("1. Add a new Customer to the DataBase")
         print("2. Search the DataBase for a Customer")
@@ -47,6 +45,11 @@ def main_menu(user_prompt=None):
 
 
 def create_new_customer():
+    """
+    This method calls the Customer class to populate attribute information
+    for a new customer as a dictionary.
+    :return: returns dictionary to the class?
+    """
     new_customer = CustomerInformationClass(
         customer_id=input("Enter Customer ID: "),
         first_name=input("Enter Customers first name: "),
@@ -61,8 +64,13 @@ def create_new_customer():
     add_customer(customer_info)
 
 
-def add_customer(customer_dict):  # customer_id, name, lastname, home_address, phone_number, email_address, status, credit_limit):
-    """This function will add a new customer to the sqlite3 database."""
+def add_customer(customer_dict):
+    """
+    This method will add a customer to the database using the dictionary
+    created in the create_new_customer method.
+    :param customer_dict:
+    :return: returns to the main menu
+    """
     try:
         new_customer = Customer.create(
             customer_id=customer_dict['customer_id'],
@@ -82,13 +90,17 @@ def add_customer(customer_dict):  # customer_id, name, lastname, home_address, p
         logger.info(e)
         logger.info('See how the database protects our data')
 
-    main_menu()()
+    # main_menu()()
 
 
 def search_customer(customer_id=None):
-    """This function will return a dictionary object with name, lastname,
+    """
+    This function will return a dictionary object with name, last name,
     email address and phone number of a customer or an empty dictionary object
-    if no customer was found."""
+    if no customer was found.
+    :param customer_id:
+    :return: query dictionary
+    """
     if customer_id is None:
         customer_id = input("Enter Customer ID: ")
     else:
@@ -104,11 +116,15 @@ def search_customer(customer_id=None):
         logger.info("Can't find customer with id: %s.", customer_id)
         logger.info("Returning empty dict.")
     print(query_dict)
-    return query_dict
+    return query_dict # where does this return go to?
 
 
 def delete_customer(customer_id=None):
-    """This function will delete a customer from the sqlite3 database."""
+    """
+    This function will delete a customer from the sqlite3 database.
+    :param customer_id:
+    :return: None
+    """
     dbase = Customer
     if customer_id is None:
         customer_id = input("Enter Customer ID: ")
@@ -124,10 +140,15 @@ def delete_customer(customer_id=None):
         logger.info(e)
 
 
-def update_customer_credit(customer_id=None, new_credit=None):
-    """This function will search an existing customer by customer_id
+def update_customer_credit(new_credit=None, customer_id=None):
+    """
+    This function will search an existing customer by customer_id
     and update their credit limit or raise a ValueError exception
-    if the customer does not exist."""
+    if the customer does not exist.
+    :param customer_id:
+    :param new_credit:
+    :return:
+    """
     if customer_id is None and new_credit is None:
         customer_id = input("Enter Customer ID: ")
         new_credit = input("Enter new credit limit: ")
@@ -142,9 +163,9 @@ def update_customer_credit(customer_id=None, new_credit=None):
             .where(Customer.customer_id == customer_id)
             .execute()
         )
-    if update == 0:
-        logger.info("No customer was found for id %s", customer_id)
-        raise ValueError("NoCustomer")
+    # if update == 0:
+    #     logger.info("No customer was found for id %s", customer_id)
+    #     raise ValueError("NoCustomer")
     return update
 
 
@@ -159,6 +180,11 @@ def list_active_customers():
     except peewee.DoesNotExist:
         logger.info("No active customers found in DB")
     print(active_customers)
+
+
+def method_to_call_testing():
+    pass
+
 
 def exit_program():
     """This method exits the program"""

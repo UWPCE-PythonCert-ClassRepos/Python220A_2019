@@ -3,9 +3,9 @@
 
 from pymongo import MongoClient
 import csv
-from pymongo import errors
 
-class MongoDBConnection():
+
+class MongoDBConnection:
     """
     MongoDB connection to server
     """
@@ -28,7 +28,7 @@ class MongoDBConnection():
 
 
 def csv_to_list_of_dict(csv_file):
-    with open(csv_file) as file:
+    with open(csv_file, encoding='utf-8-sig') as file:
         reader = csv.reader(file)
         l = [row for row in reader]
         header = l[0]
@@ -73,12 +73,68 @@ def import_data(product_file, customer_file, rentals_file):
         return collections_inserted, collections_invalid
 
 
+def show_available_products():
+    mongo = MongoDBConnection()
+    with mongo:
+        db = mongo.connection.HP_NORTON_DB
+        products = db['Products']
+
+        available_products = {}
+        for document in products.find({'quantity_available': {'$ne': '0'}}):
+            available_products[document['product_id']] = {
+                'description': document['description'],
+                'product_type': document['product_type'],
+                'quantity_available': document['quantity_available']
+            }
+    return available_products
+
+
+def show_rentals(product_id, database):
+    mongo = MongoDBConnection()
+    with mongo:
+        db = mongo.connection[database]
+        rentals = db['Rentals']
+        customers = db['Customers']
+
+        rentals_available = {}
+        for product in rentals.find({'product_id': product_id}):
+            for customer in customers.find({'user_id': product['user_id']}):
+                rentals_available[product['user_id']] = {
+                    'name': customer['name'],
+                    'address': customer['address'],
+                    'phone_number': customer['phone_number'],
+                    'email': customer['email']
+                }
+
+    return rentals_available
+
+
+def drop_collections(*collection_names, database):
+    mongo = MongoDBConnection()
+    with mongo:
+        db = mongo.connection[database]
+        [db.drop_collection(collection) for collection in collection_names]
+
+
 def main():
 
     product_file = '../data/product.csv'
     rental_file = '../data/rental.csv'
     customers_file = '../data/customers.csv'
+    print('\n')
+    print("******* Products, Customers, Rentals Imported (Errors) *********")
     print(import_data(product_file, customers_file, rental_file))
+    print('\n')
+    print("******* AVAILABLE PRODUCTS *****")
+    print(show_available_products())
+    print('\n')
+    print("******* PRODUCT RENTALS BY PRODUCT ID **********")
+    print(show_rentals('prd005',
+                       database='HP_NORTON_DB'))
+
+    drop_collections('Products', 'Customers', 'Rentals',
+                     database='HP_NORTON_DB')
+
 
 if __name__ == '__main__':
     main()

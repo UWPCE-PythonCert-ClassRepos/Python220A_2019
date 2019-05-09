@@ -2,11 +2,11 @@
 database.py
 A compilation of methods to interact with a MongoDB DB
 """
-from src.mongodb import MongoDBConnection
-from pymongo.errors import BulkWriteError
+import os
 import logging
 import pandas as pd
-import os
+from pymongo.errors import BulkWriteError
+from src.mongodb import MongoDBConnection
 
 
 def init_logging():
@@ -20,7 +20,7 @@ def init_logging():
     formatter = logging.Formatter(log_format)
     file_handler = logging.FileHandler(log_file)
     file_handler.setFormatter(formatter)
-    file_handler.setLevel(logging.DEBUG)
+    file_handler.setLevel(logging.INFO)
     logger.addHandler(file_handler)
 
     return logger
@@ -47,80 +47,65 @@ def import_data(directory_name, product_file, customer_file, rentals_file):
     """
     with MONGO:
         try:
-            db = MONGO.connection.db
-            products_col, customers_col, rentals_col = (db['products'],
-                                                        db['customers'],
-                                                        db['rentals'])
+            database = MONGO.connection.db
+            products_col, customers_col, rentals_col = (database['products'],
+                                                        database['customers'],
+                                                        database['rentals'])
             csvs = [product_file, customer_file, rentals_file]
+            LOGGER.info('CSV files: %s', csvs)
             data_dir = os.listdir(os.path.abspath(directory_name))
             records = []
             errors = []
+            file_dict = {'product.csv': products_col,
+                         'customers.csv': customers_col,
+                         'rental.csv': rentals_col}
             for csv in csvs:
                 if csv in data_dir:
-                    if csv == product_file:
-                        try:
-                            LOGGER.info("CSV file is a {csv}")
-                            errors_count = 0
-                            csv_list = []
-                            csv_dict = pd.read_csv(
-                                os.path.abspath(
-                                    directory_name + '/' + csv)).to_dict(
-                                        orient='records')
-                            for row in csv_dict:
-                                id = row.pop('product_id')
-                                row['_id'] = id
-                                csv_list.append(row)
-                            result = db.products_col.insert_many(
-                                csv_list, ordered=True)
-                            records.append(len(result.inserted_ids))
-                            LOGGER.info("Total records from %s are: %s",
-                                        csv, len(result.inserted_ids))
-                        except BulkWriteError:
-                            errors_count += 1
-                        errors.append(errors_count)
-                    elif csv == customer_file:
-                        try:
-                            LOGGER.info("CSV file is a {csv}")
-                            errors_count = 0
-                            csv_list = []
-                            csv_dict = pd.read_csv(
-                                os.path.abspath(
-                                    directory_name + '/' + csv)).to_dict(
-                                        orient='records')
-                            for row in csv_dict:
-                                id = row.pop('user_id')
-                                row['_id'] = id
-                                csv_list.append(row)
-                            result = db.customers_col.insert_many(
-                                csv_list, ordered=True)
-                            records.append(len(result.inserted_ids))
-                            LOGGER.info("Total records from %s are: %s",
-                                        csv, len(result.inserted_ids))
-                        except BulkWriteError:
-                            errors_count += 1
-                        errors.append(errors_count)
-
-                    elif csv == rentals_file:
-                        try:
-                            LOGGER.info("CSV file is a {csv}")
-                            errors_count = 0
-                            csv_list = []
-                            csv_dict = pd.read_csv(
-                                os.path.abspath(
-                                    directory_name + '/' + csv)).to_dict(
-                                        orient='records')
-                            result = db.rentals_col.insert_many(
-                                csv_dict, ordered=True)
-                            records.append(len(result.inserted_ids))
-                            LOGGER.info("Total records from %s are: %s",
-                                        csv, len(result.inserted_ids))
-                        except BulkWriteError:
-                            errors_count += 1
-                        errors.append(errors_count)
+                    collection = file_dict[csv]
+                    try:
+                        LOGGER.info("CSV file is a {csv}")
+                        errors_count = 0
+                        csv_list = csv_to_list_dict(directory_name, csv)
+                        result = collection.insert_many(
+                            csv_list, ordered=True)
+                        records.append(len(result.inserted_ids))
+                        LOGGER.info("Total records from %s are: %s",
+                                    csv, len(result.inserted_ids))
+                    except BulkWriteError as error:
+                        LOGGER.error("Bulk write issue: %s", error.details)
+                        print(error.details)
+                        errors_count += 1
+                    errors.append(errors_count)
         except Exception as error:
             LOGGER.error("Error: %s", error)
         finally:
             return tuple(records), tuple(errors)
+
+
+def csv_to_list_dict(directory_name, csv):
+    """csv_to_list_dict(directory_name, csv)
+
+    Given a directory and a csv file, read the CSV and convert it to
+    a dict and add it into the returned list.
+
+    :param directory_name str: Name of the dir where your CSV files are located
+    :param csv str: Name of the CSV file
+
+    :return list containing a dict values of the CSV data
+    :rtype list
+    """
+    LOGGER.info("CSV file is a {csv}")
+    csv_list = []
+    csv_dict = pd.read_csv(
+        os.path.abspath(
+            directory_name + '/' + csv)).to_dict(
+                orient='records')
+    for row in csv_dict:
+        if csv != "rental.csv":
+            db_id = row.pop(list(row.keys())[0])
+            row['_id'] = db_id
+        csv_list.append(row)
+    return csv_list
 
 
 def show_available_products():
@@ -134,10 +119,10 @@ def show_available_products():
     """
     try:
         with MONGO:
-            db = MONGO.connection.db
+            database = MONGO.connection.db
             avail_product = {}
-            result = db.products_col.find(
-                {"quantity_available":{'$gt': 0}},
+            result = database.products.find(
+                {"quantity_available": {'$gt': 0}},
                 {"description": 1, "product_type": 1,
                  "quantity_available": 1, "_id": 1})
             for row in result:
@@ -147,6 +132,7 @@ def show_available_products():
         return avail_product
     except Exception as error:
         LOGGER.error("Error: %s", error)
+
 
 def show_rentals(product_id):
     """show_rentals(product_id)
@@ -165,24 +151,26 @@ def show_rentals(product_id):
     """
     try:
         with MONGO:
-            db = MONGO.connection.db
+            database = MONGO.connection.db
             customers = {}
-            result = db.get_collection("rentals_col").aggregate(
-                [{"$lookup": {"from": "customers_col",
+            result = database.get_collection("rentals").aggregate(
+                [{"$lookup": {"from": "customers",
                               "localField": "user_id",
                               "foreignField": "_id",
-                              "as": "rentals"}},
+                              "as": "rental"}},
                  {"$match": {"product_id": product_id}}])
             count = 0
             for row in result:
                 count += 1
-                id = f"C00{count}"
-                row.pop('_id'), row.pop('product_id')
-                customers[id] = row
+                db_id = f"C00{count}"
+                row.pop('_id')
+                row.pop('product_id')
+                customers[db_id] = row
         LOGGER.info("Customers w/ Rentals: %s", customers)
         return customers
     except Exception as error:
         LOGGER.error("Error: %s", error)
+
 
 def drop_cols(*args):
     """drop_cols(*args)
@@ -194,6 +182,6 @@ def drop_cols(*args):
     :rtype None
     """
     with MONGO:
-        db = MONGO.connection.db
+        database = MONGO.connection.db
         for col in args:
-            db.drop_collection(col)
+            database.drop_collection(col)

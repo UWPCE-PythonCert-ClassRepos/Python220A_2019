@@ -1,0 +1,36 @@
+import pytest
+import sys
+import os
+sys.path.append(r'C:\Python220\lesson05\homework\src')
+import database as l
+db_folder = os.getcwd()
+loc = str(db_folder[:-6] + '\data')
+product = f'{loc}\product.csv'
+customer = f'{loc}\customers.csv'
+rental = f'{loc}\\rental.csv'
+
+
+def test_import():
+    results, errors = l.import_data('data', product, customer, rental)
+
+    assert results is not None
+    assert errors is ()
+
+def test_show_available_products():
+
+    results, test = l.show_available_products()
+
+    keys = ('ï»¿product_id', 'prd001', 'prd003', 'prd004',
+             'prd005', 'prd006', 'prd008', 'prd010')
+
+    assert test == keys
+
+def test_show_rentals():
+
+    id = 'prd001'
+
+    t = "dict_keys(['Rentals'])"
+
+    results, test = l.show_rentals(id)
+
+    assert test == t

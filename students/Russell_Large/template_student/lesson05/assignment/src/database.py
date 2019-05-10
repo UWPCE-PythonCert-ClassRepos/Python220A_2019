@@ -159,6 +159,12 @@ def import_data(dir, products, customers, rentals):
         return tuple(all_results), tuple(errors)
 
 def show_available_products():
+    '''
+    Query function returns all Product collection data that has a 
+    'quantity_available' greater than 0. Also returns a 'test'
+    variable that helps with testing. 
+    :return: 
+    '''
     mongo = MongoDBConnection()
 
     with mongo:
@@ -178,6 +184,12 @@ def show_available_products():
         return results_dict, test
 
 def show_rentals(product_id):
+    '''
+    Query function that matches rentals collection data with customer collection
+    data from the rentals collection. query will return data that matches. 
+    :param product_id: 
+    :return: 
+    '''
     mongo = MongoDBConnection()
     results = {}
 

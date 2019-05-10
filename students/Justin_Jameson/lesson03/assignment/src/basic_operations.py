@@ -10,6 +10,7 @@ Defining the database information and applying logging messages"""
 import sys
 import logging  # Refactored by importing only Customer from customer_class, which was importing *
 import peewee
+import time
 from customer_class import CustomerInformationClass
 from customer_info_model import Customer, database  # refactored to only import Customer class
 from playhouse.shortcuts import model_to_dict
@@ -101,10 +102,15 @@ def search_customer(customer_id=None):
     :param customer_id:
     :return: query dictionary
     """
-    if customer_id is None:
+    logger.info("starting try block")
+    try:
+        if customer_id is not None:
+            raise TypeError
         customer_id = input("Enter Customer ID: ")
-    else:
+
+    except TypeError:
         customer_id = customer_id
+
     query_dict = {}
     try:
         query = (
@@ -116,7 +122,7 @@ def search_customer(customer_id=None):
         logger.info("Can't find customer with id: %s.", customer_id)
         logger.info("Returning empty dict.")
     print(query_dict)
-    return query_dict # where does this return go to?
+    return query_dict  # where does this return go to?
 
 
 def delete_customer(customer_id=None):
@@ -126,9 +132,12 @@ def delete_customer(customer_id=None):
     :return: None
     """
     dbase = Customer
-    if customer_id is None:
+    try:
+        if customer_id is not None:
+            raise TypeError
         customer_id = input("Enter Customer ID: ")
-    else:
+
+    except TypeError:
         customer_id = customer_id
     try:
         remove_customer = dbase.get(dbase.customer_id == customer_id)
@@ -149,10 +158,13 @@ def update_customer_credit(new_credit=None, customer_id=None):
     :param new_credit:
     :return:
     """
-    if customer_id is None and new_credit is None:
+    try:
+        if customer_id is not None and new_credit is not None:
+            raise TypeError
         customer_id = input("Enter Customer ID: ")
         new_credit = input("Enter new credit limit: ")
-    else:
+
+    except TypeError:
         customer_id = customer_id
         new_credit = new_credit
 
@@ -179,11 +191,7 @@ def list_active_customers():
             .where(Customer.customer_status == "A").count())
     except peewee.DoesNotExist:
         logger.info("No active customers found in DB")
-    print(active_customers)
-
-
-def method_to_call_testing():
-    pass
+    return active_customers
 
 
 def exit_program():
@@ -193,6 +201,10 @@ def exit_program():
 
 
 if __name__ == '__main__':
+
     while True:
+        beginning_time = time.time()
         main_menu()()
+        elapsed_time = time.time() - beginning_time
+        logger.info(elapsed_time)
         input("Press Enter to continue...........")

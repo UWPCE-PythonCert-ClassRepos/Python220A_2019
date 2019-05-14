@@ -1,0 +1,83 @@
+2019-04-29 00:29:29,676 test_gradel03.py:68  INFO Delete rows
+2019-04-29 00:29:29,678 basic_operations.py:183 INFO Clear all data in Customer table.
+2019-04-29 00:29:29,681 basic_operations.py:66  INFO Database add successful
+2019-04-29 00:29:29,683 basic_operations.py:66  INFO Database add successful
+2019-04-29 00:29:29,684 basic_operations.py:66  INFO Database add successful
+2019-04-29 00:29:29,686 basic_operations.py:66  INFO Database add successful
+2019-04-29 00:29:29,687 basic_operations.py:66  INFO Database add successful
+2019-04-29 00:29:29,689 basic_operations.py:66  INFO Database add successful
+2019-04-29 00:29:29,691 basic_operations.py:119 INFO Deleted customer: 598.
+2019-04-29 00:29:29,693 basic_operations.py:119 INFO Deleted customer: 597.
+2019-04-29 00:29:29,695 basic_operations.py:119 INFO Deleted customer: 596.
+2019-04-29 00:29:29,697 basic_operations.py:119 INFO Deleted customer: 595.
+2019-04-29 00:29:29,700 basic_operations.py:119 INFO Deleted customer: 594.
+2019-04-29 00:29:29,702 basic_operations.py:119 INFO Deleted customer: 593.
+2019-04-29 00:29:29,706 basic_operations.py:66  INFO Database add successful
+2019-04-29 00:29:29,708 basic_operations.py:66  INFO Database add successful
+2019-04-29 00:29:29,710 basic_operations.py:68  ERROR Unique constraint failed on 123
+2019-04-29 00:29:29,711 basic_operations.py:66  INFO Database add successful
+2019-04-29 00:29:29,714 basic_operations.py:66  INFO Database add successful
+2019-04-29 00:29:29,715 basic_operations.py:66  INFO Database add successful
+2019-04-29 00:29:29,717 basic_operations.py:66  INFO Database add successful
+2019-04-29 00:29:29,720 basic_operations.py:119 INFO Deleted customer: 123.
+2019-04-29 00:29:29,721 basic_operations.py:119 INFO Deleted customer: 456.
+2019-04-29 00:29:29,723 basic_operations.py:123 WARNING Can't find customer with id to delete: 123.
+2019-04-29 00:29:29,724 basic_operations.py:119 INFO Deleted customer: 789.
+2019-04-29 00:29:29,726 basic_operations.py:119 INFO Deleted customer: 345.
+2019-04-29 00:29:29,728 basic_operations.py:119 INFO Deleted customer: 0123.
+2019-04-29 00:29:29,729 basic_operations.py:119 INFO Deleted customer: 777.
+2019-04-29 00:29:29,734 basic_operations.py:66  INFO Database add successful
+2019-04-29 00:29:29,736 basic_operations.py:66  INFO Database add successful
+2019-04-29 00:29:29,738 basic_operations.py:66  INFO Database add successful
+2019-04-29 00:29:29,739 basic_operations.py:91  WARNING Can't find customer with id: 1000.
+2019-04-29 00:29:29,739 basic_operations.py:92  INFO Returning empty dict.
+2019-04-29 00:29:29,741 basic_operations.py:119 INFO Deleted customer: 998.
+2019-04-29 00:29:29,743 basic_operations.py:119 INFO Deleted customer: 997.
+2019-04-29 00:29:29,745 basic_operations.py:119 INFO Deleted customer: 999.
+2019-04-29 00:29:29,748 basic_operations.py:66  INFO Database add successful
+2019-04-29 00:29:29,750 basic_operations.py:119 INFO Deleted customer: 898.
+2019-04-29 00:29:29,751 basic_operations.py:91  WARNING Can't find customer with id: 898.
+2019-04-29 00:29:29,751 basic_operations.py:92  INFO Returning empty dict.
+2019-04-29 00:29:29,752 basic_operations.py:66  INFO Database add successful
+2019-04-29 00:29:29,754 basic_operations.py:119 INFO Deleted customer: 897.
+2019-04-29 00:29:29,756 basic_operations.py:91  WARNING Can't find customer with id: 897.
+2019-04-29 00:29:29,756 basic_operations.py:92  INFO Returning empty dict.
+2019-04-29 00:29:29,758 basic_operations.py:66  INFO Database add successful
+2019-04-29 00:29:29,760 basic_operations.py:66  INFO Database add successful
+2019-04-29 00:29:29,761 basic_operations.py:66  INFO Database add successful
+2019-04-29 00:29:29,764 basic_operations.py:169 INFO Update was successful for customer: 798
+2019-04-29 00:29:29,766 basic_operations.py:169 INFO Update was successful for customer: 797
+2019-04-29 00:29:29,768 basic_operations.py:169 INFO Update was successful for customer: 797
+2019-04-29 00:29:29,770 basic_operations.py:169 INFO Update was successful for customer: 796
+2019-04-29 00:29:29,770 basic_operations.py:167 ERROR No customer was found for id 00100
+2019-04-29 00:29:29,779 basic_operations.py:197 INFO Successfully opened file <codecs.StreamReaderWriter object at 0x1080d3208>
+2019-04-29 00:29:29,779 basic_operations.py:204 INFO Next value in iteration: C000000,Rickey,Shanahan,337 Eichmann Locks,1-615-598-8649 x975,Jessy@myra.net,Active,237
+
+2019-04-29 00:29:29,780 basic_operations.py:66  INFO Database add successful
+2019-04-29 00:29:29,781 basic_operations.py:204 INFO Next value in iteration: C000001,Shea,Boehm,3343 Sallie Gateway,508.104.0644 x4976,Alexander.Weber@monroe.com,Inactive,461
+
+2019-04-29 00:29:29,781 basic_operations.py:66  INFO Database add successful
+2019-04-29 00:29:29,782 basic_operations.py:204 INFO Next value in iteration: C000002,Blanca,Bashirian,0193 Malvina Lake,(240)014-9496 x08349,Joana_Nienow@guy.org,Active,689
+
+2019-04-29 00:29:29,783 basic_operations.py:66  INFO Database add successful
+2019-04-29 00:29:29,784 basic_operations.py:204 INFO Next value in iteration: C000003,Elfrieda,Skiles,3180 Mose Row,(839)825-0058,Mylene_Smitham@hannah.co.uk,Active,90
+
+2019-04-29 00:29:29,785 basic_operations.py:66  INFO Database add successful
+2019-04-29 00:29:29,785 basic_operations.py:204 INFO Next value in iteration: C000004,Mittie,Turner,996 Lorenza Points,1-324-023-8861 x025,Clair_Bergstrom@rylan.io,Active,565
+
+2019-04-29 00:29:29,786 basic_operations.py:66  INFO Database add successful
+2019-04-29 00:29:29,787 basic_operations.py:204 INFO Next value in iteration: C000005,Nicole,Wisozk,0170 Kuphal Knoll,(731)775-3683 x45318,Hudson.Witting@mia.us,Active,244
+
+2019-04-29 00:29:29,788 basic_operations.py:66  INFO Database add successful
+2019-04-29 00:29:29,789 basic_operations.py:204 INFO Next value in iteration: C000006,Danika,Bechtelar,5067 Goyette Place,503-011-7566 x19729,Wyatt.Hodkiewicz@wyatt.net,Active,663
+
+2019-04-29 00:29:29,790 basic_operations.py:66  INFO Database add successful
+2019-04-29 00:29:29,791 basic_operations.py:204 INFO Next value in iteration: C000007,Elbert,Abbott,36531 Bergstrom Circle,(223)402-1096,Isabelle_Rogahn@isac.biz,Active,480
+
+2019-04-29 00:29:29,792 basic_operations.py:66  INFO Database add successful
+2019-04-29 00:29:29,792 basic_operations.py:204 INFO Next value in iteration: C000008,Faye,Gusikowski,329 Maye Wall,201.358.6143,Lelia_Wunsch@maximo.biz,Active,222
+
+2019-04-29 00:29:29,793 basic_operations.py:66  INFO Database add successful
+2019-04-29 00:29:29,794 basic_operations.py:204 INFO Next value in iteration: C000009,Nikko,Homenick,5348 Harann Haven,1-291-283-6287 x42360,Hans@camren.tv,Active,254
+
+2019-04-29 00:29:29,795 basic_operations.py:66  INFO Database add successful

@@ -1,0 +1,13 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.7.2, pytest-4.3.0, py-1.7.0, pluggy-0.8.1 -- /usr/local/opt/python/bin/python3.7
+cachedir: .pytest_cache
+rootdir: /Users/adevey/class/Python220A_2019/students/aaron/lesson04/assignment, inifile:
+collecting ... collected 5 items
+
+tests/test_gradel04.py::test_list_active_customers PASSED                [ 20%]
+tests/test_gradel04.py::test_add_customer PASSED                         [ 40%]
+tests/test_gradel04.py::test_search_customer PASSED                      [ 60%]
+tests/test_gradel04.py::test_delete_customer PASSED                      [ 80%]
+tests/test_gradel04.py::test_update_customer_credit PASSED               [100%]
+
+=========================== 5 passed in 0.07 seconds ===========================

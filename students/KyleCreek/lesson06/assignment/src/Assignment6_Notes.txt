@@ -1,0 +1,43 @@
+Homework 6 Profiler Notes:
+
+- Version 0 Notes:
+	- CSV Read 1 Elapsed Time: 2.912 Seconds
+	- Year Sort Elapsed Time: .5137 Seconds
+	- "AO" Search Elapsed Time: 2.775 Seconds
+	- Total Elapsed Time: 6.177 Seconds
+
+- Version 1 Notes:
+	- Changes:
+		- Combined "with open statements to remove redundant
+		  statements while file is open
+	
+	- Results:
+	- "AO" Search Elapsed Time:  3.02 Seconds
+	- Year Sort Elapsed Time:  .496 Seconds
+	- Total Elapsed Time:  3.525 Seconds
+	
+	- Total Time Saved: (-) 2.652 Seconds
+
+- Version 2 Notes:
+	- Changes:
+		- Changed Year Count into function
+	
+	- Results:
+	- "AO" Search Elapsed Time:  3.478698 Seconds
+	- Year Sort Elapsed Time:  .546 Seconds
+	- Total Elapsed Time:  4.025237 Seconds
+	
+	- Total Time Saved (Rev 0): (-) 2.15 Seconds
+	- Total Time Saved (Rev 1): (+) 0.50 Seconds
+	
+- Version 3 Notes:
+	- Changes:
+		- Changed Year Count into function
+	
+	- Results:
+	- "AO" Search Elapsed Time:  3.478698 Seconds
+	- Year Sort Elapsed Time:  .546 Seconds
+	- Total Elapsed Time:  4.025237 Seconds
+	
+	- Total Time Saved (Rev 0): (-) 2.15 Seconds
+	- Total Time Saved (Rev 1): (+) 0.50 Seconds

@@ -1,7 +1,6 @@
 import string
 import random
 import time
-import csv
 import sys
 import pandas as pd
 import numpy as np

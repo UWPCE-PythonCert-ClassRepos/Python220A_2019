@@ -3,11 +3,34 @@ poorly performing, poorly written module
 
 """
 
-import datetime
+import time
 import csv
+import sys
+import cProfile
 
+sys.path.append(r'N:\Python220\lesson06\Lesson06\assignment\data')
+
+
+listtest = []
+def do_cprofile(func):
+
+    def profiled_func(*args, **kwargs):
+        profile = cProfile.Profile()
+        try:
+            profile.enable()
+            result = func(*args, **kwargs)
+            profile.disable()
+            return result
+        finally:
+            print('poor_perf.py profile:')
+            profile.print_stats()
+            listtest.append(profile.print_stats())
+
+    return profiled_func
+
+@do_cprofile
 def analyze(filename):
-    start = datetime.datetime.now()
+    beginning_time = time.time()
     with open(filename) as csvfile:
         reader = csv.reader(csvfile, delimiter=',', quotechar='"')
         new_ones = []
@@ -26,6 +49,7 @@ def analyze(filename):
         }
 
         for new in new_ones:
+            # print(new[0][5:])
             if new[0][6:] == '2013':
                 year_count["2013"] += 1
             if new[0][6:] == '2014':
@@ -39,7 +63,7 @@ def analyze(filename):
             if new[0][6:] == '2018':
                 year_count["2017"] += 1
 
-        print(year_count)
+        # print(year_count)
 
     with open(filename) as csvfile:
         reader = csv.reader(csvfile, delimiter=',', quotechar='"')
@@ -51,13 +75,16 @@ def analyze(filename):
             if "ao" in line[6]:
                 found += 1
 
-        print(f"'ao' was found {found} times")
-        end = datetime.datetime.now()
+        # print(f"'ao' was found {found} times")
 
-    return (start, end, year_count, found)
+        elapsed_time = time.time() - beginning_time
+
+        # print(elapsed_time)
+
+    return (elapsed_time, year_count, found)
 
 def main():
-    filename = "data/exercise.csv"
+    filename = r"N:\Python220\lesson06\Lesson06\assignment\data\test.csv"
     analyze(filename)
 
 

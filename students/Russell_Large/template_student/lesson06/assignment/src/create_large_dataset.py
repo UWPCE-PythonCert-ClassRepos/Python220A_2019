@@ -70,19 +70,3 @@ elapsed_time = time.time() - beginning_time
 
 df = pd.DataFrame(tot_list2)
 df.to_csv(newcsv, index=False)
-
-# def create_dataset():
-#     tot_list2 = []
-#     count = 1
-#     for i in map(np.array, range(1, 1000000)):
-#         # seq, guid, seq, seq, ccnumber, date, sentence
-#
-#         generated_data = count, guid_full_gen(), count, count, ccnum_gen(), get_random_date(), sentence()
-#         count += 1
-#         tot_list2.append(generated_data)
-#     elapsed_time = time.time() - beginning_time
-#
-#     df = pd.DataFrame(tot_list2)
-#     df.to_csv(newcsv, index=False)
-#
-#     return

@@ -1,16 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Mon Apr 29 21:42:48 2019
-
-@author (comments): David Pokrajac
-"""
-
-""""
-must use 127.0.0.1 on windows
-pip install pymongo
-
-"""
 from pymongo import MongoClient
 
 
@@ -39,7 +26,7 @@ def print_mdb_collection(collection_name):
 def main():
     mongo = MongoDBConnection()
 
-    with mongo: #Context manager.
+    with mongo:  # Context manager.
         # mongodb database; it all starts here
         db = mongo.connection.media #We are connecting to a database named "media". 
 

@@ -21,16 +21,16 @@ def login_mongodb_cloud():
     """
 
     log.info('Here is where we use the connect to mongodb.')
-    log.info('Note use of f string to embed the user & password (from the tuple).')
+    log.info('Note use of customer string to embed the user & password (from the tuple).')
     try:
         config.read(config_file)
         user = config["mongodb_cloud"]["user"]
         pw = config["mongodb_cloud"]["pw"]
 
     except Exception as e:
-        print(f'error: {e}')
+        print(customer'error: {e}')
 
-    client = pymongo.MongoClient(f'mongodb://{user}:{pw}'
+    client = pymongo.MongoClient(customer'mongodb://{user}:{pw}'
                                  '@cluster0-shard-00-00-wphqo.mongodb.net:27017,'
                                  'cluster0-shard-00-01-wphqo.mongodb.net:27017,'
                                  'cluster0-shard-00-02-wphqo.mongodb.net:27017/test'
@@ -51,7 +51,7 @@ def login_redis_cloud():
 
 
     except Exception as e:
-        print(f'error: {e}')
+        print(customer'error: {e}')
 
     log.info('Here is where we use the connect to redis.')
 
@@ -59,7 +59,7 @@ def login_redis_cloud():
         r = redis.StrictRedis(host=host, port=port, password=pw, decode_responses=True)
 
     except Exception as e:
-        print(f'error: {e}')
+        print(customer'error: {e}')
 
     return r
 

@@ -1,0 +1,35 @@
+poor_perf.py profile:
+         1077922 function calls in 18.537 seconds
+
+   Ordered by: standard name
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        2    0.000    0.000    0.000    0.000 _bootlocale.py:11(getpreferredencoding)
+        2    0.000    0.000    0.000    0.000 codecs.py:259(__init__)
+    38954    0.016    0.000    0.516    0.000 cp1252.py:22(decode)
+        1   17.931   17.931   18.537   18.537 poor_perf.py:31(analyze)
+    38954    0.500    0.000    0.500    0.000 {built-in method _codecs.charmap_decode}
+        2    0.000    0.000    0.000    0.000 {built-in method _csv.reader}
+        2    0.000    0.000    0.000    0.000 {built-in method _locale._getdefaultlocale}
+        2    0.010    0.005    0.010    0.005 {built-in method io.open}
+        2    0.000    0.000    0.000    0.000 {built-in method time.time}
+  1000000    0.080    0.000    0.080    0.000 {method 'append' of 'list' objects}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+         1077922 function calls in 18.537 seconds
+
+   Ordered by: standard name
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        2    0.000    0.000    0.000    0.000 _bootlocale.py:11(getpreferredencoding)
+        2    0.000    0.000    0.000    0.000 codecs.py:259(__init__)
+    38954    0.016    0.000    0.516    0.000 cp1252.py:22(decode)
+        1   17.931   17.931   18.537   18.537 poor_perf.py:31(analyze)
+    38954    0.500    0.000    0.500    0.000 {built-in method _codecs.charmap_decode}
+        2    0.000    0.000    0.000    0.000 {built-in method _csv.reader}
+        2    0.000    0.000    0.000    0.000 {built-in method _locale._getdefaultlocale}
+        2    0.010    0.005    0.010    0.005 {built-in method io.open}
+        2    0.000    0.000    0.000    0.000 {built-in method time.time}
+  1000000    0.080    0.000    0.080    0.000 {method 'append' of 'list' objects}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}

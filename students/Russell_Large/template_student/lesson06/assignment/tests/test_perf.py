@@ -27,9 +27,6 @@ def test_assess_preformance():
     assert poor[2] == good[2] == new[2]
     assert good[1] == new[1]
 
-    # assert new_elapsed < good_elapsed
-    # assert poor[3] == good[3]
-
 # poor: 18.53240704536438
 # good: 3.6633636951446533
 # new: 4.28194785118103

@@ -1,0 +1,110 @@
+From Kyle Creek to Everyone:  06:02 PM
+I am ready whenever
+From danielcastro to Everyone:  06:02 PM
+yes ready
+From PYTHON Host to Everyone:  06:04 PM
+Any volunteer to answer the question :)
+From Sam Chang to Everyone:  06:18 PM
+not yet
+From Me to Everyone:  06:18 PM
+yes
+From Kyle Creek to Everyone:  06:18 PM
+I tried to install the software. Not sure if it works
+From Aaron Devey to Everyone:  06:19 PM
+haven't tried yet
+From Kyle Creek to Everyone:  06:20 PM
+I had to go to the mongo website to install Mongo
+From danielcastro to Everyone:  06:20 PM
+theres a test file you can run to make sure everything was installed
+From Aaron Devey to Everyone:  06:20 PM
+brew is for mac
+https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/  <--- windows instructions
+From Kyle Creek to Everyone:  06:21 PM
+I have a question about Mongo, or maybe API's in general. From what I"ve gathered Mongo is an API. I always had the understand that you query APIs for data and they return it. IN the samples provided it seems like you build the data and store it in a MongoDB? 
+From Me to Everyone:  06:21 PM
+Thanks Aaron!
+From Kyle Creek to Everyone:  06:25 PM
+Yeah that makes sense
+From PYTHON Host to Everyone:  06:26 PM
+Does anyone have a Windows computer?
+From Kyle Creek to Everyone:  06:26 PM
+I have a windows computer
+From PYTHON Host to Everyone:  06:27 PM
+My understanding is that you were able to install Mongo, Kyle…
+From Kyle Creek to Everyone:  06:27 PM
+I believe so
+From PYTHON Host to Everyone:  06:27 PM
+:)
+From Kyle Creek to Everyone:  06:27 PM
+I ran the file given in the "activity" foler and it worked
+From danielcastro to Everyone:  06:29 PM
+You can run this script to test it
+https://canvas.uw.edu/courses/1260484/files/56075781?module_item_id=9450736
+Yes we can see it
+From Kyle Creek to Everyone:  06:32 PM
+what is the significance of host and port? is that like an IP addres?
+From Kyle Creek to Everyone:  06:42 PM
+Its gets confusing
+From PYTHON Host to Everyone:  06:42 PM
+Yes.
+And what else?
+From danielcastro to Everyone:  06:42 PM
+The length of all of them might not match?
+From Kyle Creek to Everyone:  06:42 PM
+Uses a lot of memory?
+From Lola Guerrero to Everyone:  06:42 PM
+it might never finish
+From Aaron Devey to Everyone:  06:42 PM
+big O gets really out of hand
+From PYTHON Host to Everyone:  06:43 PM
+Or at least not within reasonable time...
+Say we need to browse through 1,000,000 records in one for loop, 1,000 in the second, 1,000 in the thitd,
+From Aaron Devey to Everyone:  06:43 PM
+exponential loops
+From PYTHON Host to Everyone:  06:45 PM
+And 1,000 in the fourth for loop.
+The number of records retrieved does grow exponentially with number of fors.
+Indexes
+From Kyle Creek to Everyone:  06:47 PM
+is there similiar documentation for mongo
+like there is for the database stuff we used last week?
+From Aaron Devey to Everyone:  06:50 PM
+there should be some docs for pymongo
+http://api.mongodb.com/python/current/tutorial.html
+From Kyle Creek to Everyone:  06:51 PM
+I think I might have misunderstood the structure. So if you would be so kind please correct me if I'm wrong. MongoDB is just the location that houses the data. The code that is written utilizes the Pymongo module to obtain and manipulate that housed data
+From Aaron Devey to Everyone:  06:52 PM
+MongoDB is actually a server or daemon
+From PYTHON Host to Everyone:  06:52 PM
+I think you are both right.
+From Kyle Creek to Everyone:  06:53 PM
+what is a daemon
+I don't have much of a CS background so I'm trying to wrap my head around some of these conceptfs
+From Aaron Devey to Everyone:  06:53 PM
+there are other kinds of servers or daemons that you might already be familiar with, such as web servers
+From PYTHON Host to Everyone:  06:53 PM
+The point is: in real World, you would not connect to a local application, you would connect to a server, with a specified IP address. Through Python, you’d be able to insert and manipulate (query, delete, update) data.
+From Aaron Devey to Everyone:  06:54 PM
+when you go to a website for example, you're connecting to a web server
+daemon is just another word for a server
+From PYTHON Host to Everyone:  06:54 PM
+The beauty of data base approach: while you are connecting to it, it I can also connect, and this is precisely when you are on FB. When you type a status, it goes to a FB database, when I am commenting on your status, it goes there, too, but from my client (browser).
+From Kyle Creek to Everyone:  06:54 PM
+got it. Thank you. 
+From PYTHON Host to Everyone:  06:57 PM
+Deamon is an application running on a server; server is typically a machine, deamon is a software.
+Do you see my screen with (pdb) prompt?
+From Kyle Creek to Everyone:  07:00 PM
+yes
+where do you define the initial databse media 
+or does calling it initialize it
+From Kyle Creek to Everyone:  07:22 PM
+why do you have to assign the insert function to the "result" variable
+From Kyle Creek to Everyone:  07:41 PM
+I'm ready whenever
+From rlarge to Everyone:  07:41 PM
+ready
+From Lola Guerrero to Everyone:  07:41 PM
+mee too
+From Sam Chang to Everyone:  07:41 PM
+ready to go

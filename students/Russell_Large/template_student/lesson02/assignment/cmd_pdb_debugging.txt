@@ -1,0 +1,902 @@
+(Pdb) n
+> c:\python220\lecture02\assignment\src\charges_calc.py(25)<module>()
+-> def calculate_additional_fields(data):
+(Pdb) n
+> c:\python220\lecture02\assignment\src\charges_calc.py(39)<module>()
+-> def save_to_json(filename, data):
+(Pdb) n
+> c:\python220\lecture02\assignment\src\charges_calc.py(43)<module>()
+-> if __name__ == "__main__":
+(Pdb) n
+> c:\python220\lecture02\assignment\src\charges_calc.py(44)<module>()
+-> args = parse_cmd_arguments()
+(Pdb) n
+> c:\python220\lecture02\assignment\src\charges_calc.py(45)<module>()
+-> data = load_rentals_file(args.input)
+(Pdb) s
+--Call--
+> c:\python220\lecture02\assignment\src\charges_calc.py(17)load_rentals_file()
+-> def load_rentals_file(filename):
+(Pdb) n
+> c:\python220\lecture02\assignment\src\charges_calc.py(18)load_rentals_file()
+-> with open(filename) as file:
+(Pdb) n
+> c:\python220\lecture02\assignment\src\charges_calc.py(19)load_rentals_file()
+-> try:
+(Pdb) n
+> c:\python220\lecture02\assignment\src\charges_calc.py(20)load_rentals_file()
+-> data = json.load(file)
+(Pdb) n
+> c:\python220\lecture02\assignment\src\charges_calc.py(23)load_rentals_file()
+-> return data
+(Pdb) pp data
+{'RNT001': {'price_per_day': 31,
+            'product_code': 'PRD80',
+            'rental_end': '3/22/17',
+            'rental_start': '6/12/17',
+            'units_rented': 8}}
+(Pdb) n
+--Return--
+> c:\python220\lecture02\assignment\src\charges_calc.py(23)load_rentals_file()->
+{'RNT001': {'price_per_day': 31, 'product_code': 'PRD80', 'rental_end': '3/22/17
+', 'rental_start': '6/12/17', ...}}
+-> return data
+(Pdb) n
+> c:\python220\lecture02\assignment\src\charges_calc.py(46)<module>()
+-> data = calculate_additional_fields(data)
+(Pdb) s
+--Call--
+> c:\python220\lecture02\assignment\src\charges_calc.py(25)calculate_additional_
+fields()
+-> def calculate_additional_fields(data):
+(Pdb) n
+> c:\python220\lecture02\assignment\src\charges_calc.py(26)calculate_additional_
+fields()
+-> for value in data.values():
+(Pdb) n
+> c:\python220\lecture02\assignment\src\charges_calc.py(27)calculate_additional_
+fields()
+-> try:
+(Pdb) n
+> c:\python220\lecture02\assignment\src\charges_calc.py(28)calculate_additional_
+fields()
+-> rental_start = datetime.datetime.strptime(value['rental_start'], '%m/%d/%y')
+(Pdb) n
+> c:\python220\lecture02\assignment\src\charges_calc.py(29)calculate_additional_
+fields()
+-> rental_end = datetime.datetime.strptime(value['rental_end'], '%m/%d/%y')
+(Pdb) n
+> c:\python220\lecture02\assignment\src\charges_calc.py(30)calculate_additional_
+fields()
+-> value['total_days'] = (rental_end - rental_start).days
+(Pdb) n
+> c:\python220\lecture02\assignment\src\charges_calc.py(31)calculate_additional_
+fields()
+-> value['total_price'] = value['total_days'] * value['price_per_day']
+(Pdb) n
+> c:\python220\lecture02\assignment\src\charges_calc.py(32)calculate_additional_
+fields()
+-> value['sqrt_total_price'] = math.sqrt(value['total_price'])
+(Pdb) n
+ValueError: math domain error
+> c:\python220\lecture02\assignment\src\charges_calc.py(32)calculate_additional_
+fields()
+-> value['sqrt_total_price'] = math.sqrt(value['total_price'])
+(Pdb) pp value['sqrt_total_price']
+*** KeyError: 'sqrt_total_price'
+(Pdb) n
+> c:\python220\lecture02\assignment\src\charges_calc.py(34)calculate_additional_
+fields()
+-> except:
+(Pdb) n
+> c:\python220\lecture02\assignment\src\charges_calc.py(35)calculate_additional_
+fields()
+-> exit(0)
+(Pdb) n
+SystemExit: 0
+> c:\python220\lecture02\assignment\src\charges_calc.py(35)calculate_additional_
+fields()
+-> exit(0)
+(Pdb) n
+--Return--
+> c:\python220\lecture02\assignment\src\charges_calc.py(35)calculate_additional_
+fields()->None
+-> exit(0)
+(Pdb) n
+SystemExit: 0
+> c:\python220\lecture02\assignment\src\charges_calc.py(46)<module>()
+-> data = calculate_additional_fields(data)
+(Pdb) s
+--Return--
+> c:\python220\lecture02\assignment\src\charges_calc.py(46)<module>()->None
+-> data = calculate_additional_fields(data)
+(Pdb) n
+SystemExit: 0
+> <string>(1)<module>()->None
+(Pdb) exit
+
+C:\Python220\Lecture02\assignment\src>python -m pdb charges_calc.py -i source_TE
+ST.json -o test.json
+> c:\python220\lecture02\assignment\src\charges_calc.py(3)<module>()
+-> '''
+(Pdb) ll
+  1     '''
+  2     Returns total price paid for individual rentals
+  3  -> '''
+  4     import argparse
+  5     import json
+  6     import datetime
+  7     import math
+  8
+  9     def parse_cmd_arguments():
+ 10         parser = argparse.ArgumentParser(description='Process some integers.
+')
+ 11         parser.add_argument('-i', '--input', help='input JSON file', require
+d=True)
+ 12         parser.add_argument('-o', '--output', help='ouput JSON file', requir
+ed=True)
+ 13
+ 14         return parser.parse_args()
+ 15
+ 16
+ 17     def load_rentals_file(filename):
+ 18         with open(filename) as file:
+ 19             try:
+ 20                 data = json.load(file)
+ 21             except:
+ 22                 exit(0)
+ 23         return data
+ 24
+ 25     def calculate_additional_fields(data):
+ 26         for value in data.values():
+ 27             try:
+ 28                 rental_start = datetime.datetime.strptime(value['rental_star
+t'], '%m/%d/%y')
+ 29                 rental_end = datetime.datetime.strptime(value['rental_end'],
+ '%m/%d/%y')
+ 30                 value['total_days'] = (rental_end - rental_start).days
+ 31                 value['total_price'] = value['total_days'] * value['price_pe
+r_day']
+ 32                 value['sqrt_total_price'] = math.sqrt(value['total_price'])
+ 33                 value['unit_cost'] = value['total_price'] / value['units_ren
+ted']
+ 34             except:
+ 35                 exit(0)
+ 36
+ 37         return data
+ 38
+ 39     def save_to_json(filename, data):
+ 40         with open(filename, 'w') as file:
+ 41             json.dump(data, file)
+ 42
+ 43     if __name__ == "__main__":
+ 44         args = parse_cmd_arguments()
+ 45         data = load_rentals_file(args.input)
+ 46         data = calculate_additional_fields(data)
+ 47         save_to_json(args.output, data)
+(Pdb) b 45
+Breakpoint 1 at c:\python220\lecture02\assignment\src\charges_calc.py:45
+(Pdb) c
+> c:\python220\lecture02\assignment\src\charges_calc.py(45)<module>()
+-> data = load_rentals_file(args.input)
+(Pdb) n
+> c:\python220\lecture02\assignment\src\charges_calc.py(46)<module>()
+-> data = calculate_additional_fields(data)
+(Pdb) s
+--Call--
+> c:\python220\lecture02\assignment\src\charges_calc.py(25)calculate_additional_
+fields()
+-> def calculate_additional_fields(data):
+(Pdb) n
+> c:\python220\lecture02\assignment\src\charges_calc.py(26)calculate_additional_
+fields()
+-> for value in data.values():
+(Pdb) n
+> c:\python220\lecture02\assignment\src\charges_calc.py(27)calculate_additional_
+fields()
+-> try:
+(Pdb) n
+> c:\python220\lecture02\assignment\src\charges_calc.py(28)calculate_additional_
+fields()
+-> rental_start = datetime.datetime.strptime(value['rental_start'], '%m/%d/%y')
+(Pdb) n
+> c:\python220\lecture02\assignment\src\charges_calc.py(29)calculate_additional_
+fields()
+-> rental_end = datetime.datetime.strptime(value['rental_end'], '%m/%d/%y')
+(Pdb) n
+> c:\python220\lecture02\assignment\src\charges_calc.py(30)calculate_additional_
+fields()
+-> value['total_days'] = (rental_end - rental_start).days
+(Pdb) n
+> c:\python220\lecture02\assignment\src\charges_calc.py(31)calculate_additional_
+fields()
+-> value['total_price'] = value['total_days'] * value['price_per_day']
+(Pdb) n
+> c:\python220\lecture02\assignment\src\charges_calc.py(32)calculate_additional_
+fields()
+-> value['sqrt_total_price'] = math.sqrt(value['total_price'])
+(Pdb) n
+ValueError: math domain error
+> c:\python220\lecture02\assignment\src\charges_calc.py(32)calculate_additional_
+fields()
+-> value['sqrt_total_price'] = math.sqrt(value['total_price'])
+(Pdb) pp value['sqrt_total_price']
+*** KeyError: 'sqrt_total_price'
+(Pdb) c
+The program exited via sys.exit(). Exit status: 0
+> c:\python220\lecture02\assignment\src\charges_calc.py(3)<module>()
+-> '''
+(Pdb) n
+> c:\python220\lecture02\assignment\src\charges_calc.py(4)<module>()
+-> import argparse
+(Pdb) n
+> c:\python220\lecture02\assignment\src\charges_calc.py(5)<module>()
+-> import json
+(Pdb) n
+> c:\python220\lecture02\assignment\src\charges_calc.py(6)<module>()
+-> import datetime
+(Pdb) n
+> c:\python220\lecture02\assignment\src\charges_calc.py(7)<module>()
+-> import math
+(Pdb) n
+> c:\python220\lecture02\assignment\src\charges_calc.py(9)<module>()
+-> def parse_cmd_arguments():
+(Pdb) n
+> c:\python220\lecture02\assignment\src\charges_calc.py(17)<module>()
+-> def load_rentals_file(filename):
+(Pdb) n
+> c:\python220\lecture02\assignment\src\charges_calc.py(25)<module>()
+-> def calculate_additional_fields(data):
+(Pdb) n
+> c:\python220\lecture02\assignment\src\charges_calc.py(39)<module>()
+-> def save_to_json(filename, data):
+(Pdb) n
+> c:\python220\lecture02\assignment\src\charges_calc.py(43)<module>()
+-> if __name__ == "__main__":
+(Pdb) n
+> c:\python220\lecture02\assignment\src\charges_calc.py(44)<module>()
+-> args = parse_cmd_arguments()
+(Pdb) n
+> c:\python220\lecture02\assignment\src\charges_calc.py(45)<module>()
+-> data = load_rentals_file(args.input)
+(Pdb) n
+> c:\python220\lecture02\assignment\src\charges_calc.py(46)<module>()
+-> data = calculate_additional_fields(data)
+(Pdb) s
+--Call--
+> c:\python220\lecture02\assignment\src\charges_calc.py(25)calculate_additional_
+fields()
+-> def calculate_additional_fields(data):
+(Pdb) n
+> c:\python220\lecture02\assignment\src\charges_calc.py(26)calculate_additional_
+fields()
+-> for value in data.values():
+(Pdb) n
+> c:\python220\lecture02\assignment\src\charges_calc.py(27)calculate_additional_
+fields()
+-> try:
+(Pdb) n
+> c:\python220\lecture02\assignment\src\charges_calc.py(28)calculate_additional_
+fields()
+-> rental_start = datetime.datetime.strptime(value['rental_start'], '%m/%d/%y')
+(Pdb) n
+> c:\python220\lecture02\assignment\src\charges_calc.py(29)calculate_additional_
+fields()
+-> rental_end = datetime.datetime.strptime(value['rental_end'], '%m/%d/%y')
+(Pdb) n
+> c:\python220\lecture02\assignment\src\charges_calc.py(30)calculate_additional_
+fields()
+-> value['total_days'] = (rental_end - rental_start).days
+(Pdb) n
+> c:\python220\lecture02\assignment\src\charges_calc.py(31)calculate_additional_
+fields()
+-> value['total_price'] = value['total_days'] * value['price_per_day']
+(Pdb) pp value['total_days']
+-82
+(Pdb) pp value['rental_start']
+'6/12/17'
+(Pdb) pp value['rental_end']
+'3/22/17'
+(Pdb)
+
+ 34             except:
+ 35                 exit(0)
+ 36
+ 37         return data
+ 38
+ 39     def save_to_json(filename, data):
+ 40         with open(filename, 'w') as file:
+ 41             json.dump(data, file)
+ 42
+ 43     if __name__ == "__main__":
+ 44         args = parse_cmd_arguments()
+ 45         data = load_rentals_file(args.input)
+ 46         data = calculate_additional_fields(data)
+ 47         save_to_json(args.output, data)
+(Pdb) b 45
+Breakpoint 1 at c:\python220\lecture02\assignment\src\charges_calc.py:45
+(Pdb) c
+> c:\python220\lecture02\assignment\src\charges_calc.py(45)<module>()
+-> data = load_rentals_file(args.input)
+(Pdb) n
+> c:\python220\lecture02\assignment\src\charges_calc.py(46)<module>()
+-> data = calculate_additional_fields(data)
+(Pdb) s
+--Call--
+> c:\python220\lecture02\assignment\src\charges_calc.py(25)calculate_additional_
+fields()
+-> def calculate_additional_fields(data):
+(Pdb) n
+> c:\python220\lecture02\assignment\src\charges_calc.py(26)calculate_additional_
+fields()
+-> for value in data.values():
+(Pdb) n
+> c:\python220\lecture02\assignment\src\charges_calc.py(27)calculate_additional_
+fields()
+-> try:
+(Pdb) n
+> c:\python220\lecture02\assignment\src\charges_calc.py(28)calculate_additional_
+fields()
+-> rental_start = datetime.datetime.strptime(value['rental_start'], '%m/%d/%y')
+(Pdb) n
+> c:\python220\lecture02\assignment\src\charges_calc.py(29)calculate_additional_
+fields()
+-> rental_end = datetime.datetime.strptime(value['rental_end'], '%m/%d/%y')
+(Pdb) n
+> c:\python220\lecture02\assignment\src\charges_calc.py(30)calculate_additional_
+fields()
+-> value['total_days'] = (rental_end - rental_start).days
+(Pdb) n
+> c:\python220\lecture02\assignment\src\charges_calc.py(31)calculate_additional_
+fields()
+-> value['total_price'] = value['total_days'] * value['price_per_day']
+(Pdb) n
+> c:\python220\lecture02\assignment\src\charges_calc.py(32)calculate_additional_
+fields()
+-> value['sqrt_total_price'] = math.sqrt(value['total_price'])
+(Pdb) n
+ValueError: math domain error
+> c:\python220\lecture02\assignment\src\charges_calc.py(32)calculate_additional_
+fields()
+-> value['sqrt_total_price'] = math.sqrt(value['total_price'])
+(Pdb) pp value['sqrt_total_price']
+*** KeyError: 'sqrt_total_price'
+(Pdb) c
+The program exited via sys.exit(). Exit status: 0
+> c:\python220\lecture02\assignment\src\charges_calc.py(3)<module>()
+-> '''
+(Pdb) n
+> c:\python220\lecture02\assignment\src\charges_calc.py(4)<module>()
+-> import argparse
+(Pdb) n
+> c:\python220\lecture02\assignment\src\charges_calc.py(5)<module>()
+-> import json
+(Pdb) n
+> c:\python220\lecture02\assignment\src\charges_calc.py(6)<module>()
+-> import datetime
+(Pdb) n
+> c:\python220\lecture02\assignment\src\charges_calc.py(7)<module>()
+-> import math
+(Pdb) n
+> c:\python220\lecture02\assignment\src\charges_calc.py(9)<module>()
+-> def parse_cmd_arguments():
+(Pdb) n
+> c:\python220\lecture02\assignment\src\charges_calc.py(17)<module>()
+-> def load_rentals_file(filename):
+(Pdb) n
+> c:\python220\lecture02\assignment\src\charges_calc.py(25)<module>()
+-> def calculate_additional_fields(data):
+(Pdb) n
+> c:\python220\lecture02\assignment\src\charges_calc.py(39)<module>()
+-> def save_to_json(filename, data):
+(Pdb) n
+> c:\python220\lecture02\assignment\src\charges_calc.py(43)<module>()
+-> if __name__ == "__main__":
+(Pdb) n
+> c:\python220\lecture02\assignment\src\charges_calc.py(44)<module>()
+-> args = parse_cmd_arguments()
+(Pdb) n
+> c:\python220\lecture02\assignment\src\charges_calc.py(45)<module>()
+-> data = load_rentals_file(args.input)
+(Pdb) n
+> c:\python220\lecture02\assignment\src\charges_calc.py(46)<module>()
+-> data = calculate_additional_fields(data)
+(Pdb) s
+--Call--
+> c:\python220\lecture02\assignment\src\charges_calc.py(25)calculate_additional_
+fields()
+-> def calculate_additional_fields(data):
+(Pdb) n
+> c:\python220\lecture02\assignment\src\charges_calc.py(26)calculate_additional_
+fields()
+-> for value in data.values():
+(Pdb) n
+> c:\python220\lecture02\assignment\src\charges_calc.py(27)calculate_additional_
+fields()
+-> try:
+(Pdb) n
+> c:\python220\lecture02\assignment\src\charges_calc.py(28)calculate_additional_
+fields()
+-> rental_start = datetime.datetime.strptime(value['rental_start'], '%m/%d/%y')
+(Pdb) n
+> c:\python220\lecture02\assignment\src\charges_calc.py(29)calculate_additional_
+fields()
+-> rental_end = datetime.datetime.strptime(value['rental_end'], '%m/%d/%y')
+(Pdb) n
+> c:\python220\lecture02\assignment\src\charges_calc.py(30)calculate_additional_
+fields()
+-> value['total_days'] = (rental_end - rental_start).days
+(Pdb) n
+> c:\python220\lecture02\assignment\src\charges_calc.py(31)calculate_additional_
+fields()
+-> value['total_price'] = value['total_days'] * value['price_per_day']
+(Pdb) pp value['total_days']
+-82
+(Pdb) pp value['rental_start']
+'6/12/17'
+(Pdb) pp value['rental_end']
+'3/22/17'
+(Pdb) exit
+The program exited via sys.exit(). Exit status: 0
+> c:\python220\lecture02\assignment\src\charges_calc.py(3)<module>()
+-> '''
+(Pdb) exit
+
+C:\Python220\Lecture02\assignment\src>python -m pdb charges_calc.py -i source_TE
+ST.json -o test.json
+> c:\python220\lecture02\assignment\src\charges_calc.py(3)<module>()
+-> '''
+(Pdb) ll
+  1     '''
+  2     Returns total price paid for individual rentals
+  3  -> '''
+  4     import argparse
+  5     import json
+  6     import datetime
+  7     import math
+  8
+  9     def parse_cmd_arguments():
+ 10         parser = argparse.ArgumentParser(description='Process some integers.
+')
+ 11         parser.add_argument('-i', '--input', help='input JSON file', require
+d=True)
+ 12         parser.add_argument('-o', '--output', help='ouput JSON file', requir
+ed=True)
+ 13
+ 14         return parser.parse_args()
+ 15
+ 16
+ 17     def load_rentals_file(filename):
+ 18         with open(filename) as file:
+ 19             try:
+ 20                 data = json.load(file)
+ 21             except:
+ 22                 exit(0)
+ 23         return data
+ 24
+ 25     def calculate_additional_fields(data):
+ 26         for value in data.values():
+ 27             try:
+ 28                 rental_start = datetime.datetime.strptime(value['rental_star
+t'], '%m/%d/%y')
+ 29                 rental_end = datetime.datetime.strptime(value['rental_end'],
+ '%m/%d/%y')
+ 30                 value['total_days'] = (rental_end - rental_start).days
+ 31                 value['total_price'] = value['total_days'] * value['price_pe
+r_day']
+ 32                 value['sqrt_total_price'] = math.sqrt(value['total_price'])
+ 33                 value['unit_cost'] = value['total_price'] / value['units_ren
+ted']
+ 34             except:
+ 35                 exit(0)
+ 36
+ 37         return data
+ 38
+ 39     def save_to_json(filename, data):
+ 40         with open(filename, 'w') as file:
+ 41             json.dump(data, file)
+ 42
+ 43     if __name__ == "__main__":
+ 44         args = parse_cmd_arguments()
+ 45         data = load_rentals_file(args.input)
+ 46         data = calculate_additional_fields(data)
+ 47         save_to_json(args.output, data)
+(Pdb) b 45
+Breakpoint 1 at c:\python220\lecture02\assignment\src\charges_calc.py:45
+(Pdb) c
+> c:\python220\lecture02\assignment\src\charges_calc.py(45)<module>()
+-> data = load_rentals_file(args.input)
+(Pdb) n
+> c:\python220\lecture02\assignment\src\charges_calc.py(46)<module>()
+-> data = calculate_additional_fields(data)
+(Pdb) s
+--Call--
+> c:\python220\lecture02\assignment\src\charges_calc.py(25)calculate_additional_
+fields()
+-> def calculate_additional_fields(data):
+(Pdb) n
+> c:\python220\lecture02\assignment\src\charges_calc.py(26)calculate_additional_
+fields()
+-> for value in data.values():
+(Pdb) n
+> c:\python220\lecture02\assignment\src\charges_calc.py(27)calculate_additional_
+fields()
+-> try:
+(Pdb) n
+> c:\python220\lecture02\assignment\src\charges_calc.py(28)calculate_additional_
+fields()
+-> rental_start = datetime.datetime.strptime(value['rental_start'], '%m/%d/%y')
+(Pdb) n
+> c:\python220\lecture02\assignment\src\charges_calc.py(29)calculate_additional_
+fields()
+-> rental_end = datetime.datetime.strptime(value['rental_end'], '%m/%d/%y')
+(Pdb) n
+> c:\python220\lecture02\assignment\src\charges_calc.py(30)calculate_additional_
+fields()
+-> value['total_days'] = (rental_end - rental_start).days
+(Pdb) pp rental_start
+datetime.datetime(2017, 6, 12, 0, 0)
+(Pdb) pp rental_end
+datetime.datetime(2018, 3, 22, 0, 0)
+(Pdb) n
+> c:\python220\lecture02\assignment\src\charges_calc.py(31)calculate_additional_
+fields()
+-> value['total_price'] = value['total_days'] * value['price_per_day']
+(Pdb) pp value['total_days']
+283
+(Pdb) n
+> c:\python220\lecture02\assignment\src\charges_calc.py(32)calculate_additional_
+fields()
+-> value['sqrt_total_price'] = math.sqrt(value['total_price'])
+(Pdb) n
+> c:\python220\lecture02\assignment\src\charges_calc.py(33)calculate_additional_
+fields()
+-> value['unit_cost'] = value['total_price'] / value['units_rented']
+(Pdb) pp value['sqrt_total_price']
+93.66429415737889
+(Pdb) n
+> c:\python220\lecture02\assignment\src\charges_calc.py(26)calculate_additional_
+fields()
+-> for value in data.values():
+(Pdb) pp value['unit_cost']
+1096.625
+(Pdb) n
+> c:\python220\lecture02\assignment\src\charges_calc.py(37)calculate_additional_
+fields()
+-> return data
+(Pdb) n
+--Return--
+> c:\python220\lecture02\assignment\src\charges_calc.py(37)calculate_additional_
+fields()->{'RNT001': {'price_per_day': 31, 'product_code': 'PRD80', 'rental_end'
+: '3/22/18', 'rental_start': '6/12/17', ...}}
+-> return data
+(Pdb) n
+> c:\python220\lecture02\assignment\src\charges_calc.py(47)<module>()
+-> save_to_json(args.output, data)
+(Pdb) s
+--Call--
+> c:\python220\lecture02\assignment\src\charges_calc.py(39)save_to_json()
+-> def save_to_json(filename, data):
+(Pdb) n
+> c:\python220\lecture02\assignment\src\charges_calc.py(40)save_to_json()
+-> with open(filename, 'w') as file:
+(Pdb) n
+> c:\python220\lecture02\assignment\src\charges_calc.py(41)save_to_json()
+-> json.dump(data, file)
+(Pdb) n
+--Return--
+> c:\python220\lecture02\assignment\src\charges_calc.py(41)save_to_json()->None
+-> json.dump(data, file)
+(Pdb) n
+--Return--
+> c:\python220\lecture02\assignment\src\charges_calc.py(47)<module>()->None
+-> save_to_json(args.output, data)
+(Pdb) n
+--Return--
+> <string>(1)<module>()->None
+(Pdb) n
+The program finished and will be restarted
+> c:\python220\lecture02\assignment\src\charges_calc.py(3)<module>()
+-> '''
+(Pdb)
+
+00:00:00
+incorrect value for rental_start: 2018-04-25 00:00:00 or rental_end: 2017-04-25
+00:00:00
+incorrect value for rental_start: 2017-10-09 00:00:00 or rental_end: 2016-08-08
+00:00:00
+incorrect value for rental_start: 2017-08-23 00:00:00 or rental_end: 2016-06-23
+00:00:00
+incorrect value for rental_start: 2018-09-25 00:00:00 or rental_end: 2016-01-12
+00:00:00
+incorrect value for rental_start: 2016-09-22 00:00:00 or rental_end: 2016-04-05
+00:00:00
+incorrect value for rental_start: 2018-09-02 00:00:00 or rental_end: 2018-02-13
+00:00:00
+incorrect value for rental_start: 2017-10-06 00:00:00 or rental_end: 2016-03-08
+00:00:00
+incorrect value for rental_start: 2017-02-19 00:00:00 or rental_end: 2016-11-17
+00:00:00
+incorrect value for rental_start: 2017-11-24 00:00:00 or rental_end: 2016-05-06
+00:00:00
+incorrect value for rental_start: 2017-08-18 00:00:00 or rental_end: 2017-04-23
+00:00:00
+incorrect value for rental_start: 2017-11-17 00:00:00 or rental_end: 2017-09-02
+00:00:00
+incorrect value for rental_start: 2017-08-18 00:00:00 or rental_end: 2016-11-24
+00:00:00
+incorrect value for rental_start: 2017-05-26 00:00:00 or rental_end: 2016-11-05
+00:00:00
+incorrect value for rental_start: 2018-02-16 00:00:00 or rental_end: 2017-10-13
+00:00:00
+incorrect value for rental_start: 2018-09-02 00:00:00 or rental_end: 2017-10-18
+00:00:00
+incorrect value for rental_start: 2017-10-16 00:00:00 or rental_end: 2017-08-08
+00:00:00
+incorrect value for rental_start: 2017-09-14 00:00:00 or rental_end: 2017-03-30
+00:00:00
+incorrect value for rental_start: 2017-01-06 00:00:00 or rental_end: 2016-08-22
+00:00:00
+incorrect value for rental_start: 2017-12-09 00:00:00 or rental_end: 2017-05-20
+00:00:00
+incorrect value for rental_start: 2018-09-19 00:00:00 or rental_end: 2018-07-10
+00:00:00
+incorrect value for rental_start: 2017-12-03 00:00:00 or rental_end: 2017-07-14
+00:00:00
+incorrect value for rental_start: 2018-12-13 00:00:00 or rental_end: 2018-07-06
+00:00:00
+incorrect value for rental_start: 2018-02-10 00:00:00 or rental_end: 2016-01-05
+00:00:00
+incorrect value for rental_start: 2018-03-15 00:00:00 or rental_end: 2017-07-28
+00:00:00
+incorrect value for rental_start: 2018-12-02 00:00:00 or rental_end: 2016-01-06
+00:00:00
+incorrect value for rental_start: 2018-06-18 00:00:00 or rental_end: 2018-02-21
+00:00:00
+incorrect value for rental_start: 2016-10-23 00:00:00 or rental_end: 2016-10-13
+00:00:00
+incorrect value for rental_start: 2018-07-13 00:00:00 or rental_end: 2016-12-28
+00:00:00
+incorrect value for rental_start: 2016-06-19 00:00:00 or rental_end: 2018-10-10
+00:00:00
+incorrect value for rental_start: 2018-01-13 00:00:00 or rental_end: 2017-01-03
+00:00:00
+incorrect value for rental_start: 2017-01-31 00:00:00 or rental_end: 2016-08-21
+00:00:00
+incorrect value for rental_start: 2018-01-25 00:00:00 or rental_end: 2017-04-16
+00:00:00
+incorrect value for rental_start: 2018-11-27 00:00:00 or rental_end: 2017-03-22
+00:00:00
+incorrect value for rental_start: 2017-03-30 00:00:00 or rental_end: 2016-02-24
+00:00:00
+incorrect value for rental_start: 2018-03-18 00:00:00 or rental_end: 2017-06-03
+00:00:00
+incorrect value for rental_start: 2018-12-30 00:00:00 or rental_end: 2016-04-30
+00:00:00
+incorrect value for rental_start: 2018-01-25 00:00:00 or rental_end: 2017-09-15
+00:00:00
+incorrect value for rental_start: 2018-01-13 00:00:00 or rental_end: 2017-06-08
+00:00:00
+incorrect value for rental_start: 2016-10-17 00:00:00 or rental_end: 2016-02-10
+00:00:00
+incorrect value for rental_start: 2018-04-03 00:00:00 or rental_end: 2017-07-19
+00:00:00
+incorrect value for rental_start: 2017-07-25 00:00:00 or rental_end: 2016-12-15
+00:00:00
+incorrect value for rental_start: 2017-12-04 00:00:00 or rental_end: 2017-04-07
+00:00:00
+incorrect value for rental_start: 2016-10-25 00:00:00 or rental_end: 2016-08-18
+00:00:00
+incorrect value for rental_start: 2018-05-16 00:00:00 or rental_end: 2017-05-03
+00:00:00
+incorrect value for rental_start: 2017-11-29 00:00:00 or rental_end: 2017-03-26
+00:00:00
+incorrect value for rental_start: 2017-12-20 00:00:00 or rental_end: 2017-07-06
+00:00:00
+incorrect value for rental_start: 2018-11-27 00:00:00 or rental_end: 2016-02-11
+00:00:00
+incorrect value for rental_start: 2017-11-13 00:00:00 or rental_end: 2016-05-13
+00:00:00
+incorrect value for rental_start: 2017-12-07 00:00:00 or rental_end: 2017-09-25
+00:00:00
+incorrect value for rental_start: 2016-05-03 00:00:00 or rental_end: 2016-04-25
+00:00:00
+incorrect value for rental_start: 2017-12-15 00:00:00 or rental_end: 2017-08-11
+00:00:00
+incorrect value for rental_start: 2018-03-18 00:00:00 or rental_end: 2017-11-25
+00:00:00
+incorrect value for rental_start: 2017-02-28 00:00:00 or rental_end: 2017-02-25
+00:00:00
+incorrect value for rental_start: 2017-08-24 00:00:00 or rental_end: 2016-01-08
+00:00:00
+incorrect value for rental_start: 2016-07-14 00:00:00 or rental_end: 2016-07-09
+00:00:00
+incorrect value for rental_start: 2018-12-21 00:00:00 or rental_end: 2018-06-25
+00:00:00
+incorrect value for rental_start: 2018-11-01 00:00:00 or rental_end: 2017-02-04
+00:00:00
+incorrect value for rental_start: 2017-10-16 00:00:00 or rental_end: 2016-04-16
+00:00:00
+incorrect value for rental_start: 2017-11-07 00:00:00 or rental_end: 2016-06-26
+00:00:00
+incorrect value for rental_start: 2018-04-14 00:00:00 or rental_end: 2017-09-09
+00:00:00
+incorrect value for rental_start: 2017-09-08 00:00:00 or rental_end: 2016-06-29
+00:00:00
+incorrect value for rental_start: 2018-10-19 00:00:00 or rental_end: 2018-03-07
+00:00:00
+incorrect value for rental_start: 2018-07-19 00:00:00 or rental_end: 2016-08-18
+00:00:00
+incorrect value for rental_start: 2018-05-14 00:00:00 or rental_end: 2016-02-09
+00:00:00
+incorrect value for rental_start: 2018-10-06 00:00:00 or rental_end: 2018-06-16
+00:00:00
+incorrect value for rental_start: 2018-08-15 00:00:00 or rental_end: 2018-06-07
+00:00:00
+incorrect value for rental_start: 2018-01-30 00:00:00 or rental_end: 2016-09-12
+00:00:00
+incorrect value for rental_start: 2016-11-05 00:00:00 or rental_end: 2016-03-31
+00:00:00
+incorrect value for rental_start: 2018-01-20 00:00:00 or rental_end: 2018-01-12
+00:00:00
+incorrect value for rental_start: 2018-01-01 00:00:00 or rental_end: 2017-05-07
+00:00:00
+incorrect value for rental_start: 2017-06-14 00:00:00 or rental_end: 2017-01-19
+00:00:00
+incorrect value for rental_start: 2017-09-27 00:00:00 or rental_end: 2016-12-02
+00:00:00
+incorrect value for rental_start: 2017-04-30 00:00:00 or rental_end: 2017-02-20
+00:00:00
+incorrect value for rental_start: 2018-02-08 00:00:00 or rental_end: 2017-11-24
+00:00:00
+incorrect value for rental_start: 2018-08-11 00:00:00 or rental_end: 2018-08-08
+00:00:00
+incorrect value for rental_start: 2017-04-30 00:00:00 or rental_end: 2016-09-20
+00:00:00
+incorrect value for rental_start: 2018-05-05 00:00:00 or rental_end: 2016-06-11
+00:00:00
+incorrect value for rental_start: 2018-01-27 00:00:00 or rental_end: 2016-04-13
+00:00:00
+incorrect value for rental_start: 2018-06-14 00:00:00 or rental_end: 2017-11-20
+00:00:00
+incorrect value for rental_start: 2016-12-03 00:00:00 or rental_end: 2016-05-01
+00:00:00
+incorrect value for rental_start: 2017-01-24 00:00:00 or rental_end: 2016-10-23
+00:00:00
+incorrect value for rental_start: 2018-06-12 00:00:00 or rental_end: 2016-03-21
+00:00:00
+incorrect value for rental_start: 2017-03-29 00:00:00 or rental_end: 2016-11-20
+00:00:00
+incorrect value for rental_start: 2017-08-04 00:00:00 or rental_end: 2016-10-27
+00:00:00
+incorrect value for rental_start: 2017-03-06 00:00:00 or rental_end: 2016-12-07
+00:00:00
+incorrect value for rental_start: 2018-07-06 00:00:00 or rental_end: 2016-01-04
+00:00:00
+incorrect value for rental_start: 2017-10-09 00:00:00 or rental_end: 2017-07-07
+00:00:00
+incorrect value for rental_start: 2017-08-30 00:00:00 or rental_end: 2016-11-18
+00:00:00
+incorrect value for rental_start: 2017-04-08 00:00:00 or rental_end: 2016-11-19
+00:00:00
+incorrect value for rental_start: 2018-04-22 00:00:00 or rental_end: 2017-12-26
+00:00:00
+incorrect value for rental_start: 2017-09-06 00:00:00 or rental_end: 2017-08-21
+00:00:00
+incorrect value for rental_start: 2018-05-23 00:00:00 or rental_end: 2016-05-17
+00:00:00
+incorrect value for rental_start: 2016-10-14 00:00:00 or rental_end: 2016-01-17
+00:00:00
+incorrect value for rental_start: 2018-11-20 00:00:00 or rental_end: 2016-09-05
+00:00:00
+incorrect value for rental_start: 2018-07-04 00:00:00 or rental_end: 2016-07-03
+00:00:00
+incorrect value for rental_start: 2018-08-09 00:00:00 or rental_end: 2017-12-19
+00:00:00
+incorrect value for rental_start: 2017-02-17 00:00:00 or rental_end: 2016-05-30
+00:00:00
+incorrect value for rental_start: 2018-08-10 00:00:00 or rental_end: 2018-07-20
+00:00:00
+incorrect value for rental_start: 2018-04-17 00:00:00 or rental_end: 2017-02-25
+00:00:00
+incorrect value for rental_start: 2018-01-20 00:00:00 or rental_end: 2017-06-13
+00:00:00
+incorrect value for rental_start: 2018-05-12 00:00:00 or rental_end: 2016-04-03
+00:00:00
+incorrect value for rental_start: 2017-09-08 00:00:00 or rental_end: 2017-04-12
+00:00:00
+incorrect value for rental_start: 2017-08-17 00:00:00 or rental_end: 2017-07-18
+00:00:00
+incorrect value for rental_start: 2017-10-10 00:00:00 or rental_end: 2016-04-01
+00:00:00
+incorrect value for rental_start: 2017-01-11 00:00:00 or rental_end: 2016-08-04
+00:00:00
+incorrect value for rental_start: 2018-03-17 00:00:00 or rental_end: 2016-11-24
+00:00:00
+incorrect value for rental_start: 2018-05-15 00:00:00 or rental_end: 2016-04-30
+00:00:00
+incorrect value for rental_start: 2018-03-02 00:00:00 or rental_end: 2018-02-21
+00:00:00
+incorrect value for rental_start: 2017-03-27 00:00:00 or rental_end: 2017-03-14
+00:00:00
+incorrect value for rental_start: 2017-06-30 00:00:00 or rental_end: 2016-08-07
+00:00:00
+incorrect value for rental_start: 2017-12-10 00:00:00 or rental_end: 2016-03-23
+00:00:00
+incorrect value for rental_start: 2016-10-23 00:00:00 or rental_end: 2016-10-15
+00:00:00
+incorrect value for rental_start: 2017-04-07 00:00:00 or rental_end: 2017-02-21
+00:00:00
+incorrect value for rental_start: 2017-07-19 00:00:00 or rental_end: 2016-02-10
+00:00:00
+incorrect value for rental_start: 2018-07-19 00:00:00 or rental_end: 2017-07-22
+00:00:00
+incorrect value for rental_start: 2017-11-12 00:00:00 or rental_end: 2017-08-19
+00:00:00
+incorrect value for rental_start: 2016-11-26 00:00:00 or rental_end: 2016-09-11
+00:00:00
+incorrect value for rental_start: 2018-11-30 00:00:00 or rental_end: 2017-05-09
+00:00:00
+incorrect value for rental_start: 2016-08-30 00:00:00 or rental_end: 2016-01-19
+00:00:00
+incorrect value for rental_start: 2018-08-27 00:00:00 or rental_end: 2016-12-16
+00:00:00
+incorrect value for rental_start: 2017-10-15 00:00:00 or rental_end: 2017-07-09
+00:00:00
+incorrect value for rental_start: 2016-05-17 00:00:00 or rental_end: 2016-02-29
+00:00:00
+incorrect value for rental_start: 2018-06-14 00:00:00 or rental_end: 2017-11-01
+00:00:00
+incorrect value for rental_start: 2017-06-21 00:00:00 or rental_end: 2016-11-13
+00:00:00
+incorrect value for rental_start: 2017-02-08 00:00:00 or rental_end: 2016-07-21
+00:00:00
+incorrect value for rental_start: 2018-03-01 00:00:00 or rental_end: 2016-10-22
+00:00:00
+incorrect value for rental_start: 2018-05-14 00:00:00 or rental_end: 2018-03-19
+00:00:00
+incorrect value for rental_start: 2017-08-20 00:00:00 or rental_end: 2017-06-25
+00:00:00
+incorrect value for rental_start: 2017-01-16 00:00:00 or rental_end: 2016-12-13
+00:00:00
+incorrect value for rental_start: 2017-12-15 00:00:00 or rental_end: 2017-10-13
+00:00:00
+incorrect value for rental_start: 2018-10-18 00:00:00 or rental_end: 2017-04-06
+00:00:00
+incorrect value for rental_start: 2018-06-28 00:00:00 or rental_end: 2016-05-27
+00:00:00
+incorrect value for rental_start: 2018-02-26 00:00:00 or rental_end: 2016-04-19
+00:00:00
+incorrect value for rental_start: 2017-11-20 00:00:00 or rental_end: 2017-01-13
+00:00:00
+incorrect value for rental_start: 2018-10-23 00:00:00 or rental_end: 2018-02-28
+00:00:00
+incorrect value for rental_start: 2017-04-05 00:00:00 or rental_end: 2016-10-10
+00:00:00
+incorrect value for rental_start: 2017-09-23 00:00:00 or rental_end: 2016-04-16
+00:00:00
+incorrect value for rental_start: 2016-11-03 00:00:00 or rental_end: 2016-03-16
+00:00:00
+incorrect value for rental_start: 2016-11-11 00:00:00 or rental_end: 2016-01-16
+00:00:00
+incorrect value for rental_start: 2016-11-08 00:00:00 or rental_end: 2016-06-30
+00:00:00
+incorrect value for rental_start: 2018-11-20 00:00:00 or rental_end: 2016-03-11
+00:00:00
+incorrect value for rental_start: 2017-09-10 00:00:00 or rental_end: 2016-02-28
+00:00:00
+incorrect value for rental_start: 2018-10-25 00:00:00 or rental_end: 2016-04-07
+00:00:00
+incorrect value for rental_start: 2017-06-04 00:00:00 or rental_end: 2017-01-02
+00:00:00
+incorrect value for rental_start: 2018-09-02 00:00:00 or rental_end: 2016-04-14
+00:00:00
+incorrect value for rental_start: 2018-10-12 00:00:00 or rental_end: 2016-10-02
+00:00:00
+
+C:\Python220\Lecture02\assignment\src>python charges_calc.py -i source.json -o t
+est.json
+incorrect value for rental_start: 2018-08-26 00:00:00 or rental_end: 2018-07-29
+00:00:00
+
+C:\Python220\Lecture02\assignment\src>

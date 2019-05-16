@@ -53,7 +53,7 @@ def sentence():
     return ' '.join(char_gen() for x in range(1,13))
 
 
-#### Map ####
+#### Create dataset ####
 
 beginning_time = time.time()
 tot_list2 = []

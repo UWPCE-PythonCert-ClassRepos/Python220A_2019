@@ -5,9 +5,9 @@ import sys
 import pandas as pd
 import numpy as np
 
-sys.path.append(r'N:\Python220\lesson06\Lesson06\assignment\data')
+sys.path.append(r'<enter csv folder here>')
 
-newcsv = r'N:\Python220\lesson06\Lesson06\assignment\data\test.csv'
+newcsv = r'<enter csv location here>'
 
 def get_random_date():
 

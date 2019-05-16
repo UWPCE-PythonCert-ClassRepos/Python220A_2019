@@ -1,0 +1,9 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.7.2, pytest-4.3.0, py-1.7.0, pluggy-0.8.1 -- /usr/local/opt/python/bin/python3.7
+cachedir: .pytest_cache
+rootdir: /Users/adevey/class/Python220A_2019/students/aaron/lesson06/assignment, inifile:
+collecting ... collected 1 item
+
+tests/test_perf.py::test_assess_preformance PASSED                       [100%]
+
+=========================== 1 passed in 0.01 seconds ===========================

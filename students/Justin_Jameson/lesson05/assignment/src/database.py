@@ -1,3 +1,9 @@
+# -------------------------------------------------#
+# # Title: Lesson 05 database.py
+# # Dev:   Justin Jameson
+# # Date:  5/18/2019
+# # ChangeLog: (Who, when, What)
+# -------------------------------------------------#
 from pymongo import MongoClient
 import sys
 import csv
@@ -13,22 +19,6 @@ customer_data = 'customers.csv'
 rentals_data = 'rental.csv'
 logger.info('defined directory name and the following .csv files: product_data, customer_data, and rental_data')
 
-"""
-   
-
-    As a HP Norton salesperson I want to see:
-     1. a list of all of the different products, showing product ID, description, product type and quantity available.
-     2. a list of the names and contact details (address, phone number and email) of all customers who have rented
-        a certain product.
-
-Here is what you need to do:
-
-    1. Create a product database with attributes that reflect the contents of the csv file.
-    2. Import all data in the csv files into your MongoDB implementation.
-    3. Write queries to retrieve the product data.
-    4. Write a query to integrate customer and product data (join data).
-
-Other requirements:"""
 
 # ******************************************** Defining Classes *********************************
 class MongoDBConnection:
@@ -51,33 +41,82 @@ class MongoDBConnection:
         self.connection.close()
 
 
+class ReadCsvFiles:
+    """
+    This class calls 'import_data' method to access the csv files.
+    Then reads the csv files, and turns them into a list of dictionaries.
+    Then sends the list to the 'main' method for incorporation into MongoDB.
+    This class also uses the self items for calls in other methods.
+
+    :return:
+    """
+    def __init__(self, list_of_customers=[], list_of_products=[], list_of_rentals=[]):
+        self.list_of_customers = list_of_customers
+        self.list_of_products = list_of_products
+        self.list_of_rentals = list_of_rentals
+
+        logger.info('created empty lists')
+        imported_data = import_data(directory_name, product_data, customer_data, rentals_data)
+        customers_file = imported_data[0]
+        products_file = imported_data[1]
+        rentals_file = imported_data[2]
+
+        with open(customers_file, 'r') as customer:
+            reader = csv.reader(customer)
+            for row in reader:
+                c_dict = {'User ID': row[0], 'Name': row[1], 'Address': row[2],
+                          'zip code': row[3], 'phone number': row[4], 'email': row[5]}
+                list_of_customers.append(c_dict)
+            list_of_customers.pop(0)
+        with open(products_file, 'r') as product:
+            reader = csv.reader(product)
+            for row in reader:
+                p_dict = {'Product ID': row[0], 'Description': row[1], 'Product Type': row[2], 'Quantity available': row[3]}
+                list_of_products.append(p_dict)
+            list_of_products.pop(0)
+        with open(rentals_file, 'r') as rentals:
+            reader = csv.reader(rentals)
+            for row in reader:
+                r_dict = {'Product ID': row[0], 'User ID': row[1]}
+                list_of_rentals.append(r_dict)
+            list_of_rentals.pop(0)
+        logger.info('appended all lists with content from csv files')
+        return
+
+
 # ************************************* user interface *************************************
 def main_menu(user_prompt=None):
     """
     This method creates the menu for the program.
     """
-    valid_prompts = {"1": show_available_products,
-                     "2": show_rentals,
-                     "3": read_csv_files,
-                     "4": read_csv_files,
-                     "5": reset_db,
+    valid_prompts = {"1": ReadCsvFiles,
+                     "2": show_available_products,
+                     "3": show_rentals,
+                     "4": reset_db,
                      "q": exit_program}
     options = list(valid_prompts.keys())
 
     while user_prompt not in valid_prompts:
-        options_str = ("{}" + ", {}" * (len(options)-1)).format(*options)
+        options_str = ("{}" + ", {}" * (len(options) - 1)).format(*options)
         print(f"Please choose from the following options ({options_str}):")
-        print("1. Show Customer products available for rent")
-        print("2. Show Sales Person the list of rentals")
-        print("3. Load csv files to database.")
-        print("4. Update the Customer's credit line")
-        print("5. Reset the DataBase")
+        print("1. Load csv files to database.")
+        print("2. Show Customer products available for rent")
+        print("3. Show Sales Person the list of customers")
+        print("4. Reset the DataBase")
         print("q. Quit")
         user_prompt = input(">")
     return valid_prompts.get(user_prompt)
 
 
 # ************************************* Processing *****************************************
+def db_info():
+    """
+    This method returns the use of the class 'ReadCsvFiles'.
+    :return:
+    """
+    return ReadCsvFiles()
+
+
 def import_data(directory_location, product_file, customer_file, rental_file):
     """
     This function takes a directory name and three csv files as input,
@@ -96,43 +135,6 @@ def import_data(directory_location, product_file, customer_file, rental_file):
     import_rentals = directory_location + rental_file
     logger.info('returning tuple for use in method "ReadCsvFiles"')
     return import_customer, import_product, import_rentals
-
-
-def read_csv_files():
-    """
-    This method calls 'import_data' method to access the csv files.
-    Then reads the csv files, and turns them into a list of dictionaries.
-    Then sends the list to the 'main' method for incorporation into MongoDB.
-
-    :return:
-    """
-    imported_data = import_data(directory_name, product_data, customer_data, rentals_data)
-    customers_file = imported_data[0]
-    products_file = imported_data[1]
-    rentals_file = imported_data[2]
-    list_of_customers = []
-    list_of_products = []
-    list_of_rentals = []
-    with open(customers_file, 'r') as customer:
-        reader = csv.reader(customer)
-        for row in reader:
-            c_dict = {'User ID': row[0], 'Name': row[1], 'Address': row[2],
-                      'zip code': row[3], 'phone number': row[4], 'email': row[5]}
-            list_of_customers.append(c_dict)
-        list_of_customers.pop(0)
-    with open( products_file, 'r') as product:
-        reader = csv.reader(product)
-        for row in reader:
-            p_dict = {'Product ID': row[0], 'Description': row[1], 'Product Type': row[2], 'Quantity available': row[3]}
-            list_of_products.append(p_dict)
-        list_of_products.pop(0)
-    with open(rentals_file, 'r') as rentals:
-        reader = csv.reader(rentals)
-        for row in reader:
-            r_dict = {'Product ID': row[0], 'User ID': row[1]}
-            list_of_rentals.append(r_dict)
-        list_of_rentals.pop(0)
-    main(list_of_customers, list_of_products, list_of_rentals)
 
 
 def main(list_of_customers, list_of_products, list_of_rentals):
@@ -164,20 +166,6 @@ def main(list_of_customers, list_of_products, list_of_rentals):
         # print_mdb_collection(rental)
         return result_customer, result_products, result_rentals
 
-""" # related data
-for CurrentRecord in ThePersonWhoCollects.find():  # Here CurrentRecord is a variable 
-pointing to each found record in a table
-    # CurrentRecord is a dictionary (EACH record is a dictionary). We can refer an element of the dictionary
-    # by its key; one of the keys is called "name"
-    print(customer'List for {CurrentRecord["name"]}')
-    query = {"name": CurrentRecord["name"]}
-    for a_cd in cd.find(
-            query):  # Find all the records from table "cd" where attribute name 
-            is equal to a specified value (which happens to be a
-        # a name of a current record). In general, keys from records need satisfy properties specified in query
-        print(customer'{CurrentRecord["name"]} has collected {a_cd}')
-"""
-
 
 def reset_db():
     """
@@ -194,20 +182,10 @@ def reset_db():
         db['customers'].drop()
         db["products"].drop()
         db["rental"].drop()
+        logger.info('dropped data from DB')
 
 
 # ****************************************** output to the user *************************************
-def print_mdb_collection(collection_name):
-    """
-    This method is called from main to print products, customers, and rentals.
-    :param collection_name:
-    :return:
-    """
-    for doc in collection_name.find():
-        logger.info('producing a list of products, customers, and rentals.')
-        print(doc)
-
-
 def show_available_products():
     """
     As a HP Norton customer I want to see a list of all products available for rent so that I can make a rental choice.
@@ -218,19 +196,15 @@ def show_available_products():
            description.
            product_type.
            quantity_available.
-
-    For example:
-        {‘prd001’:{‘description’:‘60-inch TV stand’,’product_type’:’livingroom’,’quantity_available’:‘3’},’prd002’:
-        {‘description’:’L-shaped sofa’,’product_type’:’livingroom’,’quantity_available’:‘1’}}
     :return:
     """
 
-    for doc in main():
+    for dlop in return_db_info.list_of_products:
+        if dlop['Quantity available'] != '0':
+            print(dlop)
 
-        logger.info('producing a list of products, customers, and rentals.')
-        print(doc)
 
-def show_rentals(product_id):
+def show_rentals():
     """
     Returns a Python dictionary with the following user information from users that have rented products
     matching product_id:
@@ -239,11 +213,10 @@ def show_rentals(product_id):
         address.
         phone_number.
         email.
-     For example:
-     {‘user001’:{‘name’:’Elisa Miles’,’address’:‘4490 Union Street’,’phone_number’:‘206-922-0882’,’email’:’elisa.miles@yahoo.com’},
-     ’user002’:{‘name’:’Maya Data’,’address’:‘4936 Elliot Avenue’,’phone_number’:‘206-777-1927’,’email’:’mdata@uw.edu’}}
     """
-    pass
+    for doc in return_db_info.list_of_customers:
+        logger.info('producing a list of products, customers, and rentals.')
+        print(doc)
 
 
 # ***************************************** execution ***********************************************
@@ -254,4 +227,7 @@ def exit_program():
 
 
 if __name__ == "__main__":
-    main_menu()()
+    return_db_info = db_info()
+    while True:
+        main_menu()()
+        input("Press Enter to continue...........")

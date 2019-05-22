@@ -9,6 +9,9 @@ from collections import defaultdict
 
 
 def import_data_generator(filename):
+    """
+    generator to import large csv
+    """
     with open(filename) as csvfile:
         reader = csv.reader(csvfile, delimiter=',', quotechar='"')
         for row in reader:
@@ -16,6 +19,9 @@ def import_data_generator(filename):
 
 
 def analyze(filename):
+    """
+    analyze giant csv
+    """
     start = datetime.datetime.now()
     gen1 = import_data_generator(filename)
     new_ones = ((list(row)[5], list(row)[0]) for row in gen1
@@ -42,7 +48,6 @@ def analyze(filename):
 
     found = 0
     for line in gen2:
-        lrow = list(line)
         if "ea" in line[6]:
             found += 1
 
@@ -52,6 +57,9 @@ def analyze(filename):
 
 
 def main():
+    """
+    main
+    """
     filename = r'C:\Python220\Python220A_2019\students\kevin_cavanaugh\lesson06\assignment\data\exercise.csv'
     analyze(filename)
 

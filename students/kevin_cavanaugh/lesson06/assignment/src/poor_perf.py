@@ -37,7 +37,7 @@ def analyze(filename):
             if new[0][6:] == '2017':
                 year_count["2017"] += 1
             if new[0][6:] == '2018':
-                year_count["2017"] += 1
+                year_count["2018"] += 1
 
         print(year_count)
 
@@ -48,15 +48,18 @@ def analyze(filename):
 
         for line in reader:
             lrow = list(line)
-            if "ao" in line[6]:
+            if "ea" in line[6]:
                 found += 1
 
-        print(f"'ao' was found {found} times")
+        print(f"'ea' was found {found} times")
         end = datetime.datetime.now()
 
     return (start, end, year_count, found)
 
 def main():
+    """
+    main
+    """
     filename = r'C:\Python220\Python220A_2019\students\kevin_cavanaugh\lesson06\assignment\data\exercise.csv'
     analyze(filename)
 

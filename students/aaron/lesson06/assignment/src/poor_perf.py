@@ -37,7 +37,7 @@ def analyze(filename):
             if new[0][6:] == '2017':
                 year_count["2017"] += 1
             if new[0][6:] == '2018':
-                year_count["2017"] += 1
+                year_count["2018"] += 1
 
         print(year_count)
 
@@ -57,7 +57,7 @@ def analyze(filename):
     return (start, end, year_count, found)
 
 def main():
-    filename = "data/exercise.csv"
+    filename = "data/generated_data.csv"
     analyze(filename)
 
 

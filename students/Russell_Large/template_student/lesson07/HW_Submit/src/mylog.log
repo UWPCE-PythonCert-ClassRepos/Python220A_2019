@@ -1,0 +1,57 @@
+###################
+####Linear info####
+###################
+Total product initial records: 10000. 
+Total product inserted records: 10000. 
+Total product records in collection: 10000. 
+Total product data runtime: 0.6099996566772461
+Total customer initial records: 10000. 
+Total customer inserted records: 10000. 
+Total customer records in collection: 10000. 
+Total customer data runtime: 0.7130000591278076
+Linear complete. Total execute time: 2.0260000228881836
+###################
+##Parallel info####
+###################
+Total product initial records: 10000. 
+Total product inserted records: 10000. 
+Total product records in collection: 10000. 
+Total product data runtime: 0.9170002937316895
+Total customer initial records: 10000. 
+Total customer inserted records: 10000. 
+Total customer records in collection: 10000. 
+Total customer data runtime: 1.055999994277954
+threading complete. Total execute time: 1.069000005722046
+###################
+###Regular info####
+###################
+Total customer initial records: 10000. 
+Total customer inserted records: 10000. 
+Total customer records in collection: 10000. 
+Total customer data runtime: 0.8369998931884766
+Total customer initial records: 10000. 
+Total customer inserted records: 10000. 
+Total customer records in collection: 10000. 
+Total customer data runtime: 0.8369998931884766
+Total product initial records: 10000. 
+Total product inserted records: 10000. 
+Total product records in collection: 10000. 
+Total product data runtime: 0.627000093460083
+Total product initial records: 10000. 
+Total product inserted records: 10000. 
+Total product records in collection: 10000. 
+Total product data runtime: 0.627000093460083
+normal run complete. Total execute time: 1.4830002784729004
+normal run complete. Total execute time: 1.4830002784729004
+###################
+##Parallel info####
+###################
+Total product initial records: 10000. 
+Total product inserted records: 10000. 
+Total product records in collection: 10000. 
+Total product data runtime: 0.8949999809265137
+Total customer initial records: 10000. 
+Total customer inserted records: 10000. 
+Total customer records in collection: 10000. 
+Total customer data runtime: 1.0290000438690186
+threading complete. Total execute time: 1.0439999103546143

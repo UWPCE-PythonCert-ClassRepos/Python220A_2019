@@ -1,0 +1,7 @@
+Revision Record															"Python3(s)"		"PyPy3(s)"	"Python3(s)"	"PyPy3(s)"	"AverageTime"	"%Difference"
+Baseline																6.68833				28.47798	7.57000			28.60000	17.83408			-
+Remove lrow = list(row) since for loop already reads each row as a list	6.45425				27.97358	7.38000			28.44000	17.56196		1.5376%
+Remove second call to open csv file										3.69776				14.08434	4.49000			15.48000	9.43802			60.1773%
+Move search for string to main for loop*								3.75069				14.29633	4.38000			15.41000	9.45925			-0.2247% 		(hange reverted)
+Replace if statements with Dictionary implementation of switch			3.48040				14.26814	4.42000			15.47000	9.40963			0.3013%
+

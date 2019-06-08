@@ -8,7 +8,7 @@ import jpgdiscover as sut
 @pytest.fixture
 def _test_list_jpg_files():
     """ structure from test """
-    return  [
+    return [
         "tests/lesson09/data/furniture/chair", ["metal_chair_back_isometric_400_clr_17527.png"],
         "tests/lesson09/data/furniture/chair/couch", ["sofa_400_clr_10056.png"],
         "tests/lesson09/data/furniture/table", ["basic_desk_main_400_clr_17523.png", "desk_isometric_back_400_clr_17524.png", "table_with_cloth_400_clr_10664.png"],

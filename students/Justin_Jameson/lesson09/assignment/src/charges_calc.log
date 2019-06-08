@@ -1,0 +1,13 @@
+DEBUG:root:called parse_cmd
+2019-06-02 22:26:57,016 charges_calc.py:32  DEBUG called parse_cmd
+DEBUG:root:about to return parser.parse_arg
+2019-06-02 22:26:57,017 charges_calc.py:36  DEBUG about to return parser.parse_arg
+2019-06-02 23:44:54,409 charges_calc.py:41  DEBUG Calling parse_cmd_arguments()
+2019-06-02 23:47:18,404 charges_calc.py:41  DEBUG Calling parse_cmd_arguments()
+2019-06-02 23:47:18,406 charges_calc.py:43  INFO 'parse_cmd_arguments' returned Namespace(input=None, output=None)
+2019-06-02 23:47:18,406 charges_calc.py:41  DEBUG Calling load_rentals_file(None)
+2019-06-03 12:53:00,170 charges_calc.py:41  DEBUG Calling parse_cmd_arguments()
+2019-06-03 12:53:00,173 charges_calc.py:43  INFO 'parse_cmd_arguments' returned Namespace(input=None, output=None)
+2019-06-03 12:53:00,174 charges_calc.py:41  DEBUG Calling load_rentals_file(None)
+2019-06-03 12:53:25,520 charges_calc.py:41  DEBUG Calling parse_cmd_arguments()
+2019-06-05 19:50:00,530 charges_calc.py:41  DEBUG Calling parse_cmd_arguments()

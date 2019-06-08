@@ -23,10 +23,10 @@
 # Justin Jameson, 20190525, created file
 #
 # **************************
-import sys
-import datetime
+
 import csv
-import logging
+from functools import partial
+
 
 existing_invoice_file = '../data/rented_items.csv'
 
@@ -55,23 +55,22 @@ def single_customer(customer_name, invoice_file):
     :param invoice_file: File that the invoice will write to (database).
     :return:
     """
-
-    # open csv file and read lines.
     with open(invoice_file, 'r', newline='') as rcsvfile:
         reader = csv.reader(rcsvfile, delimiter=',', quotechar='"')
         for row in reader:
-            # write to the invoice to file.
-            def invoice_file(item_code, item_description, item_monthly_price):
-                with open(existing_invoice_file, 'a', newline='') as wcsvfile:
-                    writer = csv.writer(wcsvfile, delimiter=',', quotechar='"')
-                    new_row = [customer_name, item_code, item_description, item_monthly_price]
-                    writer.writerow(new_row)
-                return print(new_row)
-            invoice_file(row[0], row[1], row[2])
+            mult_entry_single_customer = partial(add_furniture, existing_invoice_file, customer_name)
+            mult_entry_single_customer(row[0], row[1], row[2])
 
 
 if __name__ == "__main__":
     add_furniture("../data/rented_items.csv", "Elisa Miles", "LR04", "Leather Sofa", 25)
     add_furniture("../data/rented_items.csv", "Edward Data", "KT78", "Kitchen Table", 10)
     add_furniture("../data/rented_items.csv", "Alex Gonzales", "QM83", "Queen Mattress", 17)
-    create_invoice = single_customer("Susan Wong", "../data/test_items.csv")
+    single_customer("Susan Wong", "../data/test_items.csv")
+
+
+
+
+   # my_single_customer("XYAJ", "TABLE", 22)
+
+# https://www.learnpython.org/en/Partial_functions

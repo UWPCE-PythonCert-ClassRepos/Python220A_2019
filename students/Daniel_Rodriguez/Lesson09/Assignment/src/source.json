@@ -1,0 +1,142 @@
+{
+  "RNT001": {
+    "product_code": "PRD80",
+    "units_rented": 8,
+    "price_per_day": 31,
+    "rental_start": "6/12/17",
+    "rental_end": "3/22/17"
+  },
+  "RNT002": {
+    "product_code": "PRD11",
+    "units_rented": 1,
+    "price_per_day": 16,
+    "rental_start": "7/20/16",
+    "rental_end": "9/30/18"
+  },
+  "RNT003": {
+    "product_code": "PRD22",
+    "units_rented": 4,
+    "price_per_day": 40,
+    "rental_start": "2/1/16",
+    "rental_end": "6/4/17"
+  },
+  "RNT004": {
+    "product_code": "PRD86",
+    "units_rented": 6,
+    "price_per_day": 40,
+    "rental_start": "8/14/16",
+    "rental_end": "12/7/17"
+  },
+  "RNT005": {
+    "product_code": "PRD70",
+    "units_rented": 8,
+    "price_per_day": 7,
+    "rental_start": "7/12/17",
+    "rental_end": "11/23/18"
+  },
+  "RNT006": {
+    "product_code": "PRD51",
+    "units_rented": 8,
+    "price_per_day": 20,
+    "rental_start": "8/26/18",
+    "rental_end": "7/29/18"
+  },
+  "RNT007": {
+    "product_code": "PRD42",
+    "units_rented": 1,
+    "price_per_day": 16,
+    "rental_start": "7/10/17",
+    "rental_end": "5/31/17"
+  },
+  "RNT008": {
+    "product_code": "PRD32",
+    "units_rented": 3,
+    "price_per_day": 12,
+    "rental_start": "10/25/18",
+    "rental_end": "7/4/18"
+  },
+  "RNT009": {
+    "product_code": "PRD13",
+    "units_rented": 9,
+    "price_per_day": 6,
+    "rental_start": "11/3/18",
+    "rental_end": "7/28/16"
+  },
+  "RNT010": {
+    "product_code": "PRD22",
+    "units_rented": 6,
+    "price_per_day": 27,
+    "rental_start": "3/15/18",
+    "rental_end": "8/27/17"
+  },
+  "RNT011": {
+    "product_code": "PRD17",
+    "units_rented": 7,
+    "price_per_day": 26,
+    "rental_start": "9/29/17",
+    "rental_end": "4/29/16"
+  },
+  "RNT012": {
+    "product_code": "PRD55",
+    "units_rented": 4,
+    "price_per_day": 18,
+    "rental_start": "10/24/17",
+    "rental_end": "1/15/16"
+  },
+  "RNT013": {
+    "product_code": "PRD81",
+    "units_rented": 10,
+    "price_per_day": 10,
+    "rental_start": "2/3/17",
+    "rental_end": "8/31/17"
+  },
+  "RNT014": {
+    "product_code": "PRD0",
+    "units_rented": 7,
+    "price_per_day": 37,
+    "rental_start": "1/30/17",
+    "rental_end": "7/30/16"
+  },
+  "RNT015": {
+    "product_code": "PRD82",
+    "units_rented": 10,
+    "price_per_day": 29,
+    "rental_start": "5/2/17",
+    "rental_end": "6/22/18"
+  },
+  "RNT016": {
+    "product_code": "PRD52",
+    "units_rented": 10,
+    "price_per_day": 11,
+    "rental_start": "6/18/18",
+    "rental_end": "2/5/16"
+  },
+  "RNT017": {
+    "product_code": "PRD5",
+    "units_rented": 10,
+    "price_per_day": 36,
+    "rental_start": "4/28/18",
+    "rental_end": "4/11/18"
+  },
+  "RNT018": {
+    "product_code": "PRD59",
+    "units_rented": 9,
+    "price_per_day": 40,
+    "rental_start": "8/16/16",
+    "rental_end": "1/13/16"
+  },
+  "RNT019": {
+    "product_code": "PRD6",
+    "units_rented": 8,
+    "price_per_day": 39,
+    "rental_start": "12/16/17",
+    "rental_end": "5/10/16"
+  },
+  "RNT020": {
+    "product_code": "PRD2",
+    "units_rented": 9,
+    "price_per_day": 33,
+    "rental_start": "6/20/18",
+    "rental_end": "1/12/16"
+  }
+}

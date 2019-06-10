@@ -1,0 +1,12 @@
+# python3 -m pytest -vvv tests/ >pytest.log 2>&1
+============================= test session starts ==============================
+platform darwin -- Python 3.7.2, pytest-4.3.0, py-1.7.0, pluggy-0.8.1 -- /usr/local/opt/python/bin/python3.7
+cachedir: .pytest_cache
+rootdir: /Users/adevey/class/Python220A_2019/students/aaron/lesson10/assignment, inifile:
+collecting ... collected 3 items
+
+tests/test_database.py::test_import_data PASSED                          [ 33%]
+tests/test_database.py::test_show_available_products PASSED              [ 66%]
+tests/test_database.py::test_show_rentals PASSED                         [100%]
+
+=========================== 3 passed in 0.37 seconds ===========================

@@ -1,2 +1,2 @@
-# LOL
-Just kidding, I haven't completed the lesson09 homework yet either.
+# Lesson09
+Homework in ./assignment/src/

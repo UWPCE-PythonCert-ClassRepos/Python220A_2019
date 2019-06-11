@@ -1,0 +1,627 @@
+'''
+mypylint is terrible, but when I started to fix things it got wonky, so im turning in what worked!
+'''
+
+
+************* Module basic_operations
+
+src\basic_operations.py:5:0: W0401: Wildcard import customer_model (wildcard-import)
+src\basic_operations.py:10:0: C0103: Constant name "logger" doesn't conform to '(([A-Z_][A-Z0-9_]*)|(__.*__))$' pattern (invalid-name)
+src\basic_operations.py:55:11: W0703: Catching too general exception Exception (broad-except)
+src\basic_operations.py:45:12: W1203: Use % formatting in logging functions and pass the % parameters as arguments (logging-fstring-interpolation)
+src\basic_operations.py:46:12: W1203: Use % formatting in logging functions and pass the % parameters as arguments (logging-fstring-interpolation)
+src\basic_operations.py:47:12: W1203: Use % formatting in logging functions and pass the % parameters as arguments (logging-fstring-interpolation)
+src\basic_operations.py:48:12: W1203: Use % formatting in logging functions and pass the % parameters as arguments (logging-fstring-interpolation)
+src\basic_operations.py:49:12: W1203: Use % formatting in logging functions and pass the % parameters as arguments (logging-fstring-interpolation)
+src\basic_operations.py:50:12: W1203: Use % formatting in logging functions and pass the % parameters as arguments (logging-fstring-interpolation)
+src\basic_operations.py:51:12: W1203: Use % formatting in logging functions and pass the % parameters as arguments (logging-fstring-interpolation)
+src\basic_operations.py:52:12: W1203: Use % formatting in logging functions and pass the % parameters as arguments (logging-fstring-interpolation)
+src\basic_operations.py:53:12: W1203: Use % formatting in logging functions and pass the % parameters as arguments (logging-fstring-interpolation)
+src\basic_operations.py:55:4: C0103: Variable name "e" doesn't conform to '[a-z_][a-z0-9_]{2,30}$' pattern (invalid-name)
+src\basic_operations.py:57:8: W1203: Use % formatting in logging functions and pass the % parameters as arguments (logging-fstring-interpolation)
+src\basic_operations.py:88:0: C0111: Missing function docstring (missing-docstring)
+src\basic_operations.py:91:12: W0621: Redefining name 'customer' from outer scope (line 166) (redefined-outer-name)
+src\basic_operations.py:98:11: W0703: Catching too general exception Exception (broad-except)
+src\basic_operations.py:92:12: W1203: Use % formatting in logging functions and pass the % parameters as arguments (logging-fstring-interpolation)
+src\basic_operations.py:94:12: W1203: Use % formatting in logging functions and pass the % parameters as arguments (logging-fstring-interpolation)
+src\basic_operations.py:98:4: C0103: Variable name "e" doesn't conform to '[a-z_][a-z0-9_]{2,30}$' pattern (invalid-name)
+src\basic_operations.py:100:8: W1203: Use % formatting in logging functions and pass the % parameters as arguments (logging-fstring-interpolation)
+src\basic_operations.py:106:0: C0111: Missing function docstring (missing-docstring)
+src\basic_operations.py:116:11: W0703: Catching too general exception Exception (broad-except)
+src\basic_operations.py:110:12: W1203: Use % formatting in logging functions and pass the % parameters as arguments (logging-fstring-interpolation)
+src\basic_operations.py:112:12: W1203: Use % formatting in logging functions and pass the % parameters as arguments (logging-fstring-interpolation)
+src\basic_operations.py:116:4: C0103: Variable name "e" doesn't conform to '[a-z_][a-z0-9_]{2,30}$' pattern (invalid-name)
+src\basic_operations.py:118:8: W1203: Use % formatting in logging functions and pass the % parameters as arguments (logging-fstring-interpolation)
+src\basic_operations.py:136:8: W1203: Use % formatting in logging functions and pass the % parameters as arguments (logging-fstring-interpolation)
+src\basic_operations.py:142:4: C0103: Constant name "customers" doesn't conform to '(([A-Z_][A-Z0-9_]*)|(__.*__))$' pattern (invalid-name)
+src\basic_operations.py:163:4: W1203: Use % formatting in logging functions and pass the % parameters as arguments (logging-fstring-interpolation)
+src\basic_operations.py:5:0: W0614: Unused import BaseModel from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import calendar from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import collections from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import datetime from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import decimal from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import hashlib from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import itertools from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import operator from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import re from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import socket from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import struct from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import sys from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import threading from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import time from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import uuid from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import warnings from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import pysq3 from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import sqlite3 from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import psycopg2 from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import pg_errors from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import mysql_passwd from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import mysql from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import NullHandler from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import text_type from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import bytes_type from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import buffer_type from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import izip_longest from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import callable_ from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import print_ from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import builtins from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import basestring from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import long from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import reraise from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import attrdict from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import SENTINEL from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import OP from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import DJANGO_MAP from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import FIELD from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import JOIN from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import ROW from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import SCOPE_NORMAL from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import SCOPE_SOURCE from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import SCOPE_VALUES from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import SCOPE_CTE from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import SCOPE_COLUMN from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import CSQ_PARENTHESES_NEVER from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import CSQ_PARENTHESES_ALWAYS from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import CSQ_PARENTHESES_UNNESTED from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import SNAKE_CASE_STEP1 from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import SNAKE_CASE_STEP2 from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import MODEL_BASE from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import with_metaclass from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import merge_dict from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import quote from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import is_model from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import ensure_tuple from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import ensure_entity from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import make_snake_case from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import chunked from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import Proxy from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import DatabaseProxy from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import AliasManager from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import State from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import Context from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import query_to_string from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import Node from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import ColumnFactory from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import Source from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import BaseTable from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import Table from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import Join from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import ValuesList from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import CTE from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import ColumnBase from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import Column from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import WrappedNode from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import EntityFactory from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import Alias from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import Negated from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import BitwiseMixin from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import BitwiseNegated from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import Value from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import AsIs from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import Cast from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import Ordering from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import Asc from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import Desc from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import Expression from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import StringExpression from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import Entity from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import SQL from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import Check from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import Function from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import Window from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import WindowAlias from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import Case from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import NodeList from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import CommaNodeList from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import EnclosedNodeList from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import NamespaceAttribute from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import EXCLUDED from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import DQ from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import Tuple from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import QualifiedNames from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import qualify_names from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import OnConflict from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import database_required from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import BaseQuery from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import RawQuery from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import Query from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import SelectQuery from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import SelectBase from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import CompoundSelectQuery from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import Select from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import Update from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import Insert from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import Delete from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import Index from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import ModelIndex from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import PeeweeException from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import ImproperlyConfigured from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import DatabaseError from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import DataError from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import IntegrityError from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import InterfaceError from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import InternalError from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import NotSupportedError from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import OperationalError from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import ProgrammingError from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import ExceptionWrapper from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import EXCEPTIONS from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import IndexMetadata from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import ColumnMetadata from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import ForeignKeyMetadata from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import ViewMetadata from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import ConnectionContext from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import Database from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import SqliteDatabase from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import PostgresqlDatabase from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import MySQLDatabase from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import CursorWrapper from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import DictCursorWrapper from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import NamedTupleCursorWrapper from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import ObjectCursorWrapper from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import ResultIterator from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import FieldAccessor from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import ForeignKeyAccessor from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import NoQueryForeignKeyAccessor from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import BackrefAccessor from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import ObjectIdAccessor from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import Field from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import IntegerField from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import BigIntegerField from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import SmallIntegerField from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import AutoField from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import BigAutoField from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import IdentityField from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import PrimaryKeyField from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import FloatField from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import DoubleField from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import DecimalField from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import CharField from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import FixedCharField from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import TextField from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import BlobField from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import BitField from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import BigBitFieldData from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import BigBitFieldAccessor from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import BigBitField from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import UUIDField from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import BinaryUUIDField from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import format_date_time from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import DateTimeField from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import DateField from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import TimeField from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import TimestampField from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import IPField from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import BooleanField from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import BareField from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import ForeignKeyField from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import DeferredForeignKey from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import DeferredThroughModel from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import MetaField from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import ManyToManyFieldAccessor from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import ManyToManyField from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import VirtualField from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import CompositeKey from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import SchemaManager from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import Metadata from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import SubclassAwareMetadata from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import DoesNotExist from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import ModelBase from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import Model from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import ModelAlias from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import FieldAlias from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import sort_models from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import ModelRaw from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import BaseModelSelect from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import ModelCompoundSelectQuery from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import ModelSelect from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import NoopModelSelect from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import ModelUpdate from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import ModelInsert from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import ModelDelete from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import ManyToManyQuery from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import safe_python_value from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import BaseModelCursorWrapper from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import ModelDictCursorWrapper from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import ModelTupleCursorWrapper from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import ModelNamedTupleCursorWrapper from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import ModelObjectCursorWrapper from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import ModelCursorWrapper from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import PrefetchQuery from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import prefetch_add_subquery from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import prefetch from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import bisect_left from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import bisect_right from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import contextmanager from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import deepcopy from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import wraps from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import isclass from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import Mapping from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import compat from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import pg_extensions from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import Callable from wildcard import (unused-wildcard-import)
+src\basic_operations.py:5:0: W0614: Unused import reduce from wildcard import (unused-wildcard-import)
+src\basic_operations.py:7:0: W0611: Unused import csv (unused-import)
+src\basic_operations.py:6:0: C0411: standard import "import logging" should be placed before "from customer_model import *" (wrong-import-order)
+src\basic_operations.py:7:0: C0411: standard import "import csv" should be placed before "from customer_model import *" (wrong-import-order)
+************* Module customer_model
+src\customer_model.py:13:0: C0301: Line too long (119/80) (line-too-long)
+src\customer_model.py:26:15: C0326: No space allowed before bracket
+class Customer (BaseModel):
+               ^ (bad-whitespace)
+src\customer_model.py:33:0: C0301: Line too long (82/80) (line-too-long)
+src\customer_model.py:1:0: C0111: Missing module docstring (missing-docstring)
+src\customer_model.py:1:0: W0401: Wildcard import peewee (wildcard-import)
+src\customer_model.py:5:0: C0103: Constant name "logger" doesn't conform to '(([A-Z_][A-Z0-9_]*)|(__.*__))$' pattern (invalid-name)
+src\customer_model.py:12:0: C0103: Constant name "database" doesn't conform to '(([A-Z_][A-Z0-9_]*)|(__.*__))$' pattern (invalid-name)
+src\customer_model.py:18:0: C0111: Missing class docstring (missing-docstring)
+src\customer_model.py:19:4: C0111: Missing class docstring (missing-docstring)
+src\customer_model.py:1:0: W0614: Unused import calendar from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import collections from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import datetime from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import decimal from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import hashlib from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import itertools from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import operator from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import re from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import socket from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import struct from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import sys from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import threading from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import time from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import uuid from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import warnings from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import pysq3 from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import sqlite3 from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import psycopg2 from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import pg_errors from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import mysql_passwd from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import mysql from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import NullHandler from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import text_type from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import bytes_type from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import buffer_type from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import izip_longest from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import callable_ from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import print_ from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import builtins from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import basestring from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import long from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import reraise from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import attrdict from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import SENTINEL from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import OP from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import DJANGO_MAP from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import FIELD from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import JOIN from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import ROW from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import SCOPE_NORMAL from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import SCOPE_SOURCE from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import SCOPE_VALUES from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import SCOPE_CTE from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import SCOPE_COLUMN from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import CSQ_PARENTHESES_NEVER from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import CSQ_PARENTHESES_ALWAYS from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import CSQ_PARENTHESES_UNNESTED from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import SNAKE_CASE_STEP1 from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import SNAKE_CASE_STEP2 from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import MODEL_BASE from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import with_metaclass from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import merge_dict from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import quote from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import is_model from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import ensure_tuple from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import ensure_entity from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import make_snake_case from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import chunked from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import Proxy from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import DatabaseProxy from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import AliasManager from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import State from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import Context from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import query_to_string from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import Node from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import ColumnFactory from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import Source from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import BaseTable from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import Table from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import Join from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import ValuesList from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import CTE from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import ColumnBase from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import Column from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import WrappedNode from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import EntityFactory from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import Alias from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import Negated from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import BitwiseMixin from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import BitwiseNegated from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import Value from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import AsIs from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import Cast from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import Ordering from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import Asc from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import Desc from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import Expression from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import StringExpression from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import Entity from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import SQL from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import Check from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import Function from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import fn from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import Window from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import WindowAlias from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import Case from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import NodeList from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import CommaNodeList from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import EnclosedNodeList from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import NamespaceAttribute from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import EXCLUDED from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import DQ from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import Tuple from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import QualifiedNames from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import qualify_names from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import OnConflict from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import database_required from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import BaseQuery from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import RawQuery from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import Query from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import SelectQuery from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import SelectBase from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import CompoundSelectQuery from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import Select from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import Update from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import Insert from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import Delete from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import Index from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import ModelIndex from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import PeeweeException from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import ImproperlyConfigured from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import DatabaseError from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import DataError from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import IntegrityError from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import InterfaceError from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import InternalError from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import NotSupportedError from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import OperationalError from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import ProgrammingError from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import ExceptionWrapper from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import EXCEPTIONS from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import IndexMetadata from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import ColumnMetadata from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import ForeignKeyMetadata from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import ViewMetadata from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import ConnectionContext from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import Database from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import PostgresqlDatabase from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import MySQLDatabase from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import CursorWrapper from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import DictCursorWrapper from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import NamedTupleCursorWrapper from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import ObjectCursorWrapper from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import ResultIterator from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import FieldAccessor from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import ForeignKeyAccessor from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import NoQueryForeignKeyAccessor from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import BackrefAccessor from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import ObjectIdAccessor from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import Field from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import BigIntegerField from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import SmallIntegerField from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import AutoField from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import BigAutoField from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import IdentityField from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import PrimaryKeyField from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import FloatField from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import DoubleField from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import DecimalField from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import FixedCharField from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import TextField from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import BlobField from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import BitField from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import BigBitFieldData from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import BigBitFieldAccessor from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import BigBitField from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import UUIDField from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import BinaryUUIDField from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import format_date_time from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import DateTimeField from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import DateField from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import TimeField from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import TimestampField from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import IPField from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import BareField from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import ForeignKeyField from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import DeferredForeignKey from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import DeferredThroughModel from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import MetaField from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import ManyToManyFieldAccessor from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import ManyToManyField from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import VirtualField from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import CompositeKey from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import SchemaManager from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import Metadata from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import SubclassAwareMetadata from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import DoesNotExist from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import ModelBase from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import ModelAlias from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import FieldAlias from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import sort_models from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import ModelRaw from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import BaseModelSelect from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import ModelCompoundSelectQuery from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import ModelSelect from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import NoopModelSelect from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import ModelUpdate from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import ModelInsert from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import ModelDelete from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import ManyToManyQuery from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import safe_python_value from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import BaseModelCursorWrapper from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import ModelDictCursorWrapper from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import ModelTupleCursorWrapper from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import ModelNamedTupleCursorWrapper from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import ModelObjectCursorWrapper from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import ModelCursorWrapper from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import PrefetchQuery from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import prefetch_add_subquery from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import prefetch from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import bisect_left from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import bisect_right from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import contextmanager from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import deepcopy from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import wraps from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import isclass from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import Mapping from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import compat from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import pg_extensions from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import Callable from wildcard import (unused-wildcard-import)
+src\customer_model.py:1:0: W0614: Unused import reduce from wildcard import (unused-wildcard-import)
+src\customer_model.py:2:0: C0411: standard import "import logging" should be placed before "from peewee import *" (wrong-import-order)
+
+
+Report
+======
+120 statements analysed.
+
+Statistics by type
+------------------
+
++---------+-------+-----------+-----------+------------+---------+
+|type     |number |old number |difference |%documented |%badname |
++=========+=======+===========+===========+============+=========+
+|module   |2      |2          |=          |50.00       |0.00     |
++---------+-------+-----------+-----------+------------+---------+
+|class    |3      |3          |=          |33.33       |0.00     |
++---------+-------+-----------+-----------+------------+---------+
+|method   |0      |0          |=          |0           |0        |
++---------+-------+-----------+-----------+------------+---------+
+|function |5      |5          |=          |60.00       |0.00     |
++---------+-------+-----------+-----------+------------+---------+
+
+
+
+External dependencies
+---------------------
+::
+
+    customer_model (basic_operations)
+    peewee (customer_model)
+
+
+
+Raw metrics
+-----------
+
++----------+-------+------+---------+-----------+
+|type      |number |%     |previous |difference |
++==========+=======+======+=========+===========+
+|code      |149    |62.87 |149      |=          |
++----------+-------+------+---------+-----------+
+|docstring |19     |8.02  |19       |=          |
++----------+-------+------+---------+-----------+
+|comment   |15     |6.33  |15       |=          |
++----------+-------+------+---------+-----------+
+|empty     |54     |22.78 |54       |=          |
++----------+-------+------+---------+-----------+
+
+
+
+Duplication
+-----------
+
++-------------------------+------+---------+-----------+
+|                         |now   |previous |difference |
++=========================+======+=========+===========+
+|nb duplicated lines      |0     |0        |=          |
++-------------------------+------+---------+-----------+
+|percent duplicated lines |0.000 |0.000    |=          |
++-------------------------+------+---------+-----------+
+
+
+
+Messages by category
+--------------------
+
++-----------+-------+---------+-----------+
+|type       |number |previous |difference |
++===========+=======+=========+===========+
+|convention |18     |18       |=          |
++-----------+-------+---------+-----------+
+|refactor   |0      |0        |=          |
++-----------+-------+---------+-----------+
+|warning    |472    |472      |=          |
++-----------+-------+---------+-----------+
+|error      |0      |0        |=          |
++-----------+-------+---------+-----------+
+
+
+
+% errors / warnings by module
+-----------------------------
+
++-----------------+------+--------+---------+-----------+
+|module           |error |warning |refactor |convention |
++=================+======+========+=========+===========+
+|basic_operations |0.00  |52.97   |0.00     |50.00      |
++-----------------+------+--------+---------+-----------+
+|customer_model   |0.00  |47.03   |0.00     |50.00      |
++-----------------+------+--------+---------+-----------+
+
+
+
+Messages
+--------
+
++------------------------------+------------+
+|message id                    |occurrences |
++==============================+============+
+|unused-wildcard-import        |447         |
++------------------------------+------------+
+|logging-fstring-interpolation |18          |
++------------------------------+------------+
+|invalid-name                  |7           |
++------------------------------+------------+
+|missing-docstring             |5           |
++------------------------------+------------+
+|wrong-import-order            |3           |
++------------------------------+------------+
+|broad-except                  |3           |
++------------------------------+------------+
+|wildcard-import               |2           |
++------------------------------+------------+
+|line-too-long                 |2           |
++------------------------------+------------+
+|unused-import                 |1           |
++------------------------------+------------+
+|redefined-outer-name          |1           |
++------------------------------+------------+
+|bad-whitespace                |1           |
++------------------------------+------------+
+
+
+
+
+----------------------------------------------------------------------
+Your code has been rated at -30.83/10 (previous run: -30.83/10, +0.00)
+

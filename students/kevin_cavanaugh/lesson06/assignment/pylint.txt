@@ -1,0 +1,149 @@
+************* Module -
+-:1:0: F0001: No module named - (fatal)
+************* Module generate_csvlines
+src\generate_csvlines.py:34:0: C0301: Line too long (118/80) (line-too-long)
+src\generate_csvlines.py:8:0: C0103: Constant name "fake" doesn't conform to '(([A-Z_][A-Z0-9_]*)|(__.*__))$' pattern (invalid-name)
+src\generate_csvlines.py:11:0: C0111: Missing function docstring (missing-docstring)
+src\generate_csvlines.py:27:25: E1101: Instance of 'Generator' has no 'credit_card_number' member (no-member)
+src\generate_csvlines.py:28:21: E1101: Instance of 'Generator' has no 'date' member (no-member)
+src\generate_csvlines.py:29:25: E1101: Instance of 'Generator' has no 'sentence' member (no-member)
+************* Module good_perf
+src\good_perf.py:55:0: C0301: Line too long (109/80) (line-too-long)
+src\good_perf.py:11:0: C0111: Missing function docstring (missing-docstring)
+src\good_perf.py:18:0: C0111: Missing function docstring (missing-docstring)
+src\good_perf.py:45:8: W0612: Unused variable 'lrow' (unused-variable)
+src\good_perf.py:54:0: C0111: Missing function docstring (missing-docstring)
+************* Module poor_perf
+src\poor_perf.py:60:0: C0301: Line too long (109/80) (line-too-long)
+src\poor_perf.py:9:0: C0111: Missing function docstring (missing-docstring)
+src\poor_perf.py:59:0: C0111: Missing function docstring (missing-docstring)
+src\poor_perf.py:1:0: R0801: Similar lines in 2 files
+==good_perf:53
+==poor_perf:58
+def main():
+    filename = r'C:\Python220\Python220A_2019\students\kevin_cavanaugh\lesson06\assignment\data\exercise.csv'
+    analyze(filename)
+
+
+if __name__ == "__main__":
+    main() (duplicate-code)
+
+
+Report
+======
+94 statements analysed.
+
+Statistics by type
+------------------
+
++---------+-------+-----------+-----------+------------+---------+
+|type     |number |old number |difference |%documented |%badname |
++=========+=======+===========+===========+============+=========+
+|module   |3      |3          |=          |100.00      |0.00     |
++---------+-------+-----------+-----------+------------+---------+
+|class    |0      |0          |=          |0           |0        |
++---------+-------+-----------+-----------+------------+---------+
+|method   |0      |0          |=          |0           |0        |
++---------+-------+-----------+-----------+------------+---------+
+|function |6      |6          |=          |0.00        |0.00     |
++---------+-------+-----------+-----------+------------+---------+
+
+
+
+External dependencies
+---------------------
+::
+
+    faker (generate_csvlines)
+
+
+
+Raw metrics
+-----------
+
++----------+-------+------+---------+-----------+
+|type      |number |%     |previous |difference |
++==========+=======+======+=========+===========+
+|code      |110    |66.67 |110      |=          |
++----------+-------+------+---------+-----------+
+|docstring |23     |13.94 |23       |=          |
++----------+-------+------+---------+-----------+
+|comment   |0      |0.00  |0        |=          |
++----------+-------+------+---------+-----------+
+|empty     |32     |19.39 |32       |=          |
++----------+-------+------+---------+-----------+
+
+
+
+Duplication
+-----------
+
++-------------------------+------+---------+-----------+
+|                         |now   |previous |difference |
++=========================+======+=========+===========+
+|nb duplicated lines      |7     |7        |=          |
++-------------------------+------+---------+-----------+
+|percent duplicated lines |4.403 |4.403    |=          |
++-------------------------+------+---------+-----------+
+
+
+
+Messages by category
+--------------------
+
++-----------+-------+---------+-----------+
+|type       |number |previous |difference |
++===========+=======+=========+===========+
+|convention |10     |10       |=          |
++-----------+-------+---------+-----------+
+|refactor   |1      |1        |=          |
++-----------+-------+---------+-----------+
+|warning    |1      |1        |=          |
++-----------+-------+---------+-----------+
+|error      |3      |3        |=          |
++-----------+-------+---------+-----------+
+
+
+
+% errors / warnings by module
+-----------------------------
+
++------------------+-------+--------+---------+-----------+
+|module            |error  |warning |refactor |convention |
++==================+=======+========+=========+===========+
+|generate_csvlines |100.00 |0.00    |0.00     |30.00      |
++------------------+-------+--------+---------+-----------+
+|good_perf         |0.00   |100.00  |0.00     |40.00      |
++------------------+-------+--------+---------+-----------+
+|poor_perf         |0.00   |0.00    |100.00   |30.00      |
++------------------+-------+--------+---------+-----------+
+
+
+
+Messages
+--------
+
++------------------+------------+
+|message id        |occurrences |
++==================+============+
+|missing-docstring |6           |
++------------------+------------+
+|no-member         |3           |
++------------------+------------+
+|line-too-long     |3           |
++------------------+------------+
+|unused-variable   |1           |
++------------------+------------+
+|invalid-name      |1           |
++------------------+------------+
+|fatal             |1           |
++------------------+------------+
+|duplicate-code    |1           |
++------------------+------------+
+
+
+
+
+------------------------------------------------------------------
+Your code has been rated at 7.13/10 (previous run: 7.13/10, +0.00)
+

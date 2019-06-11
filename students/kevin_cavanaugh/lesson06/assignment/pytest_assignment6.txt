@@ -1,0 +1,26 @@
+============================= test session starts =============================
+platform win32 -- Python 3.7.2, pytest-4.2.1, py-1.7.0, pluggy-0.8.1
+rootdir: C:\Python220\Python220A_2019\students\kevin_cavanaugh\lesson06\assignment, inifile:
+collected 1 item
+
+tests\test_perf.py F                                                     [100%]
+
+================================== FAILURES ===================================
+___________________________ test_assess_preformance ___________________________
+
+    def test_assess_preformance():
+        """ compare """
+        poor = p.analyze(r'C:\Python220\Python220A_2019\students\kevin_cavanaugh\lesson06\assignment\data\exercise.csv')
+        good = g.analyze(r'C:\Python220\Python220A_2019\students\kevin_cavanaugh\lesson06\assignment\data\exercise.csv')
+        poor_elapsed = poor[1] - poor[0]
+        good_elapsed = good[1] - good[0]
+>       assert good_elapsed < poor_elapsed
+E       assert datetime.timedelta(seconds=6, microseconds=529544) < datetime.timedelta(seconds=6, microseconds=471696)
+
+tests\test_perf.py:15: AssertionError
+---------------------------- Captured stdout call -----------------------------
+{'2013': 20300, '2014': 20414, '2015': 20546, '2016': 20019, '2017': 20250, '2018': 20405}
+'ea' was found 288957 times
+defaultdict(<class 'int'>, {'2017': 20250, '2015': 20546, '2013': 20300, '2018': 20405, '2014': 20414, '2016': 20019})
+'ea' was found 288957 times
+========================== 1 failed in 13.14 seconds ==========================

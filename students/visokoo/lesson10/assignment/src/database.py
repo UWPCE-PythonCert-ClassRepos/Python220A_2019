@@ -5,18 +5,19 @@ A compilation of methods to interact with a MongoDB DB
 import os
 import logging
 import pandas as pd
+import datetime
 from pymongo.errors import BulkWriteError
 from src.mongodb import MongoDBConnection
 
 
-def init_logging():
+def init_logging(log_filename):
     """ Setting up the logger
         Logging to a file called db.log with anything INFO and above
     """
     logger = logging.getLogger(__name__)
     log_format = (
         "%(asctime)s %(filename)s:%(lineno)-3d %(levelname)s %(message)s")
-    log_file = 'db.log'
+    log_file = log_filename
     formatter = logging.Formatter(log_format)
     file_handler = logging.FileHandler(log_file)
     file_handler.setFormatter(formatter)
@@ -25,11 +26,25 @@ def init_logging():
 
     return logger
 
-
-LOGGER = init_logging()
+DB_LOGGER = init_logging('db.log')
 MONGO = MongoDBConnection()
 
 
+def measure_func_time(func):
+    """ Measure the function duration."""
+    def wrapper(*args):
+        timing_logger = init_logging('timing.txt')
+        start = datetime.datetime.now()
+        output = func(*args)
+        end = datetime.datetime.now()
+        duration = (end-start).total_seconds()
+        timing_logger.warning(
+            "Func Name: %s | Duration of function: %s", func.__name__, duration)
+        return output
+    return wrapper
+    
+
+@measure_func_time
 def import_data(directory_name, product_file, customer_file, rentals_file):
     """import_data(directory_name, product_file, customer_file, rentals_file)
 
@@ -42,7 +57,7 @@ def import_data(directory_name, product_file, customer_file, rentals_file):
     :param rentals_file str: Name of the rentals CSV file
 
     :return 2 tuples, one showing total records added for each collection
-                      one showing total errors that occured for each add
+                    one showing total errors that occured for each add
     :rtype tuple
     """
     with MONGO:
@@ -52,36 +67,37 @@ def import_data(directory_name, product_file, customer_file, rentals_file):
                                                         database['customers'],
                                                         database['rentals'])
             csvs = [product_file, customer_file, rentals_file]
-            LOGGER.info('CSV files: %s', csvs)
+            DB_LOGGER.info('CSV files: %s', csvs)
             data_dir = os.listdir(os.path.abspath(directory_name))
             records = []
             errors = []
             file_dict = {'product.csv': products_col,
-                         'customers.csv': customers_col,
-                         'rental.csv': rentals_col}
+                        'customers.csv': customers_col,
+                        'rental.csv': rentals_col}
             for csv in csvs:
                 if csv in data_dir:
                     collection = file_dict[csv]
                     try:
-                        LOGGER.info("CSV file is a {csv}")
+                        DB_LOGGER.info("CSV file is a {csv}")
                         errors_count = 0
                         csv_list = csv_to_list_dict(directory_name, csv)
                         result = collection.insert_many(
                             csv_list, ordered=True)
                         records.append(len(result.inserted_ids))
-                        LOGGER.info("Total records from %s are: %s",
+                        DB_LOGGER.info("Total records from %s are: %s",
                                     csv, len(result.inserted_ids))
                     except BulkWriteError as error:
-                        LOGGER.error("Bulk write issue: %s", error.details)
+                        DB_LOGGER.error("Bulk write issue: %s", error.details)
                         print(error.details)
                         errors_count += 1
                     errors.append(errors_count)
         except Exception as error:
-            LOGGER.error("Error: %s", error)
+            DB_LOGGER.error("Error: %s", error)
         finally:
             return tuple(records), tuple(errors)
 
 
+@measure_func_time
 def csv_to_list_dict(directory_name, csv):
     """csv_to_list_dict(directory_name, csv)
 
@@ -94,7 +110,7 @@ def csv_to_list_dict(directory_name, csv):
     :return list containing a dict values of the CSV data
     :rtype list
     """
-    LOGGER.info("CSV file is a {csv}")
+    DB_LOGGER.info("CSV file is a {csv}")
     csv_list = []
     csv_dict = pd.read_csv(
         os.path.abspath(
@@ -108,6 +124,7 @@ def csv_to_list_dict(directory_name, csv):
     return csv_list
 
 
+@measure_func_time
 def show_available_products():
     """show_available_products()
 
@@ -124,16 +141,17 @@ def show_available_products():
             result = database.products.find(
                 {"quantity_available": {'$gt': 0}},
                 {"description": 1, "product_type": 1,
-                 "quantity_available": 1, "_id": 1})
+                "quantity_available": 1, "_id": 1})
             for row in result:
                 p_id = row.pop('_id')
                 avail_product[p_id] = row
-        LOGGER.info("Available Products: %s", avail_product)
+        DB_LOGGER.info("Available Products: %s", avail_product)
         return avail_product
     except Exception as error:
-        LOGGER.error("Error: %s", error)
+        DB_LOGGER.error("Error: %s", error)
 
 
+@measure_func_time
 def show_rentals(product_id):
     """show_rentals(product_id)
     Returns a Python dictionary with the following user information
@@ -155,10 +173,10 @@ def show_rentals(product_id):
             customers = {}
             result = database.get_collection("rentals").aggregate(
                 [{"$lookup": {"from": "customers",
-                              "localField": "user_id",
-                              "foreignField": "_id",
-                              "as": "rental"}},
-                 {"$match": {"product_id": product_id}}])
+                            "localField": "user_id",
+                            "foreignField": "_id",
+                            "as": "rental"}},
+                {"$match": {"product_id": product_id}}])
             count = 0
             for row in result:
                 count += 1
@@ -166,12 +184,13 @@ def show_rentals(product_id):
                 row.pop('_id')
                 row.pop('product_id')
                 customers[db_id] = row
-        LOGGER.info("Customers w/ Rentals: %s", customers)
+        DB_LOGGER.info("Customers w/ Rentals: %s", customers)
         return customers
     except Exception as error:
-        LOGGER.error("Error: %s", error)
+        DB_LOGGER.error("Error: %s", error)
 
 
+@measure_func_time
 def drop_cols(*args):
     """drop_cols(*args)
     Drop collections based on inputed values in DB
@@ -185,3 +204,8 @@ def drop_cols(*args):
         database = MONGO.connection.db
         for col in args:
             database.drop_collection(col)
+
+if __name__ == "__main__":
+    test = Database()
+
+

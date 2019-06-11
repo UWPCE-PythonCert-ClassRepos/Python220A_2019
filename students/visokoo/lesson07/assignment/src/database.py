@@ -4,6 +4,7 @@ A compilation of methods to interact with a MongoDB DB
 """
 import os
 import logging
+import datetime
 import pandas as pd
 from pymongo.errors import BulkWriteError
 from src.mongodb import MongoDBConnection
@@ -45,7 +46,12 @@ def import_data(directory_name, product_file, customer_file, rentals_file):
                       one showing total errors that occured for each add
     :rtype tuple
     """
+    records = []
+    errors = []
+    record_count_before_op = None
+    record_count_after_op = None
     with MONGO:
+        start = datetime.datetime.now()
         try:
             database = MONGO.connection.db
             products_col, customers_col, rentals_col = (database['products'],
@@ -54,21 +60,21 @@ def import_data(directory_name, product_file, customer_file, rentals_file):
             csvs = [product_file, customer_file, rentals_file]
             LOGGER.info('CSV files: %s', csvs)
             data_dir = os.listdir(os.path.abspath(directory_name))
-            records = []
-            errors = []
             file_dict = {'product.csv': products_col,
                          'customers.csv': customers_col,
                          'rental.csv': rentals_col}
             for csv in csvs:
                 if csv in data_dir:
                     collection = file_dict[csv]
+                    record_count_before_op = collection.count()
                     try:
                         LOGGER.info("CSV file is a {csv}")
                         errors_count = 0
                         csv_list = csv_to_list_dict(directory_name, csv)
                         result = collection.insert_many(
                             csv_list, ordered=True)
-                        records.append(len(result.inserted_ids))
+                        records.append(result.inserted_ids)
+                        record_count_after_op = collection.count()
                         LOGGER.info("Total records from %s are: %s",
                                     csv, len(result.inserted_ids))
                     except BulkWriteError as error:
@@ -79,8 +85,10 @@ def import_data(directory_name, product_file, customer_file, rentals_file):
         except Exception as error:
             LOGGER.error("Error: %s", error)
         finally:
-            return tuple(records), tuple(errors)
-
+            end = datetime.datetime.now()
+            duration = (end - start).total_seconds()
+            return (len(records[0]), record_count_before_op,
+                    record_count_after_op, duration)
 
 def csv_to_list_dict(directory_name, csv):
     """csv_to_list_dict(directory_name, csv)
@@ -185,3 +193,11 @@ def drop_cols(*args):
         database = MONGO.connection.db
         for col in args:
             database.drop_collection(col)
+
+if __name__ == "__main__":
+    SCRIPT_START = datetime.datetime.now()
+    print("Importing data", "start time: ", SCRIPT_START)
+    import_data('data', "product.csv", "customers.csv", "rental.csv")
+    SCRIPT_END = datetime.datetime.now()
+    TOTAL_TIME = SCRIPT_END - SCRIPT_START
+    print("Done importing", "end time: ", SCRIPT_END, "total time:", TOTAL_TIME)

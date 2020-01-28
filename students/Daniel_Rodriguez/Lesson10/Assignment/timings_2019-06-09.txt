@@ -1,0 +1,16 @@
+2019-06-09 13:11:27,741:50   INFO Ran import_data with args: ('data/', 'product.csv', 'customer.csv', 'rental.csv', True)
+2019-06-09 13:11:27,741:55   INFO Function import_data elapsed time: 0.0020208358764648438
+2019-06-09 13:11:27,742:50   INFO Ran drop_collections with args: ()
+2019-06-09 13:11:27,742:55   INFO Function drop_collections elapsed time: 0.0010602474212646484
+2019-06-09 13:11:27,821:50   INFO Ran import_csv with args: ('data/product.csv',)
+2019-06-09 13:11:27,821:55   INFO Function import_csv elapsed time: 0.08023524284362793
+2019-06-09 13:11:27,927:50   INFO Ran import_csv with args: ('data/customer.csv',)
+2019-06-09 13:11:27,928:55   INFO Function import_csv elapsed time: 0.18680906295776367
+2019-06-09 13:11:27,999:50   INFO Ran import_csv with args: ('data/rental.csv',)
+2019-06-09 13:11:27,999:55   INFO Function import_csv elapsed time: 0.25762414932250977
+2019-06-09 13:11:29,463:50   INFO Ran show_available_products with args: ()
+2019-06-09 13:11:29,464:55   INFO Function show_available_products elapsed time: 1.7233490943908691
+2019-06-09 13:11:29,707:50   INFO Ran show_rentals with args: ('C000000',)
+2019-06-09 13:11:29,708:55   INFO Function show_rentals elapsed time: 1.965914011001587
+2019-06-09 13:11:29,757:50   INFO Ran show_customers with args: ()
+2019-06-09 13:11:29,758:55   INFO Function show_customers elapsed time: 2.015742540359497
